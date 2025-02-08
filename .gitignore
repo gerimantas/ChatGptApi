@@ -1,1 +1,9 @@
 .env
+ai_logs.txt
+chat_logs.txt
+test_script.py
+
+chat_history.json
+chat_logs.txt
+response.mp3
+modules/__pycache__/

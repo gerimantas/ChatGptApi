@@ -1,65 +1,81 @@
-import openai
+import sys
 import os
-import dotenv
-import colorama
-from colorama import Fore, Style
-from modules.openai_client import send_message_to_gpt
 
-# Įkeliame API raktą iš .env failo
-dotenv.load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
+sys.path.append(os.path.abspath(os.path.dirname(__file__) + "/.."))
 
-if not api_key:
-    raise ValueError("🔴 API raktas nerastas! Patikrink .env failą.")
+from modules.openai_client import ask_openai  
 
-# Inicializuojame spalvų biblioteką
-colorama.init()
-
-# Funkcija pokalbio su AI vykdymui
 def start_chat():
-    """Interaktyvus pokalbio režimas terminale su režimų pasirinkimu."""
-    print(Fore.CYAN + "🤖 AI Asistentas aktyvus!" + Style.RESET_ALL)
-    print("🔹 Pasirink režimą: ")
-    print("   1️⃣ Kodo generavimas")
-    print("   2️⃣ Kodo optimizavimas")
-    print("   3️⃣ Klaidų taisymas")
-    print("   4️⃣ Laisvas pokalbis")
-    mode = input(Fore.YELLOW + "✏️ Įvesk pasirinkimą (1-4): " + Style.RESET_ALL)
+    """Paleidžia AI asistentą terminale."""
+    print("🚀 START CHAT")
+    main()
 
-    mode_mapping = {
-        "1": "Kodo generavimas",
-        "2": "Kodo optimizavimas",
-        "3": "Klaidų taisymas",
-        "4": "Laisvas pokalbis"
+def get_multiline_input(prompt):
+    """Leidžia įvesti kelias kodo eilutes, baigiamas su `/done`."""
+    print(f"✏️ PRADEDAMAS ĮVESTIES RINKIMAS: {prompt}")
+    lines = []
+    while True:
+        line = input()
+        if line.strip().lower() == "/done":
+            break
+        lines.append(line)
+    print(f"✅ ĮVESTIES RINKIMAS BAIGTAS, gautas kodas: {lines}")
+    return "\n".join(lines) if lines else None
+
+def process_command(command, code_text, commands_map, test_mode=False):
+    """Apdoroja komandą ir siunčia užklausą į OpenAI API."""
+    print(f"➡️ ENTER process_command: `{command}`")  
+    print(f"🔹 Testavimo režimas: {test_mode}")
+
+    if command not in commands_map:
+        print(f"⚠️ ERROR: `{command}` nėra žinomas!")
+        print("⬅️ EXIT process_command (invalid command)")
+        return
+
+    print(f"⏳ AI analizuoja {command}...")
+    print(f"📌 Komandų žemėlapis: {commands_map}")
+    print(f"🔍 Rasta komanda: {commands_map[command]}")
+
+    # Užtikriname, kad API iškvietimas iš tikrųjų vyksta
+    print("🛠️ `ask_openai()` turėtų būti kviečiamas dabar!")
+
+    result = ask_openai(f"{commands_map[command]}\n```python\n{code_text}\n```")  
+    print("🛠️ `ask_openai()` buvo iškviestas!")  
+    print(f"📄 {result}\n")
+
+    print("⬅️ EXIT process_command")  
+
+def main(test_mode=False):
+    """Pagrindinė AI asistento funkcija. Jei `test_mode=True`, `SystemExit` nėra iškviečiamas."""
+    print(f"🔹 ENTER main() (test_mode={test_mode})")
+    commands_map = {
+        "/ask": "Pateik glaustą atsakymą (1-2 sakiniai):",
+        "/fix": "Pataisyk klaidas šiame Python kode ir grąžink tik pataisytą kodą:",
+        "/refactor": "Optimizuok šį Python kodą, išlaikydamas jo veikimą. Grąžink tik optimizuotą kodą:",
+        "/test": "Sugeneruok `unittest` testus šiai Python funkcijai. Grąžink tik testų kodą:",
+        "/doc": "Sugeneruok PEP 257 standarto docstring šiai Python funkcijai. Grąžink tik dokumentaciją:",
+        "/style": "Suformatuok šį Python kodą pagal PEP 8 standartą. Grąžink tik suformatuotą kodą:",
+        "/explain": "Pateik glaustą šio kodo paaiškinimą (1–2 sakiniai):"
     }
-    
-    selected_mode = mode_mapping.get(mode, "Laisvas pokalbis")
-    print(Fore.GREEN + f"✅ Pasirinktas režimas: {selected_mode}" + Style.RESET_ALL)
+
+    print("🔹 AI Asistentas – įveskite komandą (/ask, /fix, /refactor, /test, /doc, /style, /explain, /exit)")
 
     while True:
-        user_input = input(Fore.YELLOW + "👤 Tu: " + Style.RESET_ALL)
+        command = input("🖥️ >>> ").strip().lower()
+        print(f"🔹 Gauta komanda: `{command}`")
 
-        if user_input.lower() == "exit":
-            print(Fore.RED + "👋 Pokalbis baigtas." + Style.RESET_ALL)
-            break
+        if command == "/exit":
+            print("👋 Išeinama iš AI asistento...")
+            if not test_mode:
+                raise SystemExit
+            else:
+                print("✅ Testavimo režime – ciklas baigtas.")
+                break  # Jei testavimo režimas, tiesiog nutraukiame ciklą.
 
-        messages = [
-            {"role": "system", "content": f"Tu esi AI asistentas, kuris padeda su {selected_mode}."},
-            {"role": "user", "content": user_input}
-        ]
+        elif command in commands_map:
+            code_text = get_multiline_input(f"🔹 Įveskite Python kodą. Baigti įvestį – `/done`.")
+            process_command(command, code_text, commands_map, test_mode)
+        else:
+            print("⚠️ Neatpažinta komanda! Bandykite dar kartą.")
 
-        ai_response = send_message_to_gpt(messages)
-
-        log_chat(user_input, ai_response)
-
-        print(Fore.CYAN + f"🤖 AI: {ai_response}" + Style.RESET_ALL)
-
-# Funkcija pokalbio išsaugojimui logų faile
-def log_chat(user_input, ai_response, log_file="chat_logs.txt"):
-    """Išsaugo vartotojo ir AI pokalbį faile."""
-    with open(log_file, "a", encoding="utf-8") as log:
-        log.write(f"\n👤 Vartotojas: {user_input}\n🤖 AI: {ai_response}\n")
-
-# Jei paleidžiamas kaip pagrindinis failas, pradedame pokalbį
-if __name__ == "__main__":
-    start_chat()
+    print("⬅️ EXIT main()")  # Debugging

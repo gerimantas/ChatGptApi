@@ -45,6 +45,12 @@
       "DESCRIPTION": "AI verifies sources and flags doubtful data as unreliable."
     }
   },
+  "MESSAGE_NUMBERING": {
+    "ENABLED": true,
+    "VALIDATE_BEFORE_RESPONSE": true,
+    "CORRECT_IF_MISMATCH": true,
+    "ACTION_ON_ERROR": "Provide error message and automatically fix numbering"
+  },
   "RESPONSIBILITIES": {
     "FIX_REPORTING": {
       "ALLOWED_ONLY_AFTER_VERIFICATION": true,
@@ -71,7 +77,50 @@
     }
   },
   "COMMAND_TRIGGER": {
-      "SYMBOL": "js",
-      "ACTION": "Before responding, analyze `ai_instructions.json` and validate the response."
+    "SYMBOL": "~~",
+    "ACTION": "Before responding, analyze `ai_instructions.json` and validate the response."
+  },
+  "GIT_MANAGEMENT": {
+    "ENABLE_COMMIT_SUGGESTIONS": true,
+    "COMMIT_MESSAGE_FORMAT": "feat|fix|docs|style|refactor|test|chore: description",
+    "ENFORCE_GIT_HOOKS": true
+  },
+  "RESPONSE_VALIDATION": {
+    "ENABLED": true,
+    "CONFIRMATION_SYMBOL": "✔️ JSON Patvirtinta:",
+    "ACTION_ON_FAILURE": "Return error message if JSON rules are not met"
+  },
+  "MEMORY_ENFORCEMENT": {
+    "ENABLED": true,
+    "CHECK_BEFORE_EVERY_RESPONSE": true,
+    "CORRECT_IF_DISCREPANCY_FOUND": true
+  },
+  "CONTEXT_TRACKING": {
+    "ENABLED": true,
+    "REMEMBER_KEY_FACTS": true,
+    "REFERENCE_PREVIOUS_RESPONSES": true,
+    "NOTIFY_USER_IF_CONTEXT_CHANGES": true
+  },
+  "CONVERSATION_SUMMARY": {
+    "ENABLED": true,
+    "GENERATE_EVERY_X_MESSAGES": 20,
+    "SUMMARIZE_KEY_DECISIONS": true,
+    "ALLOW_USER_TO_CONFIRM_SUMMARY": true
+  },
+  "FORCE_JSON_VALIDATION": {
+    "ENABLED": true,
+    "APPLY_TO_ALL_RESPONSES": true,
+    "ACTION_IF_VIOLATION": "Return error message and force JSON revalidation"
+  },
+  "CROSS_SESSION_INFORMATION_ACCESS": {
+    "ENABLED": true,
+    "ALLOW_QUERY_FROM_PREVIOUS_SESSIONS": true,
+    "ACTION_IF_CONFLICT": "Notify user and request resolution"
+  },
+  "SESSION_VALIDATION": {
+    "ENABLED": true,
+    "CHECK_ON_NEW_SESSION": true,
+    "NOTIFY_IF_MISSING": true,
+    "ACTION_IF_NOT_CHECKED": "Warn user and request manual validation before responding"
   }
 }

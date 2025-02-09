@@ -1,23 +1,38 @@
 ChatGptApi/
+│   │   📄 test-ci.yml
+│   │   📄 test.yml
+│   📂 workflows/
 │   📄 settings.json
+│   📄 openai_cache.db
+│   📄 openai_client.log
 📄 .env
 📂 .git/ (10 failai)  # Git saugykla
+📂 .github/
 📄 .gitignore
 📂 .vscode/
 📄 README.md
 📄 ai_instructions.json
+📂 cache/
 📄 chatbot.py
 📄 check_gpt_model.py
+📄 instr2.json
+📂 logs/
 📂 modules/
 │   📄 __init__.py
+│   📂 __pycache__/
 │   📄 assistant_ui.py
 │   📄 code_analyzer.py
 │   📄 file_manager.py
 │   📄 openai_client.py
 📄 project_structure_output.txt
 📄 scan_project_structure.py
+📄 test_file.txt
+📄 test_script.py
 📂 tests/
+│   📄 __init__.py
+│   📂 __pycache__/
 │   📄 test_api.py
+│   📄 test_assistant_ui.py
 │   📄 test_code_analyzer.py
 │   📄 test_file_manager.py
 │   📄 test_ui.py

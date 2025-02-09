@@ -3,6 +3,7 @@ import os
 import time
 import logging
 import shelve
+import asyncio
 from dotenv import load_dotenv
 
 # Įkeliame API raktą iš .env failo
@@ -10,7 +11,7 @@ load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Sukuriamas OpenAI klientas
-client = openai.OpenAI(api_key=OPENAI_API_KEY)
+client = openai.AsyncOpenAI(api_key=OPENAI_API_KEY)
 
 # Sukuriami aplankai, jei jų nėra
 LOG_DIR = "logs"
@@ -26,8 +27,8 @@ logging.basicConfig(filename=LOG_FILE, level=logging.ERROR,
 # Cache failas
 CACHE_FILE = os.path.join(CACHE_DIR, "openai_cache.db")
 
-def ask_openai(prompt, model="gpt-4o", max_retries=5):
-    """Siunčia užklausą OpenAI API su caching ir backoff retry mechanizmu."""
+async def ask_openai(prompt, model="gpt-4o", max_retries=5):
+    """Asinchroniškai siunčia užklausą OpenAI API su caching ir backoff retry mechanizmu."""
     retries = 0
     wait_time = 1  # Pradinis laukimo laikas sekundėmis
 
@@ -38,7 +39,7 @@ def ask_openai(prompt, model="gpt-4o", max_retries=5):
 
         while retries < max_retries:
             try:
-                response = client.chat.completions.create(
+                response = await client.chat.completions.create(
                     model=model,
                     messages=[{"role": "user", "content": prompt}]
                 )
@@ -49,14 +50,14 @@ def ask_openai(prompt, model="gpt-4o", max_retries=5):
             except openai.RateLimitError:
                 logging.error("RateLimitError: API pasiekė užklausų ribą.")
                 print(f"⚠️ API pasiekė užklausų ribą. Laukiama {wait_time} sek. ir bandoma dar kartą...")
-                time.sleep(wait_time)
+                await asyncio.sleep(wait_time)
                 wait_time *= 2
                 retries += 1
             
             except openai.APITimeoutError:
                 logging.error("TimeoutError: API atsako per ilgai.")
                 print(f"⏳ API atsako per ilgai. Laukiama {wait_time} sek. ir bandoma dar kartą...")
-                time.sleep(wait_time)
+                await asyncio.sleep(wait_time)
                 wait_time *= 2
                 retries += 1
 
@@ -69,6 +70,6 @@ def ask_openai(prompt, model="gpt-4o", max_retries=5):
         print("🚫 Nepavyko gauti atsakymo po kelių bandymų.")
         return None
 
-def send_message_to_gpt(messages):
-    """Siunčia žinutę į OpenAI API ir grąžina atsakymą."""
-    return ask_openai(messages[0]["content"])
+async def send_message_to_gpt(messages):
+    """Asinchroniškai siunčia žinutę į OpenAI API ir grąžina atsakymą."""
+    return await ask_openai(messages[0]["content"])

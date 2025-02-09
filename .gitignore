@@ -7,3 +7,4 @@ chat_history.json
 chat_logs.txt
 response.mp3
 modules/__pycache__/
+__pycache__/

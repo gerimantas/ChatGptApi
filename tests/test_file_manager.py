@@ -1,17 +1,33 @@
-import sys
+import unittest
 import os
+from modules.file_manager import FileManager
 
-# Pridedame projekto šaknies aplanką į Python kelių sąrašą
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+class TestFileManager(unittest.TestCase):
+    def setUp(self):
+        self.file_path = "test_file.txt"
+        self.file_manager = FileManager()
 
-from modules.file_manager import read_file, write_file, file_exists
+    def test_create_file(self):
+        self.file_manager.write_file(self.file_path, "Test content")
+        self.assertTrue(os.path.exists(self.file_path))
 
-# Testinis failo pavadinimas
-test_file = "test_file.txt"
+    def test_read_file(self):
+        self.file_manager.write_file(self.file_path, "Test content")
+        content = self.file_manager.read_file(self.file_path)
+        self.assertEqual(content, "Test content")
 
-# Testas: Įrašyti ir perskaityti failą
-write_file(test_file, "Testinis failo turinys.")
-assert file_exists(test_file) == True, "❌ Klaida: Failas turėjo egzistuoti, bet nebuvo rastas."
-assert read_file(test_file) == "Testinis failo turinys.", "❌ Klaida: Netikslus failo turinys."
+    def test_delete_file(self):
+        self.file_manager.write_file(self.file_path, "Test content")
+        self.file_manager.delete_file(self.file_path)
+        self.assertFalse(os.path.exists(self.file_path))
 
-print("✅ Visi failų sistemos testai sėkmingai praėjo!")
+    def test_read_nonexistent_file(self):
+        with self.assertRaises(FileNotFoundError):
+            self.file_manager.read_file("nonexistent.txt")
+
+    def tearDown(self):
+        if os.path.exists(self.file_path):
+            os.remove(self.file_path)
+
+if __name__ == '__main__':
+    unittest.main()

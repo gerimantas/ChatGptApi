@@ -1,16 +1,17 @@
 import sys
 import os
+import asyncio
 
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + "/.."))
 
 from modules.openai_client import ask_openai  
 
-def start_chat():
+async def start_chat():
     """Paleidžia AI asistentą terminale."""
     print("🚀 START CHAT")
-    main()
+    await main()
 
-def get_multiline_input(prompt):
+async def get_multiline_input(prompt):
     """Leidžia įvesti kelias kodo eilutes, baigiamas su `/done`."""
     print(f"✏️ PRADEDAMAS ĮVESTIES RINKIMAS: {prompt}")
     lines = []
@@ -22,7 +23,7 @@ def get_multiline_input(prompt):
     print(f"✅ ĮVESTIES RINKIMAS BAIGTAS, gautas kodas: {lines}")
     return "\n".join(lines) if lines else None
 
-def process_command(command, code_text, commands_map, test_mode=False):
+async def process_command(command, code_text, commands_map, test_mode=False):
     """Apdoroja komandą ir siunčia užklausą į OpenAI API."""
     print(f"➡️ ENTER process_command: `{command}`")  
     print(f"🔹 Testavimo režimas: {test_mode}")
@@ -30,22 +31,21 @@ def process_command(command, code_text, commands_map, test_mode=False):
     if command not in commands_map:
         print(f"⚠️ ERROR: `{command}` nėra žinomas!")
         print("⬅️ EXIT process_command (invalid command)")
-        return
+        return None
 
     print(f"⏳ AI analizuoja {command}...")
     print(f"📌 Komandų žemėlapis: {commands_map}")
     print(f"🔍 Rasta komanda: {commands_map[command]}")
 
-    # Užtikriname, kad API iškvietimas iš tikrųjų vyksta
     print("🛠️ `ask_openai()` turėtų būti kviečiamas dabar!")
-
-    result = ask_openai(f"{commands_map[command]}\n```python\n{code_text}\n```")  
+    result = await ask_openai(f"{commands_map[command]}\n```python\n{code_text}\n```")  
     print("🛠️ `ask_openai()` buvo iškviestas!")  
     print(f"📄 {result}\n")
 
     print("⬅️ EXIT process_command")  
+    return result
 
-def main(test_mode=False):
+async def main(test_mode=False):
     """Pagrindinė AI asistento funkcija. Jei `test_mode=True`, `SystemExit` nėra iškviečiamas."""
     print(f"🔹 ENTER main() (test_mode={test_mode})")
     commands_map = {
@@ -70,12 +70,12 @@ def main(test_mode=False):
                 raise SystemExit
             else:
                 print("✅ Testavimo režime – ciklas baigtas.")
-                break  # Jei testavimo režimas, tiesiog nutraukiame ciklą.
+                break
 
         elif command in commands_map:
-            code_text = get_multiline_input(f"🔹 Įveskite Python kodą. Baigti įvestį – `/done`.")
-            process_command(command, code_text, commands_map, test_mode)
+            code_text = await get_multiline_input(f"🔹 Įveskite Python kodą. Baigti įvestį – `/done`.")
+            await process_command(command, code_text, commands_map, test_mode)
         else:
             print("⚠️ Neatpažinta komanda! Bandykite dar kartą.")
 
-    print("⬅️ EXIT main()")  # Debugging
+    print("⬅️ EXIT main()")  

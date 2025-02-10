@@ -6,6 +6,8 @@ C:.
 |   CHANGELOG.md
 |   chatbot.py
 |   check_gpt_model.py
+|   file_hashes.txt
+|   project_plan.md
 |   project_structure_output.txt
 |   README.md
 |   scan_project_structure.py
@@ -49,11 +51,3 @@ C:.
     |   __init__.py
     |   
     \---__pycache__
-            test_api.cpython-313.pyc
-            test_assistant_ui.cpython-313.pyc
-            test_code_analyzer.cpython-313.pyc
-            test_file_manager.cpython-313.pyc
-            test_git_status.cpython-313.pyc
-            test_ui.cpython-313.pyc
-            __init__.cpython-313.pyc
-            

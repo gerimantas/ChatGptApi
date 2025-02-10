@@ -79,3 +79,7 @@ async def main(test_mode=False):
             print("⚠️ Neatpažinta komanda! Bandykite dar kartą.")
 
     print("⬅️ EXIT main()")  
+
+# ✅ Užtikrina, kad skriptas būtų paleidžiamas teisingai
+if __name__ == "__main__":
+    asyncio.run(main())

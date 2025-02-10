@@ -12,3 +12,10 @@
 ### Ištaisyta:
 - `assistant_ui.py` async funkcijų klaidos
 - Testų neveikimas dėl `NoneType` grąžinimo
+## [v1.0] - 2025-02-10
+- 🎯 Pirmoji stabili ChatGptApi versija
+- ✅ OpenAI API optimizacija
+- ✅ VS Code UI sąsaja
+- ✅ Failų valdymas AI pagalba
+- ✅ Automatiniai testai
+- ✅ Git optimizacija ir automatiniai commit'ai

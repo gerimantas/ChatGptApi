@@ -19,3 +19,8 @@
 - ✅ Failų valdymas AI pagalba
 - ✅ Automatiniai testai
 - ✅ Git optimizacija ir automatiniai commit'ai
+## [v1.0] - 2025-02-10
+- ✅ Užbaigtas projekto kūrimas
+- 🛠 Optimizuotas OpenAI API užklausų valdymas
+- 📂 Implementuotas failų valdymas ir testavimas
+- 🚀 Paruošta pirmoji stabili ChatGptApi versija

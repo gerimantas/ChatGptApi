@@ -30,15 +30,19 @@ C:.
 +---modules
 |   |   assistant_ui.py
 |   |   code_analyzer.py
+|   |   doc_generator.py
 |   |   file_manager.py
 |   |   openai_client.py
+|   |   task_manager.py
 |   |   __init__.py
 |   |   
 |   \---__pycache__
 |           assistant_ui.cpython-313.pyc
 |           code_analyzer.cpython-313.pyc
+|           doc_generator.cpython-313.pyc
 |           file_manager.cpython-313.pyc
 |           openai_client.cpython-313.pyc
+|           task_manager.cpython-313.pyc
 |           __init__.cpython-313.pyc
 |           
 \---tests
@@ -51,3 +55,10 @@ C:.
     |   __init__.py
     |   
     \---__pycache__
+            test_api.cpython-313.pyc
+            test_assistant_ui.cpython-313.pyc
+            test_code_analyzer.cpython-313.pyc
+            test_file_manager.cpython-313.pyc
+            test_git_status.cpython-313.pyc
+            test_ui.cpython-313.pyc
+            

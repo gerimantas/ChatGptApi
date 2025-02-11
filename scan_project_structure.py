@@ -44,6 +44,7 @@ def scan_directory(directory, output_file, indent=0, ignored_folders=None, ignor
 if __name__ == "__main__":
     output_file = "project_structure_output.txt"
     with open(output_file, "w", encoding="utf-8") as f:
-        f.write("ChatGptApi/\n")
+        f.write("ai.assist/\n")
     scan_directory(os.getcwd(), output_file)
     print(f"📄 Projekto struktūra išsaugota į {output_file}")
+

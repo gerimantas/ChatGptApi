@@ -11,3 +11,4 @@ if __name__ == "__main__":
     print("🔍 Testuojamas AI UI sąsajos paleidimas...")
     start_chat()
 1
+

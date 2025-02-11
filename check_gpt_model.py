@@ -16,3 +16,4 @@ response = client.chat.completions.create(
 )
 
 print(f"🔍 Naudojamas GPT modelis: {response.model}")
+

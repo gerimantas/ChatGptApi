@@ -1,5 +1,5 @@
 Set-Content -Path "project_plan.md" -Value @'
-# 📌 OPTIMIZUOTAS „ChatGptApi“ PROJEKTO PLANAS
+# 📌 OPTIMIZUOTAS „ai.assist“ PROJEKTO PLANAS
 
 🔹 **Tikslas:** Užtikrinti, kad ChatGPT nepasiūlytų jau atliktų veiksmų, optimizuoti OpenAI API naudojimą ir automatizuoti kodo testavimą bei versijų valdymą.
 
@@ -66,3 +66,4 @@ Set-Content -Path "project_plan.md" -Value @'
 2️⃣ **Pridėti AI pagrindu generuojamą dokumentaciją (`doc_generator.py`)**       
 3️⃣ **Įdiegti papildomą progreso sekimo mechanizmą (`task_manager.py`)**
 '@
+

@@ -52,3 +52,4 @@ pytest_cache/
 # Ignoruoti `Git` darbo failus
 .git/
 .gitignore
+

@@ -117,3 +117,4 @@ def chatbot():
 # Paleidžiame chatbotą
 if __name__ == "__main__":
     chatbot()
+

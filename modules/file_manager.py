@@ -43,3 +43,4 @@ if __name__ == "__main__":
 
     FileManager.delete_file(test_path)
     print("🗑️ Failas ištrintas:", not FileManager.file_exists(test_path))
+

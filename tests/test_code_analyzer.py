@@ -21,3 +21,4 @@ assert isinstance(result["optimizations"], list), "❌ Klaida: `optimizations` t
 print("🔍 Aptiktos problemos:", result["issues"])
 print("✨ Optimizacijos pasiūlymai:", result["optimizations"])
 print("✅ Visi kodo analizės testai sėkmingai praėjo!")
+

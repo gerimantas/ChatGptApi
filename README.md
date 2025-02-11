@@ -1,6 +1,6 @@
-# 🚀 ChatGptApi
+# 🚀 ai.assist
 
-**ChatGptApi** – tai projektas, leidžiantis integruoti OpenAI API į terminalo aplinką ir atlikti įvairias kodo optimizavimo užduotis.
+**ai.assist** – tai projektas, leidžiantis integruoti OpenAI API į terminalo aplinką ir atlikti įvairias kodo optimizavimo užduotis.
 
 ---
 
@@ -27,3 +27,4 @@ Po projekto klonavimo, paleiskite šią komandą, kad `pre-commit` būtų įtrau
 
 ```sh
 cp hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+

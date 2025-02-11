@@ -83,3 +83,4 @@ async def main(test_mode=False):
 # ✅ Užtikrina, kad skriptas būtų paleidžiamas teisingai
 if __name__ == "__main__":
     asyncio.run(main())
+

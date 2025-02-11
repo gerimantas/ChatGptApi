@@ -73,3 +73,4 @@ async def ask_openai(prompt, model="gpt-4o", max_retries=5):
 async def send_message_to_gpt(messages):
     """Asinchroniškai siunčia žinutę į OpenAI API ir grąžina atsakymą."""
     return await ask_openai(messages[0]["content"])
+

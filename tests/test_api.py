@@ -14,3 +14,4 @@ ai_response = send_message_to_gpt(test_messages)
 
 # Rezultato atvaizdavimas terminale
 print(f"🤖 AI atsakymas: {ai_response}")
+

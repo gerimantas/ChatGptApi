@@ -50,3 +50,4 @@ if __name__ == "__main__":
     result = analyze_code(test_file)
     print(f"🔍 Aptiktos problemos: {result['issues']}")
     print(f"✨ Optimizacijos pasiūlymai: {result['optimizations']}")
+

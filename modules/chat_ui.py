@@ -90,3 +90,4 @@ if __name__ == "__main__":
     window = ChatUI()
     window.show()
     sys.exit(app.exec_())
+

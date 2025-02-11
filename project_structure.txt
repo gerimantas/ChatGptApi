@@ -1,0 +1,94 @@
+Folder PATH listing
+Volume serial number is 8766-3EB0
+C:.
+¦   .env
+¦   .gitignore
+¦   CHANGELOG.md
+¦   chatbot.py
+¦   check_gpt_model.py
+¦   file_hashes.txt
+¦   project_plan.md
+¦   project_structure.txt
+¦   project_structure_output.txt
+¦   README.md
+¦   scan_project_structure.py
+¦   test_script.py
+¦   
++---.github
+¦   +---workflows
+¦           test-ci.yml
+¦           test.yml
+¦           
++---.vscode
+¦       settings.json
+¦       
++---cache
+¦       openai_cache.db
+¦       
++---logs
+¦       openai_client.log
+¦       
++---modules
+¦   ¦   api_usage.log
+¦   ¦   api_usage_report.json
+¦   ¦   api_usage_tracker.py
+¦   ¦   assistant_ui.py
+¦   ¦   chat_ui.py
+¦   ¦   code_analyzer.py
+¦   ¦   doc_generator.py
+¦   ¦   file_manager.py
+¦   ¦   openai_client.py
+¦   ¦   task_manager.py
+¦   ¦   __init__.py
+¦   ¦   
+¦   +---__pycache__
+¦           assistant_ui.cpython-313.pyc
+¦           chat_ui.cpython-313.pyc
+¦           code_analyzer.cpython-313.pyc
+¦           doc_generator.cpython-313.pyc
+¦           file_manager.cpython-313.pyc
+¦           openai_client.cpython-313.pyc
+¦           task_manager.cpython-313.pyc
+¦           __init__.cpython-313.pyc
+¦           
++---strategy
+¦   ¦   __init__.py
+¦   ¦   
+¦   +---ai_assist_pr_strategy
+¦   ¦   ¦   ai_assist_strategy.json
+¦   ¦   ¦   ai_assist_strategy_info.json
+¦   ¦   ¦   progress_tracking.json
+¦   ¦   ¦   strategy_tracker.py
+¦   ¦   ¦   __init__.py
+¦   ¦   ¦   
+¦   ¦   +---__pycache__
+¦   ¦           strategy_tracker.cpython-313.pyc
+¦   ¦           __init__.cpython-313.pyc
+¦   ¦           
+¦   +---Co_strategy
+¦   ¦       co_strategy.json
+¦   ¦       co_strategy_info.json
+¦   ¦       progress_tracking.json
+¦   ¦       strategy_tracker.py
+¦   ¦       __init__.py
+¦   ¦       
+¦   +---__pycache__
+¦           __init__.cpython-313.pyc
+¦           
++---tests
+    ¦   test_api.py
+    ¦   test_assistant_ui.py
+    ¦   test_code_analyzer.py
+    ¦   test_file_manager.py
+    ¦   test_git_status.py
+    ¦   test_ui.py
+    ¦   __init__.py
+    ¦   
+    +---__pycache__
+            test_api.cpython-313.pyc
+            test_assistant_ui.cpython-313.pyc
+            test_code_analyzer.cpython-313.pyc
+            test_file_manager.cpython-313.pyc
+            test_git_status.cpython-313.pyc
+            test_ui.cpython-313.pyc
+            

@@ -1,0 +1,26 @@
+{
+    "requests": 5,
+    "tokens_used": 2500,
+    "history": [
+        {
+            "timestamp": "2025-02-11T03:30:29.576034",
+            "tokens_used": 500
+        },
+        {
+            "timestamp": "2025-02-11T03:30:53.117163",
+            "tokens_used": 500
+        },
+        {
+            "timestamp": "2025-02-11T03:31:04.557084",
+            "tokens_used": 500
+        },
+        {
+            "timestamp": "2025-02-11T03:34:21.383761",
+            "tokens_used": 500
+        },
+        {
+            "timestamp": "2025-02-11T03:38:39.146879",
+            "tokens_used": 500
+        }
+    ]
+}

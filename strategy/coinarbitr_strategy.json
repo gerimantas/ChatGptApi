@@ -1,0 +1,55 @@
+{
+    "project": "CoinArbitr strategy",
+    "description": "Strategija, skirta ai.assist vystymui ir valdymui.",
+    "versioning": {
+      "ai.assist v1.0": "Pagrindinė versija (užrakinta, testuota, veikianti)",
+      "ai.assist v1.1": "Optimizacijos ir naujų funkcijų versija (kuriama)",
+      "ai.assist v1.2-v1.99": "Numatomi atnaujinimai pagal CoinArbitr strategy"
+    },
+    "sessions": {
+      "context_transfer": "CoinArbitr strategy privalo numatyti sesijų konteksto perdavimą tarp Co sesijų.",
+      "storage": "Visa svarbi CoinArbitr strategy informacija saugoma ai.assist aplanke vartotojo kompiuteryje ir GitHub."
+    },
+    "ai_assist": {
+      "core_features": [
+        "OpenAI API optimizacija",
+        "VS Code terminalo sąsaja",
+        "AI pagrindu valdomas failų tvarkymas",
+        "Kodo analizė ir optimizacija",
+        "Automatinis testavimas",
+        "Git valdymo optimizacija",
+        "Dokumentacijos generavimas",
+        "Progreso sekimo sistema",
+        "Projekto failų būsenos fiksavimas"
+      ],
+      "v1.1_new_features": [
+        "Chato sąsaja OpenAI API komunikacijai",
+        "CoinArbitr strategy saugojimo ir progreso sekimo sistema",
+        "API tokenų optimizavimas ir sekimas"
+      ],
+      "future_development": {
+        "planned_versions": "Dideli funkcionalumo papildymai (v1.x), Optimizacijos ir pataisymai (v1.x.y)",
+        "planned_features": [
+          "Platesnė chato funkcionalumo plėtra",
+          "UI sąsajos sukūrimas",
+          "AI analizės įrankiai",
+          "Web aplinkos integracija",
+          "Išmanus OpenAI API užklausų valdymas"
+        ]
+      }
+    },
+    "ai_management": {
+      "ai_tasks": [
+        "AI analizuoja užduotis ir užduoda klausimus ai.assist strategy tikslinimui",
+        "AI suformuoja ai.assist.pr strategiją, pažymi prioritetus ir skirsto darbus",
+        "AI administruoja ai.assist.pr aplanką ir tvarko jo struktūrą",
+        "AI generuoja periodines ataskaitas apie progresą",
+        "AI užtikrina automatizuotą kodo valdymą, testavimą, optimizaciją"
+      ]
+    },
+    "api_management": {
+      "token_tracking": "ai.assist seka ir optimizuoja OpenAI API naudojimą, ruošia raportus",
+      "cost_optimization": "AI gali pranešti apie artėjančias API išlaidų ribas ir siūlyti optimizacijos veiksmus"
+    }
+  }
+  

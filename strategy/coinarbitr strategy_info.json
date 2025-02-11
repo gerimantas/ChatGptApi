@@ -1,0 +1,48 @@
+{
+    "shortcuts": {
+      "Co": "ChatGPT projektas CoinArbitr",
+      "CoinArbitr strategy": "Pagrindinė ai.assist kūrimo strategija",
+      "ai.assist": "Galutinis AI asistentas – moderni programavimo priemonė",
+      "ai.assist strategy": "Vidinė ai.assist kūrimo strategija",
+      "ai.assist.pr": "Visi ai.assist kuriami projektai",
+      "AI": "OpenAI API, naudojama ai.assist kūrimui"
+    },
+    "hierarchy": {
+      "1": {
+        "name": "Co",
+        "description": "ChatGPT projektas CoinArbitr, kuris valdo visą strategiją",
+        "sub": {
+          "2": {
+            "name": "CoinArbitr strategy",
+            "description": "Pagrindinė strategija, nustatanti ai.assist kūrimo principus",
+            "sub": {
+              "3": {
+                "name": "ai.assist",
+                "description": "Galutinis AI asistentas – moderni programavimo priemonė",
+                "sub": {
+                  "4": {
+                    "name": "ai.assist strategy",
+                    "description": "Vidinė ai.assist kūrimo strategija, kuri apibrėžia struktūrą ir vystymo procesą",
+                    "sub": {
+                      "5": {
+                        "name": "ai.assist.pr",
+                        "description": "Konkretūs ai.assist projektai, vykdomi pagal strategiją",
+                        "sub": {
+                          "6": {
+                            "name": "AI",
+                            "description": "OpenAI API, naudojama ai.assist kūrimui ir optimizacijai"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "description": "Šis dokumentas apima visus naudojamus terminus ir jų tarpusavio ryšius CoinArbitr strategy rėmuose. Aiškiai apibrėžtos rolės padeda užtikrinti strategijos tęstinumą ir sklandų ai.assist vystymą."
+  }
+  

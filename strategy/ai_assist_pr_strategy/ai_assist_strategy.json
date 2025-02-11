@@ -1,0 +1,10 @@
+{
+    "name": "ai.assist strategy",
+    "description": "Strategija, skirta ai.assist projekto vystymui.",
+    "version": "v1.1",
+    "objectives": [
+        "Plėsti ai.assist funkcionalumą",
+        "Automatizuoti API naudojimo optimizaciją",
+        "Integruoti chato sąsają į ai.assist sistemą"
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "name": "CoinArbitr strategy",
+    "description": "Nuolat atnaujinama strategija, valdanti ai.assist kūrimą ir vystymą.",
+    "version": "v1.1",
+    "last_update": "2025-02-11",
+    "goals": [
+        "Užtikrinti ai.assist strategijos tęstinumą",
+        "Automatizuoti progreso ir strategijos fiksavimą",
+        "Sukurti optimizuotą OpenAI API naudojimo sekimą",
+        "Pritaikyti Co sesijų valdymo sistemą",
+        "Fiksuoti CoinArbitr strategijos progresą",
+        "Palaikyti ai.assist projektų strategijų sinchronizaciją",
+        "Automatizuoti GitHub commit'ų sekimą ir fiksavimą"
+    ],
+    "core_components": {
+        "session_management": {
+            "description": "Sekti ir perkelti sesijų kontekstą tarp visų Co sesijų",
+            "actions": [
+                "Fiksuoti strategijos progresą kiekvienoje sesijoje",
+                "Atnaujinti strategijos failus prieš kiekvieną commit'ą",
+                "Sinchronizuoti CoinArbitr strategiją su ai.assist projektais"
+            ]
+        },
+        "openai_optimization": {
+            "description": "Optimizuoti OpenAI API naudojimą strategijoje",
+            "actions": [
+                "Sukurti cache sistemą OpenAI užklausoms",
+                "Mažinti nereikalingus pakartotinius užklausų siuntimus",
+                "Naudoti lokalią AI analizę mažiems veiksmams"
+            ]
+        },
+        "testing_framework": {
+            "description": "Automatizuotas testavimas CoinArbitr strategijai",
+            "actions": [
+                "Patikrinti, ar visi strategijos failai yra užpildyti ir atnaujinti",
+                "Automatizuoti testų vykdymą prieš commit'ą",
+                "Generuoti savaitinius progreso raportus"
+            ]
+        }
+    },
+    "completed_tasks": [
+        "Chato sąsajos sukūrimas",
+        "CoinArbitr strategijos fiksavimo sistema",
+        "API naudojimo optimizacija",
+        "Savaitinių progreso raportų generavimas",
+        "Strategijos failų automatinis užpildymas",
+        "Automatinė sesijų konteksto sinchronizacija",
+        "CoinArbitr strategijos integracija su ai.assist projektais"
+    ],
+    "next_steps": [
+        "Planuoti ai.assist v1.2 vystymą",
+        "Pridėti daugiau testavimo automatizacijos",
+        "Optimizuoti CoinArbitr strategijos sekimą",
+        "Praplėsti strategijos informacijos saugojimą",
+        "Įdiegti sisteminę GitHub commit'ų analizę"
+    ]
+}

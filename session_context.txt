@@ -3,22 +3,53 @@ On branch v1.2-development
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
+	modified:   session_context.txt
 	modified:   tests/test_git_status.py
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	session_context.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
 === GIT LOG ===
+91d6746 Atnaujinti openai_client ir test_code_analyzer failai
 f4db4ca Ištaisyti sintaksės ir kintamųjų klaidos test_git_status.py
 f39d613 Testai sėkmingai praeiti – optimizuotas test_git_status_clean
 5fedaae 🔄 Pataisyta chat_ui.py klaida – užtikrintas modulio matomumas
 0bf3182 🔄 Pataisyta chat_ui.py klaida – užtikrintas modulio matomumas
-bfc4660 🔄 Tvarkinga būsena – fiksuoti v1.1 pakeitimai
 === UNITTEST REZULTATAI ===
 Hello World
 0
 1
 2
+🔍 Aptiktos problemos: []
+✨ Optimizacijos pasiūlymai: ['🔹 Naudok `enumerate()` vietoje `range(len(...))`, kad kodas būtų aiškesnis.']
+✅ Visi kodo analizės testai sėkmingai praėjo!
+💾 Atsakymas paimtas iš cache!
+➡️ ENTER process_command: `/ask`
+🔹 Testavimo režimas: True
+⏳ AI analizuoja /ask...
+📌 Komandų žemėlapis: {'/ask': 'Pateik glaustą atsakymą (1-2 sakiniai):'}
+🔍 Rasta komanda: Pateik glaustą atsakymą (1-2 sakiniai):
+🛠️ `ask_openai()` turėtų būti kviečiamas dabar!
+🛠️ `ask_openai()` buvo iškviestas!
+📄 Test response
+
+⬅️ EXIT process_command
+➡️ ENTER process_command: `/style`
+🔹 Testavimo režimas: True
+⏳ AI analizuoja /style...
+📌 Komandų žemėlapis: {'/style': 'Suformatuok šį Python kodą pagal PEP 8 standartą. Grąžink tik suformatuotą kodą:'}
+🔍 Rasta komanda: Suformatuok šį Python kodą pagal PEP 8 standartą. Grąžink tik suformatuotą kodą:
+🛠️ `ask_openai()` turėtų būti kviečiamas dabar!
+🛠️ `ask_openai()` buvo iškviestas!
+📄 Styled code
+
+⬅️ EXIT process_command
+➡️ ENTER process_command: `/test`
+🔹 Testavimo režimas: True
+⏳ AI analizuoja /test...
+📌 Komandų žemėlapis: {'/test': 'Sugeneruok `unittest` testus šiai Python funkcijai. Grąžink tik testų kodą:'}
+🔍 Rasta komanda: Sugeneruok `unittest` testus šiai Python funkcijai. Grąžink tik testų kodą:
+🛠️ `ask_openai()` turėtų būti kviečiamas dabar!
+🛠️ `ask_openai()` buvo iškviestas!
+📄 Generated tests
+
+⬅️ EXIT process_command
 === NEBAIGTI DARBAI ===

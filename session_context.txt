@@ -1,245 +1,43 @@
 === COINARBITR SESIJOS SANTRAUKA ===
 Data: 02/12/2025 21:33:17
 
+=== PROJEKTO STRATEGIJA ===
+CoinArbitr vystomas kaip AI pagrįsta automatizuota prekybos strategijų testavimo ir optimizavimo platforma. Pagrindiniai tikslai:
+✅ Automatizuoti OpenAI API naudojimą prekybos strategijų analizėje.
+✅ Optimizuoti API užklausų valdymą, siekiant sumažinti išlaidas ir padidinti efektyvumą.
+✅ Integruoti AI analitikos įrankius duomenų analizei ir prognozėms.
+
+=== PROJEKTO GALUTINIS TIKSLAS ===
+CoinArbitr siekia sukurti AI asistuojamą platformą, kuri padeda analizuoti, testuoti ir optimizuoti prekybos strategijas, sumažinant riziką ir didinant pelningumą.
+
+=== SEKANTIS ŽINGSNIS ===
+1️⃣ Užbaigti API optimizavimo modulius.
+2️⃣ Įdiegti papildomus automatizuotus testus naujiems funkcionalumams.
+3️⃣ Paruošti dokumentaciją galutiniam naudotojui.
+
 === ATLIKTI DARBAI ===
-39b11fd I┼ísaugotas session_context.txt prie┼í sesijos perk─ùlim─à
-b129719 Sukurtas backlog.txt failas, kad i┼ívengti test┼│ klaid┼│
-64edee4 I┼ísaugotas session_context.txt prie┼í sesijos perk─ùlim─à
-91d6746 Atnaujinti openai_client ir test_code_analyzer failai
-f4db4ca I┼ítaisyti sintaks─ùs ir kintam┼│j┼│ klaidos test_git_status.py
-f39d613 Testai s─ùkmingai praeiti ΓÇô optimizuotas test_git_status_clean
-5fedaae ≡ƒöä Pataisyta chat_ui.py klaida ΓÇô u┼╛tikrintas modulio matomumas
-0bf3182 ≡ƒöä Pataisyta chat_ui.py klaida ΓÇô u┼╛tikrintas modulio matomumas
-bfc4660 ≡ƒöä Tvarkinga b┼½sena ΓÇô fiksuoti v1.1 pakeitimai
-33725f1 Pakeista ChatGptApi ─» ai.assist visuose failuose
+39b11fd Išsaugotas session_context.txt prieš sesijos perkėlimą.
+b129719 Sukurtas backlog.txt failas, kad išvengti testų klaidų.
+64edee4 Išsaugotas session_context.txt prieš sesijos perkėlimą.
+91d6746 Atnaujinti openai_client ir test_code_analyzer failai.
+f4db4ca Ištaisyti sintaksės ir kintamųjų klaidos test_git_status.py.
+f39d613 Testai sėkmingai praeiti – optimizuotas test_git_status_clean.
+5fedaae ✅ Pataisyta chat_ui.py klaida – užtikrintas modulio matomumas.
+0bf3182 ✅ Pataisyta chat_ui.py klaida – užtikrintas modulio matomumas.
+bfc4660 ✅ Tvarkinga būsena – fiksuoti v1.1 pakeitimai.
+33725f1 Pakeista ChatGptApi → ai.assist visuose failuose.
 
 === PROJEKTO STRUKTŪRA ===
-
-    Directory: C:\Users\37065\Projects\ai.assist
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
-d---- 2025-02-12    21:32        __pycache__
-d---- 2025-02-08    10:38        .github
-d---- 2025-02-06    01:48        .vscode
-d---- 2025-02-12    21:32        cache
-d---- 2025-02-08    05:14        logs
-d---- 2025-02-12    08:36        modules
-d---- 2025-02-11    03:18        strategy
-d---- 2025-02-12    20:04        tests
--a--- 2025-02-11    02:20    185 .env
--a--- 2025-02-11    19:59   1127 .gitignore
--a--- 2025-02-12    08:11   9484 ai_assist_tree.txt
--a--- 2025-02-12    19:14     30 backlog.txt
--a--- 2025-02-11    02:20    874 CHANGELOG.md
--a--- 2025-02-11    17:58   9144 chat_history.json
--a--- 2025-02-11    02:20   4720 chatbot.py
--a--- 2025-02-11    02:20    467 check_gpt_model.py
--a--- 2025-02-11    18:19     79 config.json
--a--- 2025-02-12    21:20  27470 file_hashes.txt
--a--- 2025-02-11    12:24   1933 fill_strategy.py
--a--- 2025-02-12    21:29   2239 generate_session_report.ps1
--a--- 2025-02-11    02:20   2421 project_plan.md
--a--- 2025-02-12    21:33      0 project_structure.txt
--a--- 2025-02-11    02:20    842 README.md
--a--- 2025-02-11    02:20   2439 scan_project_structure.py
--a--- 2025-02-12    21:33    902 session_context.txt
--a--- 2025-02-12    21:32     60 test_script.py
-
-    Directory: C:\Users\37065\Projects\ai.assist\.github
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
-d---- 2025-02-08    11:03        workflows
-
-    Directory: C:\Users\37065\Projects\ai.assist\.github\workflows
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
--a--- 2025-02-11    02:16    521 test-ci.yml
--a--- 2025-02-11    02:16    879 test.yml
-
-    Directory: C:\Users\37065\Projects\ai.assist\.vscode
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
--a--- 2025-02-11    02:16     38 settings.json
-
-    Directory: C:\Users\37065\Projects\ai.assist\cache
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
--a--- 2025-02-12    21:32  45056 openai_cache.db
-
-    Directory: C:\Users\37065\Projects\ai.assist\logs
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
--a--- 2025-02-08    05:14      0 openai_client.log
-
-    Directory: C:\Users\37065\Projects\ai.assist\modules
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
-d---- 2025-02-12    21:32        __pycache__
--a--- 2025-02-10    10:52      0 __init__.py
--a--- 2025-02-11    03:38    629 api_usage_report.json
--a--- 2025-02-11    03:38   2273 api_usage_tracker.py
--a--- 2025-02-11    03:38     84 api_usage.log
--a--- 2025-02-11    02:20   3540 assistant_ui.py
--a--- 2025-02-11    18:33   3398 chat_ui.py
--a--- 2025-02-11    02:20   1666 code_analyzer.py
--a--- 2025-02-11    18:18    907 config.py
--a--- 2025-02-11    02:20   1541 doc_generator.py
--a--- 2025-02-11    02:20   1613 file_manager.py
--a--- 2025-02-12    19:03   3584 openai_client.py
--a--- 2025-02-11    11:13   1689 task_manager.py
--a--- 2025-02-12    08:36   1037 ui_config.py
-
-    Directory: C:\Users\37065\Projects\ai.assist\modules\__pycache__
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
--a--- 2025-02-12    21:32    116 __init__.cpython-313.pyc
--a--- 2025-02-12    21:32   4094 api_usage_tracker.cpython-313.pyc
--a--- 2025-02-12    21:32   4801 assistant_ui.cpython-313.pyc
--a--- 2025-02-12    21:32   5257 chat_ui.cpython-313.pyc
--a--- 2025-02-12    21:32   2547 code_analyzer.cpython-313.pyc
--a--- 2025-02-12    21:32   1535 config.cpython-313.pyc
--a--- 2025-02-12    21:32   2699 doc_generator.cpython-313.pyc
--a--- 2025-02-12    21:32   2886 file_manager.cpython-313.pyc
--a--- 2025-02-12    21:32   4880 openai_client.cpython-313.pyc
--a--- 2025-02-12    21:32   2483 task_manager.cpython-313.pyc
--a--- 2025-02-12    21:32   1902 ui_config.cpython-313.pyc
-
-    Directory: C:\Users\37065\Projects\ai.assist\strategy
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
-d---- 2025-02-11    03:11        __pycache__
-d---- 2025-02-11    03:18        ai_assist_pr_strategy
-d---- 2025-02-12    18:59        Co_strategy
--a--- 2025-02-11    03:11      0 __init__.py
-
-    Directory: C:\Users\37065\Projects\ai.assist\strategy\ai_assist_pr_strategy
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
-d---- 2025-02-11    03:18        __pycache__
--a--- 2025-02-11    03:11      0 __init__.py
--a--- 2025-02-11    03:05      0 ai_assist_strategy_info.json
--a--- 2025-02-11    12:25    320 ai_assist_strategy.json
--a--- 2025-02-11    12:22      0 progress_tracking.json
--a--- 2025-02-11    03:05      0 strategy_tracker.py
-
-    Directory: C:\Users\37065\Projects\ai.assist\strategy\ai_assist_pr_strategy\__pycache__
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
--a--- 2025-02-11    03:18    173 __init__.cpython-313.pyc
--a--- 2025-02-11    03:18    181 strategy_tracker.cpython-313.pyc
-
-    Directory: C:\Users\37065\Projects\ai.assist\strategy\Co_strategy
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
-d---- 2025-02-12    18:59        __pycache__
--a--- 2025-02-11    03:11      0 __init__.py
--a--- 2025-02-11    12:36    561 co_strategy_info.json
--a--- 2025-02-11    12:35   2531 co_strategy.json
--a--- 2025-02-11    12:36    336 progress_tracking.json
--a--- 2025-02-11    03:05      0 strategy_tracker.py
-
-    Directory: C:\Users\37065\Projects\ai.assist\strategy\Co_strategy\__pycache__
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
--a--- 2025-02-12    18:59    163 __init__.cpython-313.pyc
-
-    Directory: C:\Users\37065\Projects\ai.assist\strategy\__pycache__
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
--a--- 2025-02-11    03:11    151 __init__.cpython-313.pyc
-
-    Directory: C:\Users\37065\Projects\ai.assist\tests
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
-d---- 2025-02-12    19:07        __pycache__
-d---- 2025-02-12    21:32        logs
--a--- 2025-02-08    07:43      0 __init__.py
--a--- 2025-02-11    19:09    802 test_api.py
--a--- 2025-02-11    02:20   1720 test_assistant_ui.py
--a--- 2025-02-12    19:05    933 test_code_analyzer.py
--a--- 2025-02-11    02:20   1143 test_file_manager.py
--a--- 2025-02-12    18:58   3018 test_git_status.py
--a--- 2025-02-11    02:20    347 test_ui.py
-
-    Directory: C:\Users\37065\Projects\ai.assist\tests\logs
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
--a--- 2025-02-12    21:32   2036 test_results_latest.txt
-
-    Directory: C:\Users\37065\Projects\ai.assist\tests\__pycache__
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
--a--- 2025-02-11    20:14    148 __init__.cpython-313.pyc
--a--- 2025-02-11    19:15   1650 test_api.cpython-313.pyc
--a--- 2025-02-11    12:11   2445 test_assistant_ui.cpython-313.pyc
--a--- 2025-02-12    19:07   1537 test_code_analyzer.cpython-313.pyc
--a--- 2025-02-11    12:11   3037 test_file_manager.cpython-313.pyc
--a--- 2025-02-12    18:59   4633 test_git_status.cpython-313.pyc
--a--- 2025-02-11    12:11    699 test_ui.cpython-313.pyc
-
-    Directory: C:\Users\37065\Projects\ai.assist\__pycache__
-
-Mode        LastWriteTime Length Name
-----        ------------- ------ ----
--a--- 2025-02-12    21:32    303 test_script.cpython-313.pyc
-
+(Čia pateikiama `Get-ChildItem -Recurse` sugeneruota failų struktūra)
 
 === UNITTEST TESTAVIMO ISTORIJA ===
 Hello World
 0
 1
 2
-≡ƒöì Aptiktos problemos: []
-Γ£¿ Optimizacijos pasi┼½lymai: ['≡ƒö╣ Naudok `enumerate()` vietoje `range(len(...))`, kad kodas b┼½t┼│ ai┼íkesnis.']
-Γ£à Visi kodo analiz─ùs testai s─ùkmingai pra─ùjo!
-≡ƒÆ╛ Atsakymas paimtas i┼í cache!
-Γ₧í∩╕Å ENTER process_command: `/ask`
-≡ƒö╣ Testavimo re┼╛imas: True
-ΓÅ│ AI analizuoja /ask...
-≡ƒôî Komand┼│ ┼╛em─ùlapis: {'/ask': 'Pateik glaust─à atsakym─à (1-2 sakiniai):'}
-≡ƒöì Rasta komanda: Pateik glaust─à atsakym─à (1-2 sakiniai):
-≡ƒ¢á∩╕Å `ask_openai()` tur─ùt┼│ b┼½ti kvie─ìiamas dabar!
-≡ƒ¢á∩╕Å `ask_openai()` buvo i┼íkviestas!
-≡ƒôä Test response
-
-Γ¼à∩╕Å EXIT process_command
-Γ₧í∩╕Å ENTER process_command: `/style`
-≡ƒö╣ Testavimo re┼╛imas: True
-ΓÅ│ AI analizuoja /style...
-≡ƒôî Komand┼│ ┼╛em─ùlapis: {'/style': 'Suformatuok ┼í─» Python kod─à pagal PEP 8 standart─à. Gr─à┼╛ink tik suformatuot─à kod─à:'}
-≡ƒöì Rasta komanda: Suformatuok ┼í─» Python kod─à pagal PEP 8 standart─à. Gr─à┼╛ink tik suformatuot─à kod─à:
-≡ƒ¢á∩╕Å `ask_openai()` tur─ùt┼│ b┼½ti kvie─ìiamas dabar!
-≡ƒ¢á∩╕Å `ask_openai()` buvo i┼íkviestas!
-≡ƒôä Styled code
-
-Γ¼à∩╕Å EXIT process_command
-Γ₧í∩╕Å ENTER process_command: `/test`
-≡ƒö╣ Testavimo re┼╛imas: True
-ΓÅ│ AI analizuoja /test...
-≡ƒôî Komand┼│ ┼╛em─ùlapis: {'/test': 'Sugeneruok `unittest` testus ┼íiai Python funkcijai. Gr─à┼╛ink tik test┼│ kod─à:'}
-≡ƒöì Rasta komanda: Sugeneruok `unittest` testus ┼íiai Python funkcijai. Gr─à┼╛ink tik test┼│ kod─à:
-≡ƒ¢á∩╕Å `ask_openai()` tur─ùt┼│ b┼½ti kvie─ìiamas dabar!
-≡ƒ¢á∩╕Å `ask_openai()` buvo i┼íkviestas!
-≡ƒôä Generated tests
-
-Γ¼à∩╕Å EXIT process_command
+✅ Aptiktos problemos: []
+✨ Optimizacijos pasiūlymai: ['✅ Naudok `enumerate()` vietoje `range(len(...))`, kad kodas būtų aiškesnis.']
+✅ Visi kodo analizės testai sėkmingai praėjo!
 
 === NEATLIKTI DARBAI ===
 Nėra užduočių backlog'e.
@@ -262,9 +60,8 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 
 === GIT LOG (PASKUTINIAI 5 COMMIT'AI) ===
-39b11fd I┼ísaugotas session_context.txt prie┼í sesijos perk─ùlim─à
-b129719 Sukurtas backlog.txt failas, kad i┼ívengti test┼│ klaid┼│
-64edee4 I┼ísaugotas session_context.txt prie┼í sesijos perk─ùlim─à
-91d6746 Atnaujinti openai_client ir test_code_analyzer failai
-f4db4ca I┼ítaisyti sintaks─ùs ir kintam┼│j┼│ klaidos test_git_status.py
-
+39b11fd Išsaugotas session_context.txt prieš sesijos perkėlimą.
+b129719 Sukurtas backlog.txt failas, kad išvengti testų klaidų.
+64edee4 Išsaugotas session_context.txt prieš sesijos perkėlimą.
+91d6746 Atnaujinti openai_client ir test_code_analyzer failai.
+f4db4ca Ištaisyti sintaksės ir kintamųjų klaidos test_git_status.py.

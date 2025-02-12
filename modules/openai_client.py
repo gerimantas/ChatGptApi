@@ -1,95 +1,87 @@
 import openai
-import os
-import time
 import logging
-import shelve
+import aiosqlite
 import asyncio
-from dotenv import load_dotenv
-import sys
-sys.stdout.reconfigure(encoding='utf-8')
+from cachetools import LRUCache
+from tenacity import retry, stop_after_attempt, wait_exponential
+from logging.handlers import RotatingFileHandler
+from modules.config import load_config
+import os
 
 
-# ✅ Įkeliame API raktą iš .env failo
-load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# ✅ Įkeliame konfigūraciją
+config = load_config()
 
-# ✅ Sukuriamas OpenAI klientas
-client = openai.AsyncOpenAI(api_key=OPENAI_API_KEY)
-
-# ✅ Sukuriami aplankai, jei jų nėra
-LOG_DIR = "logs"
-CACHE_DIR = "cache"
-
-def ensure_cache_directory():
-    """Užtikrina, kad `cache/` katalogas egzistuoja prieš naudojant cache failą."""
-    if not os.path.exists(CACHE_DIR):
-        os.makedirs(CACHE_DIR)
-        print("🛠️ Sukurtas `cache/` katalogas.")
-
-ensure_cache_directory()
+# ✅ Sukuriame OpenAI klientą
+client = openai.AsyncOpenAI(api_key=config["openai_api_key"])
 
 # ✅ Nustatoma logų sistema
-LOG_FILE = os.path.join(LOG_DIR, "openai_client.log")
-logging.basicConfig(filename=LOG_FILE, level=logging.ERROR,
+if not os.path.exists(config["log_dir"]):
+    os.makedirs(config["log_dir"])
+
+LOG_FILE = f"{config['log_dir']}/openai_client_errors.log"
+handler = RotatingFileHandler(LOG_FILE, maxBytes=1_000_000, backupCount=5)
+logging.basicConfig(level=logging.ERROR, handlers=[handler],
                     format="%(asctime)s - %(levelname)s - %(message)s")
 
-# ✅ Cache failas
-CACHE_FILE = os.path.join(CACHE_DIR, "openai_cache.db")
+# ✅ Sukuriame LRU cache
+cache = LRUCache(maxsize=config["lru_cache_size"])
 
-async def get_current_model():
-    """Užklausia OpenAI API ir grąžina tikrą GPT modelio versiją, kuri realiai naudojama."""
-    ensure_cache_directory()
+
+async def ensure_cache():
+    """Asinchroniškai sukuria cache DB jei jos nėra."""
+    os.makedirs(os.path.dirname(config["cache_file"]), exist_ok=True)
+    async with aiosqlite.connect(config["cache_file"]) as db:
+        await db.execute("""
+            CREATE TABLE IF NOT EXISTS cache (
+                prompt TEXT PRIMARY KEY,
+                response TEXT
+            )
+        """)
+        await db.commit()
+
+
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=1, max=10))
+async def ask_openai(prompt):
+    """Asinchroniškai siunčia užklausą OpenAI API su LRU cache, SQLite ir automatiniu backoff."""
     try:
+        # ✅ Pirmiausia tikriname LRU cache
+        if prompt in cache:
+            print("💾 Atsakymas paimtas iš LRU cache!")
+            return cache[prompt]
+
+        # ✅ Jei nėra LRU cache, tikriname SQLite cache
+        async with aiosqlite.connect(config["cache_file"]) as db:
+            async with db.execute("SELECT response FROM cache WHERE prompt=?", (prompt,)) as cursor:
+                row = await cursor.fetchone()
+                if row:
+                    print("💾 Atsakymas paimtas iš SQLite cache!")
+                    cache[prompt] = row[0]  # Įdedame į LRU cache
+                    return row[0]
+
+        # ✅ Jei atsakymo nėra cache, siunčiame užklausą OpenAI API
         response = await client.chat.completions.create(
-            model="gpt-4o",  # Naudojame paskutinį patvirtintą modelį, nes užklausa be `model` nesuveiks
-            messages=[{"role": "system", "content": "Grąžink tik modelio versijos pavadinimą."}]
+            model=config["model"],
+            messages=[{"role": "user", "content": prompt}]
         )
-        return response.model  # OpenAI API grąžina `model` lauką su tiksliu modelio pavadinimu
-    except Exception as e:
-        print(f"⚠️ Klaida gaunant realų modelio pavadinimą: {e}")
-        return "Nežinoma versija"
+        result = response.choices[0].message.content
 
-async def ask_openai(prompt, max_retries=5):
-    """Asinchroniškai siunčia užklausą OpenAI API su caching ir backoff retry mechanizmu."""
-    ensure_cache_directory()
-    retries = 0
-    wait_time = 1  # Pradinis laukimo laikas sekundėmis
+        # ✅ Išsaugome į LRU cache
+        cache[prompt] = result
 
-    try:
-        with shelve.open(CACHE_FILE) as cache:
-            if prompt in cache:
-                print("💾 Atsakymas paimtas iš cache!")
-                return cache[prompt]
+        # ✅ Išsaugome į SQLite cache
+        async with aiosqlite.connect(config["cache_file"]) as db:
+            await db.execute(
+                "INSERT OR REPLACE INTO cache (prompt, response) VALUES (?, ?)", (prompt, result)
+            )
+            await db.commit()
 
-            while retries < max_retries:
-                try:
-                    response = await client.chat.completions.create(
-                        model="gpt-4o",
-                        messages=[{"role": "user", "content": prompt}]
-                    )
-                    result = response.choices[0].message.content.encode("utf-8", errors="replace").decode("utf-8")
-                    cache[prompt] = result
-                    return result
+        return result
 
-                except openai.RateLimitError:
-                    print(f"⚠️ API pasiekė užklausų ribą. Laukiama {wait_time} sek. ir bandoma dar kartą...")
-                    await asyncio.sleep(wait_time)
-                    wait_time *= 2
-                    retries += 1
-                
-                except openai.APITimeoutError:
-                    print(f"⏳ API atsako per ilgai. Laukiama {wait_time} sek. ir bandoma dar kartą...")
-                    await asyncio.sleep(wait_time)
-                    wait_time *= 2
-                    retries += 1
-
-                except openai.OpenAIError as e:
-                    print(f"⚠️ OpenAI API klaida: {e}")
-                    return None
-
-            print("🚫 Nepavyko gauti atsakymo po kelių bandymų.")
-            return None
-
-    except Exception:
-        print("⚠️ Cache failas sugadintas. Jis bus ištrintas ir atkurtas.")
+    except openai.OpenAIError as e:
+        logging.error(f"OpenAI API klaida: {e}")
         return None
+
+
+# ✅ Paleidžiame `ensure_cache()` paleidžiant programą
+asyncio.run(ensure_cache())

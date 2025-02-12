@@ -1,5 +1,6 @@
 import json
 import os
+from dotenv import load_dotenv
 
 CONFIG_FILE = "config.json"
 
@@ -9,17 +10,28 @@ def load_config():
         default_config = {
             "model": "gpt-4o",
             "language": "auto",
-            "response_detail": 3
+            "response_detail": 3,
+            "cache_file": "cache/openai_cache.db",
+            "log_dir": "logs",
+            "openai_api_key": "",
+            "lru_cache_size": 100
         }
         with open(CONFIG_FILE, "w", encoding="utf-8") as f:
             json.dump(default_config, f, ensure_ascii=False, indent=4)
         return default_config
 
     with open(CONFIG_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
+        config = json.load(f)
+
+    # ✅ Įkeliamas OpenAI API raktas iš `.env`, jei jis nėra nurodytas `config.json`
+    load_dotenv()
+    if not config["openai_api_key"]:
+        config["openai_api_key"] = os.getenv("OPENAI_API_KEY", "")
+
+    return config
 
 def update_config(key, value):
-    """Atnaujina konkretų nustatymą ir išsaugo jį."""
+    """Atnaujina konkretų nustatymą ir išsaugo jį JSON faile."""
     config = load_config()
     config[key] = value
     with open(CONFIG_FILE, "w", encoding="utf-8") as f:

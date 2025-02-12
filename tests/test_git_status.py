@@ -9,7 +9,6 @@ class TestGitStatus(unittest.TestCase):
         result = subprocess.run(command, shell=True, capture_output=True, text=True, encoding="utf-8", errors="ignore")
         return result.stdout.strip() if result.stdout else "", result.stderr.strip() if result.stderr else ""
 
-    # 🔹 Copilot: Optimizuok šią funkciją, kad ji neblokuotų commit'ų, jei `tests/test_git_status.py` yra aktyviai redaguojamas.
     def test_git_status_clean(self):
         """Patikrina, ar nėra nepateiktų pakeitimų (išskyrus `cache/`)."""
         stdout, _ = self.run_git_command("git status --porcelain")
@@ -52,7 +51,6 @@ class TestGitStatus(unittest.TestCase):
         self.assertNotIn("[behind]", stdout, "❌ Vietinė Git šaka atsilieka nuo nuotolinės! Paleisk `git pull`.")
         self.assertNotIn("[ahead]", stdout, "❌ Vietinė Git šaka yra priekyje! Paleisk `git push`.")
 
-    # 🔹 Copilot: Optimizuok šią funkciją, kad ji neblokuotų commit'ų, jei `tests/test_git_status.py` yra aktyviai redaguojamas.
     def test_git_diff_clean(self):
         """Patikrina, ar nėra necommit'intų pakeitimų (`git diff --name-only`)."""
         stdout, _ = self.run_git_command("git diff --name-only")

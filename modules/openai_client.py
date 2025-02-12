@@ -5,6 +5,9 @@ import logging
 import shelve
 import asyncio
 from dotenv import load_dotenv
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+
 
 # ✅ Įkeliame API raktą iš .env failo
 load_dotenv()

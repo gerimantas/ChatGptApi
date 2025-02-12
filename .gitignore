@@ -60,3 +60,4 @@ pytest_cache/
 *.egg-info/
 
 # 🔹 Palikta visa kita Git saugojimui
+file_hashes.txt

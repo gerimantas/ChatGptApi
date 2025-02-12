@@ -1,17 +1,23 @@
 import sys
 import os
 
-# Pridedame projekto šaknies aplanką į Python kelių sąrašą
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# ✅ Pridedame `modules/` katalogą į `sys.path`, kad testai rastų modulius
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from modules.openai_client import send_message_to_gpt
+import unittest
+import asyncio
+from modules.openai_client import ask_openai
 
-# Testinė žinutė AI modeliui
-test_messages = [{"role": "user", "content": "Labas, kaip tau sekasi?"}]
+class TestOpenAIApi(unittest.TestCase):
+    """Testuoja OpenAI API užklausas."""
 
-# Vykdoma užklausa į OpenAI API
-ai_response = send_message_to_gpt(test_messages)
+    def test_api_response(self):
+        """Testuoja, ar OpenAI API grąžina atsakymą."""
+        test_message = "Kas yra Python?"
+        ai_response = asyncio.run(ask_openai(test_message))
 
-# Rezultato atvaizdavimas terminale
-print(f"🤖 AI atsakymas: {ai_response}")
+        self.assertIsInstance(ai_response, str, "❌ API turėtų grąžinti teksto eilutę.")
+        self.assertGreater(len(ai_response), 0, "❌ API atsakymas neturėtų būti tuščias.")
 
+if __name__ == "__main__":
+    unittest.main()

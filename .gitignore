@@ -1,17 +1,17 @@
-# Ignoruoti `__pycache__` katalogą ir `.pyc` failus
+# 🔹 Ignoruoti `__pycache__` katalogą ir `.pyc` failus
 **/__pycache__/
 **/*.pyc
 **/*.pyo
 **/*.pyd
 
-# Ignoruoti virtualias aplinkas ir su aplinka susijusius failus
+# 🔹 Ignoruoti virtualias aplinkas ir su aplinka susijusius failus
 venv/
 .env
 .venv/
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Ignoruoti cache, logų ir testavimo failus
+# 🔹 Ignoruoti cache, logų ir testavimo failus
 logs/
 cache/
 *.log
@@ -21,27 +21,34 @@ ai_logs.txt
 chat_logs.txt
 test_script.py
 
-# Ignoruoti pokalbių istoriją ir generuotus atsakymus
+# 🔹 Ignoruoti OpenAI cache failus
+cache/openai_cache.db
+
+# Ignoruoti cache katalogą
+cache/
+
+
+# 🔹 Ignoruoti pokalbių istoriją ir generuotus atsakymus
 chat_history.json
 chat_logs.txt
 response.mp3
 
-# Ignoruoti `modules/__pycache__` ir kitus `__pycache__` katalogus
+# 🔹 Ignoruoti `modules/__pycache__` ir kitus `__pycache__` katalogus
 modules/__pycache__/
 __pycache__/
 
-# Ignoruoti `VS Code` ir `JetBrains` IDE nustatymų failus
+# 🔹 Ignoruoti `VS Code` ir `JetBrains` IDE nustatymų failus
 .vscode/
 .idea/
 *.sublime-workspace
 *.sublime-project
 
-# Ignoruoti sistemos failus
+# 🔹 Ignoruoti sistemos failus
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Ignoruoti testų rezultatų failus
+# 🔹 Ignoruoti testų rezultatų failus
 .coverage
 *.cover
 nosetests.xml
@@ -49,7 +56,7 @@ coverage.xml
 *.lcov
 pytest_cache/
 
-# Ignoruoti `Git` darbo failus
-.git/
-.gitignore
+# 🔹 Ignoruoti Python priklausomybių katalogus
+*.egg-info/
 
+# 🔹 Palikta visa kita Git saugojimui

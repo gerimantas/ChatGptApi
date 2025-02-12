@@ -8,11 +8,11 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 === GIT LOG ===
+b129719 Sukurtas backlog.txt failas, kad išvengti testų klaidų
+64edee4 Išsaugotas session_context.txt prieš sesijos perkėlimą
 91d6746 Atnaujinti openai_client ir test_code_analyzer failai
 f4db4ca Ištaisyti sintaksės ir kintamųjų klaidos test_git_status.py
 f39d613 Testai sėkmingai praeiti – optimizuotas test_git_status_clean
-5fedaae 🔄 Pataisyta chat_ui.py klaida – užtikrintas modulio matomumas
-0bf3182 🔄 Pataisyta chat_ui.py klaida – užtikrintas modulio matomumas
 === UNITTEST REZULTATAI ===
 Hello World
 0
@@ -53,3 +53,4 @@ Hello World
 
 ⬅️ EXIT process_command
 === NEBAIGTI DARBAI ===
+Nėra užduočių backlog'e.

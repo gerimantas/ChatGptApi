@@ -1,6 +1,0 @@
-{
-    "CodeGPT.apiKey": "OpenAI",
-    "python.defaultInterpreterPath": "C:/Users/37065/Projects/ai.assist/venv/Scripts/python.exe",
-    "python.analysis.extraPaths": ["./modules"],
-    "python.pythonPath": "C:/Users/37065/Projects/ai.assist/venv/Scripts/python.exe"
-}

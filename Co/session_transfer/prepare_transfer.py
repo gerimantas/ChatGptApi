@@ -3,13 +3,13 @@ import os
 import subprocess
 import json
 
-SOURCE_DIR = "Co/"
-DEST_DIR = "next_session/"
-PROMPT_FILE = "next_session/chatgpt_prompt.txt"
+SOURCE_DIR = "Co/session_transfer/"
+DEST_DIR = "Co/session_transfer/"
+PROMPT_FILE = os.path.join(DEST_DIR, "chatgpt_prompt.txt")
+STRUCTURE_FILE = os.path.join(DEST_DIR, "project_structure.txt")
 
 def check_git_status():
     """Tikrina, ar visi pakeitimai yra `GitHub` repozitorijoje."""
-    subprocess.run(["git", "remote", "update"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     status_output = subprocess.getoutput("git status --porcelain")
     last_commit = subprocess.getoutput("git log -1 --oneline")
 
@@ -25,7 +25,7 @@ def check_git_status():
     return True
 
 def prepare_transfer():
-    """Kopijuoja CoinArbitr failus į kitą sesiją tik jei `GitHub` yra sinchronizuotas."""
+    """Užtikrina, kad visi CoinArbitr failai būtų `Co/session_transfer/` ir paruošia naują sesiją."""
     if not check_git_status():
         return
 
@@ -36,19 +36,18 @@ def prepare_transfer():
         full_file_name = os.path.join(SOURCE_DIR, file_name)
         if os.path.isfile(full_file_name):
             shutil.copy(full_file_name, DEST_DIR)
-            print(f"📂 Perkeltas failas: {file_name}")
 
     generate_chatgpt_prompt()
-    print("✅ CoinArbitr failai paruošti perkėlimui į kitą sesiją!")
+    generate_project_structure()
+    print("✅ CoinArbitr failai sėkmingai paruošti ir **lieka** `Co/session_transfer/`!")
 
 def generate_chatgpt_prompt():
-    """Sugeneruoja `ChatGPT` promptą naujai CoinArbitr sesijai."""
+    """Sugeneruoja `ChatGPT` promptą naujai CoinArbitr sesijai, išsaugant `Co/session_transfer/`."""
     context_data = {
-        "session_summary": "Šioje sesijoje buvo atlikta pilna projekto failų struktūros optimizacija, sukurti ir pertvarkyti `Co/` aplanko failai.",
+        "session_summary": "Šioje sesijoje buvo atlikta pilna projekto failų struktūros optimizacija, visi `Co/session_transfer/` failai perkelti ir išsaugoti vietoje.",
         "critical_tasks": [
-            "Perkelti `Co/` failus į naują sesiją.",
+            "Užtikrinti, kad `Co/session_transfer/` būtų sinchronizuotas su `GitHub`.",
             "Užtikrinti, kad `pytest` testai veikia be klaidų.",
-            "Sinchronizuoti `GitHub` su naujos sesijos pokyčiais.",
             "Pritaikyti papildomas funkcijas optimizuotoje struktūroje."
         ],
         "next_steps": [
@@ -58,10 +57,19 @@ def generate_chatgpt_prompt():
         ]
     }
 
-    with open(PROMPT_FILE, "w", encoding="utf-8") as f:
-        f.write(json.dumps(context_data, indent=4, ensure_ascii=False))
+    with open(PROMPT_FILE, "w") as f:
+        json.dump(context_data, f, indent=4)
 
-    print(f"✅ `ChatGPT` promptas naujai sesijai sugeneruotas: {PROMPT_FILE}")
+    print(f"✅ `ChatGPT` promptas naujai sesijai sugeneruotas į: {PROMPT_FILE}")
+
+def generate_project_structure():
+    """Sugeneruoja naują projekto failų struktūrą ir išsaugo `Co/session_transfer/`."""
+    structure_data = subprocess.getoutput("tree /F /A")
+    
+    with open(STRUCTURE_FILE, "w", encoding="utf-8") as f:
+        f.write(structure_data)
+
+    print(f"✅ Atnaujinta projekto failų struktūra: {STRUCTURE_FILE}")
 
 if __name__ == "__main__":
     prepare_transfer()

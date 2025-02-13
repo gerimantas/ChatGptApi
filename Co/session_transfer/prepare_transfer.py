@@ -4,7 +4,7 @@ import subprocess
 import json
 
 SOURCE_DIR = "Co/"
-DEST_DIR = "next_session/"
+DEST_DIR = "Co/session_transfer/"
 PROMPT_FILE = os.path.join(DEST_DIR, "chatgpt_prompt.txt")
 STRUCTURE_FILE = os.path.join(DEST_DIR, "project_structure.txt")
 

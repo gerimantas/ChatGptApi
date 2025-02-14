@@ -8,13 +8,13 @@ from PyQt5.QtCore import QSettings, QSize, QPoint
 # ✅ Užtikriname, kad `modules/` katalogas būtų matomas kaip paketas
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from ai.assist.core.openai_client import ask_openai, get_current_model
-from ai.assist.core.ui_config import apply_dark_theme, style_input_field, style_send_button
+from bot_aps.core.openai_client import ask_openai, get_current_model
+from bot_aps.core.ui_config import apply_dark_theme, style_input_field, style_send_button
 
 class ChatUI(QWidget):
     def __init__(self):
         super().__init__()
-        self.settings = QSettings("ai.assist", "ChatUI")
+        self.settings = QSettings("bot_aps", "ChatUI")
 
         # ✅ Gauti realią GPT modelio versiją iš OpenAI API
         self.current_model = asyncio.run(get_current_model())

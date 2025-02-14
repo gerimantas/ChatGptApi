@@ -1,7 +1,7 @@
 # Failas: modules/doc_generator.py
 import os
 import ast
-from ai.assist.core.openai_client import ask_openai
+from bot_aps.core.openai_client import ask_openai
 
 def generate_docstring(source_code):
     """Siunčia kodą į OpenAI API ir sugeneruoja docstring'ą."""

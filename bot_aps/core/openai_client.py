@@ -5,7 +5,7 @@ import asyncio
 from cachetools import LRUCache
 from tenacity import retry, stop_after_attempt, wait_exponential
 from logging.handlers import RotatingFileHandler
-from ai.assist.core.config import load_config
+from bot_aps.core.config import load_config
 import os
 
 

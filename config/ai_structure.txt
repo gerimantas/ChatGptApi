@@ -1,0 +1,3821 @@
+|-- .git
+|   |-- COMMIT_EDITMSG
+|   |-- FETCH_HEAD
+|   |-- HEAD
+|   |-- ORIG_HEAD
+|   |-- config
+|   |-- description
+|   |-- hooks
+|   |   |-- applypatch-msg.sample
+|   |   |-- commit-msg.sample
+|   |   |-- fsmonitor-watchman.sample
+|   |   |-- post-update.sample
+|   |   |-- pre-applypatch.sample
+|   |   |-- pre-commit
+|   |   |-- pre-commit.sample
+|   |   |-- pre-commit.txt
+|   |   |-- pre-merge-commit.sample
+|   |   |-- pre-push.sample
+|   |   |-- pre-rebase.sample
+|   |   |-- pre-receive.sample
+|   |   |-- prepare-commit-msg.sample
+|   |   |-- push-to-checkout.sample
+|   |   |__ update.sample
+|   |-- index
+|   |-- info
+|   |   |__ exclude
+|   |-- logs
+|   |   |-- HEAD
+|   |   |__ refs
+|   |       |-- heads
+|   |       |   |-- assistant-ui
+|   |       |   |-- code-analyzer
+|   |       |   |-- file-manager
+|   |       |   |-- main
+|   |       |   |-- openai-integration
+|   |       |   |-- v1.1-development
+|   |       |   |__ v1.2-development
+|   |       |__ remotes
+|   |           |__ origin
+|   |               |-- main
+|   |               |-- v1.1-development
+|   |               |__ v1.2-development
+|   |-- objects
+|   |   |-- 00
+|   |   |   |__ 108b8f3efc02cae5c6f5ae54e516c9e4f65657
+|   |   |-- 01
+|   |   |   |__ 88ca7394ba4bdef1af2cef6c848ba3bb9ea354
+|   |   |-- 02
+|   |   |   |-- 2fef97b77d635bbc5de67b8a63dc4344c0918b
+|   |   |   |__ 41e3fedb08bb3c2457d6e551d001f9861ecb36
+|   |   |-- 03
+|   |   |   |-- 287ccd36b0ed386e51187645d21732d5b92609
+|   |   |   |__ 4b0478f1be29a70f6827ed9317a6d65a1b5c88
+|   |   |-- 05
+|   |   |   |-- 9e691646036fb997498b24e10b409477db52dd
+|   |   |   |-- 9f9ea3d99587754ed8191f54c8efc9351d4d11
+|   |   |   |-- c126bfead60d1fa1cc98e6274f4098cfddd59e
+|   |   |   |-- e3375022db5ffb08b0fd6389006abba5a31dc4
+|   |   |   |__ f18c72e6886265dad84ab8b92d9f4e60c81d4e
+|   |   |-- 07
+|   |   |   |-- 676043ec200c6f2ce63ad774d802d156be87e6
+|   |   |   |__ fd3d0d09b2241cc3965997e356b403a98d5914
+|   |   |-- 08
+|   |   |   |-- 481e993d81e92be32be2475b77eb8c7b063e12
+|   |   |   |__ 711a8c016952d4624fb05b6240c5ad03811d0d
+|   |   |-- 09
+|   |   |   |-- 17c94b0f089eac0eb692ce6da5ac3ff3b3bded
+|   |   |   |-- 966980a93ef796e4a7493a87d7cdd583ad4671
+|   |   |   |__ fde54870440fb393f1b2dfd1b6e8d41327b09c
+|   |   |-- 0a
+|   |   |   |__ e21d94b2d973395e06990e7b4ee82eee3cb45d
+|   |   |-- 0b
+|   |   |   |-- 1961a58a1520cd74c8144cd39defdaf12b32cd
+|   |   |   |-- c73825067cbc7f881e88e1414a6dde2ab6464d
+|   |   |   |__ f318230d9eb9577ded386b83c693bbed08282c
+|   |   |-- 0c
+|   |   |   |-- af68f0f8f66645c816f306bc799efce5a9e238
+|   |   |   |__ debeb5a4c384d01806380e584dd7818a5c46b3
+|   |   |-- 0d
+|   |   |   |-- 62e7124d68c09a97fd90bd8a943e52fccd0e29
+|   |   |   |__ f6c9006927fc5d6f26dc42536f102410019db8
+|   |   |-- 0e
+|   |   |   |__ d41c3fafef03adbcceb4bfbc47cb5735b2bf99
+|   |   |-- 0f
+|   |   |   |__ e006d0a2a5abb26031bf5074ad29d89e1e318b
+|   |   |-- 10
+|   |   |   |__ bb648c3301e738bfbdcd11bbd2ef47d3ba647e
+|   |   |-- 11
+|   |   |   |__ 1cf763556571b7fdddbe9ae9db995345b7ca6f
+|   |   |-- 12
+|   |   |   |-- ac011781a67ccc0b2d943f7d7b2ba9820896b2
+|   |   |   |__ b9e3b41773ab4ae5fe68122737a62b651070d9
+|   |   |-- 13
+|   |   |   |-- 49f7080811dc3a44732ece0ecd4bb3bb263a29
+|   |   |   |__ df7d0d7c4ba5cc469dd57cf4b4c0eeac677dfc
+|   |   |-- 14
+|   |   |   |__ a41674477b4eab93b3e41cc04a0c04decab459
+|   |   |-- 16
+|   |   |   |__ 33a792e1338442feb4bf3c709f5e9166535f30
+|   |   |-- 17
+|   |   |   |-- 321465d1b6e44251b15b30b5cc141b4b5f7e3a
+|   |   |   |-- 4dc8cd39efc0f25c5fa3c40601f5f82a849e47
+|   |   |   |-- 6ceff4fa6a183183e73c66e123d27370b2caf6
+|   |   |   |-- 879696001a4caa2a8d3cad3e867d219c23ef94
+|   |   |   |-- bd3537e97f0bade8ef858c23e57d167c10b2be
+|   |   |   |__ bec15b8551026d9a7ef1751dabbcd9c4f67a18
+|   |   |-- 18
+|   |   |   |__ 94a6fb72d00d5b0689800688dcb308cd88d75f
+|   |   |-- 19
+|   |   |   |__ fee189c816ddf9052d408273082755f61ce6c3
+|   |   |-- 1a
+|   |   |   |__ 83531a5db2c13fda0009a436552cde93800446
+|   |   |-- 1d
+|   |   |   |__ 7892f2043b19bac2159d6e201dea46940df1b8
+|   |   |-- 1e
+|   |   |   |__ c3c08f287a54b0265f0b5b586238c781aa5cb7
+|   |   |-- 1f
+|   |   |   |-- a1b9c7789e9e2487a38f64f9d31b7b412e4199
+|   |   |   |__ f841cd88f17926efeec99eff2bae7c3073af41
+|   |   |-- 20
+|   |   |   |-- 1a31b3a115d6105690fbf2523d94eaa2c46da4
+|   |   |   |-- 461625f469c1debf2c2384b782168cb600536e
+|   |   |   |-- 5217bf43759bfbb93110d796a0eb127a313db8
+|   |   |   |__ 9416e33e11836c82b5c0dc2ccfc80765a81c92
+|   |   |-- 21
+|   |   |   |-- a2a6f65338a4370155185b5aec6265a54ae774
+|   |   |   |-- a866a3b35222e09312f85a700f70a9d0af3ecf
+|   |   |   |__ e740d48100fdf0c393dce5a3f238552d920fb8
+|   |   |-- 22
+|   |   |   |-- 4a99b8fff915e193f94dded8ce9ff1852c4b35
+|   |   |   |-- 5dbf178a44896b3edb0c3e0cf52e3962b1ea0e
+|   |   |   |-- b9aab9b813737b160957e039ffb4d8a25768b5
+|   |   |   |-- cee0604e5f4254827926140869e583051522c0
+|   |   |   |__ e271ea6a2429a624fd2359cf882c7f32a48cfc
+|   |   |-- 23
+|   |   |   |__ c6bec50d6ef90cc387c3f0935e363745082d79
+|   |   |-- 24
+|   |   |   |-- 0145124d2db29b436b26a9f22833c27b09d9bb
+|   |   |   |__ 88e645fde7761c7325afd5eb6e81d9b30c80ec
+|   |   |-- 25
+|   |   |   |-- 2dd39f9f5225e9b267ba34a80128d1e81f5197
+|   |   |   |__ f9718589a9649a23ec7be0cae9134bbe6afd40
+|   |   |-- 26
+|   |   |   |__ b1ef89dce0aa8469ccb34bb4c5e15a39562595
+|   |   |-- 27
+|   |   |   |__ ce0ef8364a0d6ea68584ae0b95389a423eedb9
+|   |   |-- 28
+|   |   |   |__ b8e572352d3a4791bda1834834825775db0e3e
+|   |   |-- 29
+|   |   |   |-- 0c807d7780abbdedfd2c43e1f73e004f2a224e
+|   |   |   |-- 3b150f01ba5cad1f5e4ecd1c4bcbf00e9199d5
+|   |   |   |-- 5b14d1bd2b827c7ea0436ffa01d75c11e6456a
+|   |   |   |__ b2a72e694c18da8e20a9498619322ebb976bf8
+|   |   |-- 2a
+|   |   |   |__ 4588f2e1a1a00236a91cc8fc1ec348d6a36586
+|   |   |-- 2c
+|   |   |   |-- 26c9e3baebf51290ccd31ff2586db8b41b1761
+|   |   |   |__ ea086ec9053b678e171486d7d5f094ea25c24d
+|   |   |-- 2e
+|   |   |   |__ b3148f25259e8933ccbd1e9158ba4a1987aa3b
+|   |   |-- 2f
+|   |   |   |-- a4668e50106a12f9c6e4f47543ba3fded278c1
+|   |   |   |__ da1f95dcd584c761a8ecc3d64a762e2b68b9c1
+|   |   |-- 31
+|   |   |   |__ f1fb38528b416dab680554d67aafbcb8813b76
+|   |   |-- 32
+|   |   |   |__ 43c541a7245badb0315021e78e0bf5e1457a1a
+|   |   |-- 33
+|   |   |   |__ 725f1c2bc22b85158d0219e69794d4554a89ed
+|   |   |-- 35
+|   |   |   |__ 2383314d53e2bb2bdf6ec3c974b5c98dd1e54c
+|   |   |-- 36
+|   |   |   |-- 8bed9ec8dfc2a9362745fde8ba446b1ffa430c
+|   |   |   |__ d925877a97e090c06c6d725fe0a54a1b507fbc
+|   |   |-- 37
+|   |   |   |-- 70866a6d407059ec1335914ac3f43d8cfc416e
+|   |   |   |__ c4d93667b59cc90f58589025c2ac9dc76125c4
+|   |   |-- 39
+|   |   |   |-- 3b07750b122308a5be918362cc410a6a0ff655
+|   |   |   |-- 53892021549eac13db9291b78cf8702a91842f
+|   |   |   |__ b11fd6116214acbe65bcb69fb90fe8c97ecf86
+|   |   |-- 3a
+|   |   |   |__ 1a8372eb147600161eab11a38e680ea65e0222
+|   |   |-- 3b
+|   |   |   |-- 1cfc4e33dde998861e94e916faeb0d8f682f4c
+|   |   |   |-- 242d88ea0bc87ee04af2633a98b4c8782764ea
+|   |   |   |-- c38bcac62a0dfcde93f3d4da42b8405ea31854
+|   |   |   |__ e88679565ac8fddaf48e72ad87f0020fa92f35
+|   |   |-- 3c
+|   |   |   |__ 845dc6c3a71ec5dc0dd35f319afe9bcc0918cb
+|   |   |-- 3d
+|   |   |   |__ 7031f0c073aa5f50bd9e0a46ca4c9c46e210a3
+|   |   |-- 40
+|   |   |   |-- 90b1934637680e613869a37734ab576f21d6d5
+|   |   |   |__ e67348752597cf7185180c007c89a5cd7fc7b0
+|   |   |-- 42
+|   |   |   |__ d27cf487742a142f40159dd80d76ab09f9d1ba
+|   |   |-- 43
+|   |   |   |-- 21a51f352bdc42a8e55578bee963f7c59fb05c
+|   |   |   |-- 2c81d81436d5845cc2b225dd5a7d30d53f0a3b
+|   |   |   |__ 5549ee9716a2de76a6463027ecb06319ac4aae
+|   |   |-- 44
+|   |   |   |-- 10ac6598cb7c34469876708194715e62ef2761
+|   |   |   |__ f33752a265b4a863e14f0ad4bf4ff962c17195
+|   |   |-- 45
+|   |   |   |-- 480bfa5dae25c9c5341102bb7332f9855ef93e
+|   |   |   |-- 80c17def89fb68543a7d4672bd7b1e847771b8
+|   |   |   |-- 91bcfe96b48afd7a2a2f949723d4ad59ce193d
+|   |   |   |__ c7aea516253959e0cfae021faabf33fb94cef6
+|   |   |-- 46
+|   |   |   |__ 3c998e7e94f0f8b587cce297f1485818f6e42b
+|   |   |-- 48
+|   |   |   |__ 626dac58c4b09e9948f0607e81782d5a4ad134
+|   |   |-- 49
+|   |   |   |__ 82ecfa349e08057f246142a54f464fca7ba4cb
+|   |   |-- 4a
+|   |   |   |-- 27a88e769e2705553f73a1b9061bdca9a6e603
+|   |   |   |-- 7a9582b072e5c40867c32c0a53c9e8446ff0e8
+|   |   |   |-- a9de1f7353927b3feb5dcc7f8fcc1f6aa6f622
+|   |   |   |__ bbe20c34c62b42e6d7990c62fc0a3d783be278
+|   |   |-- 4b
+|   |   |   |-- 1efe2e9a670379f400f2b47bc89e7887a4ad15
+|   |   |   |__ 6a8d5ad30ce9954169a6a501fa64c9823906c3
+|   |   |-- 4c
+|   |   |   |-- 46620afab7cad50ea9c8c8123f7d8baaaf2d72
+|   |   |   |-- 49bd78f1d08f2bc09fa0bd8191ed38b7dce5e3
+|   |   |   |-- ecf3f1771ebef229029f3627d4e1af49bd49a6
+|   |   |   |__ ee04fad5725fdc97ac383cf08f00f539501c9d
+|   |   |-- 4e
+|   |   |   |__ abfaef3b4b94e41ffe9f183b70b8a681f503a0
+|   |   |-- 4f
+|   |   |   |-- 17c4bbcbbe36c7ee978d3653dcfc102ed7da4f
+|   |   |   |-- 6495dd257fdb3a0728d5fc83dba6c770ed904e
+|   |   |   |-- 71978bb6284ddc34109387eda2c9fdc6f35438
+|   |   |   |__ efdd3319005f72b5a8a4bbfa466045c8aac729
+|   |   |-- 51
+|   |   |   |-- 114fbf27228ce6b7379bc8690b070f1b5c2347
+|   |   |   |__ d951bc44f42083f6f3742e685d435d12a31cfc
+|   |   |-- 52
+|   |   |   |__ 721c18f40a86370276345348c927e95883887d
+|   |   |-- 53
+|   |   |   |__ 8cb024c86e12098c34a712500ad3b55e17a45c
+|   |   |-- 54
+|   |   |   |__ ac66c70cb1da6e70a48e90e01c77644230b77f
+|   |   |-- 56
+|   |   |   |-- 3ef4e34919c5792e611a9c8b65aa9b77b751e8
+|   |   |   |__ 8d4292477dbfde608e36baed99be444887373e
+|   |   |-- 57
+|   |   |   |__ 1da965b9df0819e7140bd6ad39745e43081378
+|   |   |-- 59
+|   |   |   |-- 0c0c7252f90845fba24a666cb3a3b1362e8c4a
+|   |   |   |-- 17d7558057a14849b75a5824912519eab4eaba
+|   |   |   |__ 411f38a8b0af5b6b34f73e8d134142ce7d838c
+|   |   |-- 5a
+|   |   |   |-- 151302c1e86cd074faec0d902333da5e49a735
+|   |   |   |-- 40fd626276d26d5fed053448f071642694b602
+|   |   |   |-- 4ecc770fc24802b3ddaf0bca78f6439fd49535
+|   |   |   |-- 7f1f27225e401b777323fa2a8299f36edfe986
+|   |   |   |__ 7fbef2629c2e6b68fc0b9514976b18ee39cc61
+|   |   |-- 5b
+|   |   |   |__ faf76045ff3b3b285dfae132d6df5daf4c370b
+|   |   |-- 5c
+|   |   |   |-- 62ad2e739b6e0cdb8cb9e2abfac666eecda54c
+|   |   |   |-- 7cacbb2392897b0b0012a1719beec31efd6ce7
+|   |   |   |-- 8b326b2a435d1e41689a5557a0e1d48debb080
+|   |   |   |__ 8ff64900aefd7f6749cba2a982bbcdd1862d86
+|   |   |-- 5f
+|   |   |   |__ edaaebbe17f3a1c3ce193306b409cd53352ca5
+|   |   |-- 60
+|   |   |   |-- 170a79596d8d9f7dfcae6544d48eeebb2ceaee
+|   |   |   |__ 17a955ca2c57f29a4111002fd34630b8e5a5ff
+|   |   |-- 61
+|   |   |   |__ f2c2df9f0498e347392b236e0837305f4abb43
+|   |   |-- 63
+|   |   |   |-- 1726c304ae92f85f19691b448ba1537f80cd7e
+|   |   |   |-- 83af5b1c7a89a152d0fb7dec755377fabe2bce
+|   |   |   |__ d4eaaf1093e79b3a358db9145da61e233e2782
+|   |   |-- 64
+|   |   |   |-- c2c432c46d296d1d9a5d48d082197046419bf6
+|   |   |   |__ edee419e92b2875382030daac8b91f212f4f9b
+|   |   |-- 65
+|   |   |   |__ 390fd22c3b1ddc07b1d57c63543d5ea50a7061
+|   |   |-- 67
+|   |   |   |__ 7fd3807537e3b5d9dbf7e24d711a614e334d1b
+|   |   |-- 69
+|   |   |   |__ 489b395d7bde55ba098fde8f6e99e4c9c15fdc
+|   |   |-- 6a
+|   |   |   |-- af1f270fc82aca4f69232323547670d89877e7
+|   |   |   |__ e8319a1ddf75853f3c4b4375cdeee098316ab6
+|   |   |-- 6b
+|   |   |   |-- 0c750203744c107205c9cee354b15e3a656887
+|   |   |   |__ 5b3639652414f5c076e01d6078e9e0359bbccd
+|   |   |-- 6c
+|   |   |   |__ 168ef33cd702251c8741e7e7d92f6630df7d67
+|   |   |-- 6d
+|   |   |   |__ 13c4cb479fa01a3d5f89b9c0a9469a57513f47
+|   |   |-- 6f
+|   |   |   |__ abff6740e1495d314ba4d940d1034730e906f9
+|   |   |-- 70
+|   |   |   |__ 194ddbe1bffd78358d740575fd361fc8689831
+|   |   |-- 71
+|   |   |   |-- 189c90a217e17c9df93d0bd1f723ae60f15ab1
+|   |   |   |__ df7810dc1c656bcce167c117324c8739d102a3
+|   |   |-- 72
+|   |   |   |-- 2e8f9b526ccdca08549a317540c542abe71e38
+|   |   |   |__ 47eee0b6977804d5f3f8077369c9238774029f
+|   |   |-- 73
+|   |   |   |-- 1a705eeba94e6aaaa5c3f4c6c24b561a90cf66
+|   |   |   |__ 6a9e6efaafcc1db1eb365577c00999133dc5ce
+|   |   |-- 74
+|   |   |   |__ 23b185da298318a96954dd5ca7f4955405897b
+|   |   |-- 75
+|   |   |   |__ 56d55f61979c41a4fc410f0fe897a9749785b1
+|   |   |-- 76
+|   |   |   |-- 8ef5b5cb7c9bd967e2bbcf49e7cb59b15e48cd
+|   |   |   |__ dee8ccb7647cf862a822f2dc02f0d1460358b0
+|   |   |-- 78
+|   |   |   |-- 36c81fbe2d8b61ceee3488568a43a600118d0e
+|   |   |   |-- 3df3534cccb2e3fda9d2c283a09f8716a9f2a5
+|   |   |   |-- 5266dbf31ff769ead5bbbc323dd884e96c352c
+|   |   |   |__ 598d7b40d89b1e0917cf4004020b21cc994368
+|   |   |-- 79
+|   |   |   |__ cc94e772fd7c76ccb23b4ca5590b80b710f737
+|   |   |-- 7a
+|   |   |   |__ 7e5309a861b276748aec456fc3f2d48e557793
+|   |   |-- 7b
+|   |   |   |__ 12e4d8b08ee4aa2a62eb923ba16eba6fb3b9dd
+|   |   |-- 7d
+|   |   |   |-- 532dbbd7ebb6a54641fb6f23a5dfea1c86e9ab
+|   |   |   |-- 87df8752fcc62acf53f7cc90d6961a6326297c
+|   |   |   |__ ef771e2cb6876ce5cd0abe9fa4597bfa2ab29c
+|   |   |-- 80
+|   |   |   |-- 4708c33e94c3224aa35b02dd66c56f50fd70d9
+|   |   |   |__ 7466a995ac7f50578d81be2568508cac429a92
+|   |   |-- 82
+|   |   |   |-- ca5df6e98257e9c9cfb1146656154776b8cc23
+|   |   |   |__ cce110b822a2e1c3c12e3e413adda4a0203df2
+|   |   |-- 83
+|   |   |   |__ bca08a784d6221cc0387abb8be9c22e6668224
+|   |   |-- 84
+|   |   |   |-- 167310e5c56783b5d7bd327b78a0c2b28ff729
+|   |   |   |-- 4181375e2f07fe5166f4a42e4d8d26630e0b01
+|   |   |   |__ f64e7eff76a08707a082bdd9c0bf2929985315
+|   |   |-- 85
+|   |   |   |-- 2bc024fc2bd7d52f1931d41b1916e413cd8e66
+|   |   |   |__ 707c6996baa3d2a3c439b7add6d40ba68c8a23
+|   |   |-- 86
+|   |   |   |__ eefb050634bd9280353624e42ef25bd7541267
+|   |   |-- 87
+|   |   |   |-- 0f3331697ea91cb778de6b8d00e621106f0f6d
+|   |   |   |-- 5746274815b14dcd0795e56a737f5f2b33b8e3
+|   |   |   |__ d204ef38e57c0542defd3e797be0ebcbaba113
+|   |   |-- 88
+|   |   |   |-- 1682f4fe6069e46903b1fdfa240031478eaa44
+|   |   |   |-- 4dfae38bcaab3dd52ec7286bd398e33ec99bf0
+|   |   |   |__ 80896c0ea7e4a49a4c7d498185cdee044f49fd
+|   |   |-- 89
+|   |   |   |-- 05a7eee9d7d804e0ce92e8d6c15f3563556c7f
+|   |   |   |-- d34b0f96d707ab6a04a8c1ac734958cbf4dadf
+|   |   |   |__ f05531eb57ba3678af89daf8360e45ea2cf151
+|   |   |-- 8a
+|   |   |   |__ 1bd8054286d290122919a582d0f5307149c848
+|   |   |-- 8b
+|   |   |   |-- 3f71d9651854b62007b1127db4591a42c24b9e
+|   |   |   |__ ebeeb5a92699eb960d1414a22dd17776472aa9
+|   |   |-- 8e
+|   |   |   |-- 1e621325c1e83fc2d384a452545efb29c94450
+|   |   |   |-- 3f828ea4a2936da745be8b505ab4faba378ff5
+|   |   |   |-- 5ddcda5f7e10fae2b65b0acdf53bd86956f377
+|   |   |   |__ 93ed6448e1c031e4a75973b7eaccf6f0a35543
+|   |   |-- 8f
+|   |   |   |__ 14b0e108c629922fec96b3e7a99de6fe1be27b
+|   |   |-- 90
+|   |   |   |-- 0d0187fa856134cef080717a77bd1abb7938c0
+|   |   |   |__ fade517c2ce69934e0ad4c71527993788cd0a5
+|   |   |-- 91
+|   |   |   |-- 9a852283ca73209d2a38be6fac8a4013266f14
+|   |   |   |-- d2dba25eb4d9fd74035e696921f945ddb7966d
+|   |   |   |__ d67468bbe0d56502aaec4de8917dc5ede0a754
+|   |   |-- 92
+|   |   |   |__ d9de2ea606883ca38d05a0e76923132ac129cf
+|   |   |-- 94
+|   |   |   |-- 248b7fa86591043f1c55a732bcdb0309043f68
+|   |   |   |-- 74f952d20ba2b6c74a8dbae914208b74a0e541
+|   |   |   |-- 7a2624db3040290302b3cfa478f84d0563b63b
+|   |   |   |__ 9dd8bd5f5acc826e04d46e6985c9fe09426e22
+|   |   |-- 95
+|   |   |   |__ a9d03b7720d92fa6b455ec0b0b0f8dd2b588a3
+|   |   |-- 96
+|   |   |   |__ afcc13acf9f62e73cf5682c7af6a2f09e00e46
+|   |   |-- 97
+|   |   |   |__ 03db74ec9850b57a7af2a48cca1cbb45df2f55
+|   |   |-- 99
+|   |   |   |__ 5f1f6234404fe4883748f655756b511ab4b36d
+|   |   |-- 9a
+|   |   |   |-- 18b0fcecf537434607e8b30c26a4d49a23da88
+|   |   |   |__ 798272c7250847250d221b2e9d5552b28e7d43
+|   |   |-- 9b
+|   |   |   |-- bd5e5afccfdb15ee2b9572c0d4750fc21ae46e
+|   |   |   |__ fb589aefab2e2054335074309f9edc7e1fcb5a
+|   |   |-- 9c
+|   |   |   |-- 8a2315ab86107663801bbfc939b65e7fc3e3b4
+|   |   |   |__ f1d87bba601e415cf9218218ceb65a2dbb7cea
+|   |   |-- 9f
+|   |   |   |__ 378613834044793cc0ccfd7da47715d86545d2
+|   |   |-- a0
+|   |   |   |__ d5c6dcd573a3d237431a9d8a9f9945d10a4041
+|   |   |-- a1
+|   |   |   |__ f1050e963695058590faacfed89448a70e73e6
+|   |   |-- a2
+|   |   |   |__ 7dec88e3e796ba6e8da72617d7a4e427c4c906
+|   |   |-- a3
+|   |   |   |-- 30e83625600c4af339245cc4df5d7bd6d019ef
+|   |   |   |-- 68c701dc88999ac3dd2171fe71f046ed06bd64
+|   |   |   |__ df0d1f8ca89f033ea3bc8f7585f68db24bede6
+|   |   |-- a4
+|   |   |   |__ c86c64c7cd50d7250515f436970324f649cfbe
+|   |   |-- a5
+|   |   |   |-- 81fb18f183b1c1ce714ca6dfd6de754c2443fd
+|   |   |   |-- 93b3383be9015e6faad27d178a0b95a26d325c
+|   |   |   |__ 950565ea6be960bef865afc4d1c35b60395054
+|   |   |-- a7
+|   |   |   |__ 2b8e528222c08342803e88460071cd142b7449
+|   |   |-- a9
+|   |   |   |__ c8522b9e2ee69f9a50888e69500a7077296e06
+|   |   |-- aa
+|   |   |   |__ 77c5897a02d67fe8a5732e9aba0b5c576e032a
+|   |   |-- ab
+|   |   |   |__ 5d33fb7e9b7150bde34c58c13a7bf7f69d8535
+|   |   |-- ac
+|   |   |   |-- 046a4e41d28ef8cec65b0e83e55766a4413269
+|   |   |   |-- 1157590a7f805977c88f6189f7c6de163a8a15
+|   |   |   |__ b548bc37bfcc5243df1fc204bc582bd9729376
+|   |   |-- ad
+|   |   |   |-- 7a6cd0e49ea9b767fed4bb323d4f08742ec6b9
+|   |   |   |-- 9362616cf3091387a2c029b91d3b34e101ab40
+|   |   |   |__ e4b063c28f6ae9909be247989b2fa9aadf1662
+|   |   |-- ae
+|   |   |   |-- 8e019b28b8bdcb07d9200e5e219f6652257cc6
+|   |   |   |__ e6b3a73e14e964ad4988cff205455ce5018f4a
+|   |   |-- af
+|   |   |   |__ 3396ca4f6afae6c5983a0f979cabeb907f3d5d
+|   |   |-- b1
+|   |   |   |__ 29719c30b940ba5660f71c9a8a11ed4b678eb1
+|   |   |-- b2
+|   |   |   |__ d7aa5ca8abeae28da4aca7c1747a318474ec33
+|   |   |-- b4
+|   |   |   |-- 0d5cbe335a84e9df6636c40cc56fdfe3e356f1
+|   |   |   |-- 7236d2dbc7343586908e289969963e877b79db
+|   |   |   |__ f794f64dbf265995d2093a10ca85150c580aac
+|   |   |-- b5
+|   |   |   |-- 17fe67fc707919a127dae99e71302e5b641dd9
+|   |   |   |__ ba606275c115fed37ea032106e2c322fe553ae
+|   |   |-- b6
+|   |   |   |__ 94217039adfb2b2cdf6c68951215a298f6c036
+|   |   |-- b7
+|   |   |   |__ 9cc60b3628cbbcb7540b7aebe2d1f488b4d51b
+|   |   |-- b8
+|   |   |   |-- 5119b24a5f07b0065980a5abc5d0ec29fc1f1f
+|   |   |   |__ 908a02d7595c2ad70e2c6dd8790e6fe917790f
+|   |   |-- b9
+|   |   |   |-- 8b685a2ff425d407c94c492bc03d69be76f39e
+|   |   |   |__ e05d74fa66a070713c05bd0b724cb50168d1ec
+|   |   |-- ba
+|   |   |   |-- 031023eddc6a7b1f80d5731ee4e980c29e35f3
+|   |   |   |__ 5a2db081a00e264fc7f27d7a290b7cd948b690
+|   |   |-- bb
+|   |   |   |-- 00b1d1cdfb2c0f131cedc0e9aa01d9010eabc0
+|   |   |   |__ 81aad992e7ec7fec31abe345e55eba5f296976
+|   |   |-- bc
+|   |   |   |-- 95f956af18989353c5bf1aeee9506e7cdfddd5
+|   |   |   |__ a67966baab629e5f2ac70d929847723ccc651f
+|   |   |-- bd
+|   |   |   |__ 5e87109314af734242598b48941f57680751e2
+|   |   |-- be
+|   |   |   |__ 99bc09c8e392c2207f3a78a4f3662492aee18a
+|   |   |-- bf
+|   |   |   |-- 0c2d8e428ffc7dfdbc3b2447a0c36c959ab225
+|   |   |   |-- 877729efc0b836d65e1ee38d06462e0b61bf99
+|   |   |   |-- 9260a022a1304765f26fca3b3a7882cd8a6953
+|   |   |   |-- b0307840fa68a135851112a01b70c78b3f11d7
+|   |   |   |-- c46607c683a9c1e4b00d8a2ac21b8d37dd274d
+|   |   |   |__ e1c373a240fae782a3db42372c83dc39ff1d9a
+|   |   |-- c0
+|   |   |   |__ 7cb75cd19cdb998b38422c10c36d4dc43b8693
+|   |   |-- c1
+|   |   |   |__ 2a9a7b7c505dfe60c174f91679d3bdd1296353
+|   |   |-- c2
+|   |   |   |__ fea2bec4917812d89fb0a8f5a8200eb4c4e7a2
+|   |   |-- c3
+|   |   |   |-- 3e35fd577c364ae03b5dd7b0f6a2b7dec3b831
+|   |   |   |-- c3c27125d9a755040c93a1df92bbdd8c4fc6af
+|   |   |   |__ fade6ee2022c952df3321bedecc31a536e1f74
+|   |   |-- c4
+|   |   |   |__ f866fa070bf3a4b49a70b46b0733679116d2de
+|   |   |-- c5
+|   |   |   |__ bfa1af6f2325085afd625e2616048feebda785
+|   |   |-- c6
+|   |   |   |-- ab6ee75ac221b8c033e5e8b6cee056bd27bb28
+|   |   |   |__ f7c9d34c1293dcda82cf5814f9de00835e2cf5
+|   |   |-- c8
+|   |   |   |-- 4472da5820f19300bcc00781f1641de1b76a98
+|   |   |   |__ f4c0009107702c51f8cdbdc106d39865cf36df
+|   |   |-- c9
+|   |   |   |__ d0cfc4c35cb55ec715c4cea8ca45b45473a6c6
+|   |   |-- ca
+|   |   |   |-- 99eb4468e803e43eb8485299de50ad6dcc92db
+|   |   |   |-- cc46d5d58ba8c494ab91d26edb664e9a47373d
+|   |   |   |__ f6da59bfa7a4e1de013f67b4f03e58167889b8
+|   |   |-- cb
+|   |   |   |__ a1d3777e92aa47ab3a0975caec5f7dc0902f49
+|   |   |-- cc
+|   |   |   |-- 016d341cefb83b0eb6f5912232a2693ff1fec2
+|   |   |   |-- 8d586ff9e23687fff6cc8d1f220e08fb906cc0
+|   |   |   |__ 9ad6bca261073f3bbd5fa6c0c0189d6501f777
+|   |   |-- cd
+|   |   |   |__ eaac9be7811226a12056f7ee93a48adfb156a6
+|   |   |-- ce
+|   |   |   |__ c54c3c46cfd571cecdf1d48f0e0b131ddcbbd1
+|   |   |-- d0
+|   |   |   |-- 58e789807915e4843314171659b8707856de76
+|   |   |   |-- 6c8b3c890230c8c47e63a89b5cf1ef07366940
+|   |   |   |__ fddcf4be9b8bfb6505dd290c6ba3e5f5769448
+|   |   |-- d2
+|   |   |   |__ 73657dd896c57482287cc4cc15cc85711565be
+|   |   |-- d3
+|   |   |   |__ cd3742fb60b4a9d2a8b0433065bdabc2306ed0
+|   |   |-- d4
+|   |   |   |-- 5cb69141edea0507cd7a456c0818cb676a97cd
+|   |   |   |__ bd1af1046072a2c721015cab441a1e388b3870
+|   |   |-- d6
+|   |   |   |-- 0b74d111eb729d19eb66dc2e6e3f9e2a281377
+|   |   |   |-- 29f651ea745d7413844e1f5ddd7f664e03a9f9
+|   |   |   |__ d84ae361280042d5da0d8e0a5b36da4b886456
+|   |   |-- d9
+|   |   |   |__ bfb5bd3e6ed6f63f4c5e26918dd02e1b6f585d
+|   |   |-- db
+|   |   |   |__ 51f99ab87b4bb1670670d17e6886976df6d2a1
+|   |   |-- dc
+|   |   |   |__ 9866a1509096713a11b0779cb53a93846b4be0
+|   |   |-- de
+|   |   |   |__ 664492b1bdeceb3a1a5310856f4082b3d33956
+|   |   |-- df
+|   |   |   |__ 8a036933650aff61b8644244284434c9b63eeb
+|   |   |-- e1
+|   |   |   |__ 19f3ede485dc96b6d00f31ce76f3f6e9555144
+|   |   |-- e2
+|   |   |   |__ dafc130bbd9768feb850095a856344b43c7a69
+|   |   |-- e3
+|   |   |   |__ 1f1a992dd8c72e76b0ff78fb5c22ba4171457b
+|   |   |-- e4
+|   |   |   |__ c2ec02053edbac983e654937831a227c0a1109
+|   |   |-- e5
+|   |   |   |-- 309cb11254a4a276884e36493ce73f3c21906f
+|   |   |   |__ 62c39fe43cf33fe4a4f46ae95c38913f83dddb
+|   |   |-- e6
+|   |   |   |-- 1834d7c52d5f952b6eeef5722776b62d17998f
+|   |   |   |-- 431e1290277d7fa735e92abfe05694f0da75cb
+|   |   |   |__ 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+|   |   |-- e7
+|   |   |   |__ 31181d8c252d2c39ec788e99b5da2165afb786
+|   |   |-- e8
+|   |   |   |__ 3ad0ec76eca9cc7c1e936fe78c27c7414a1c66
+|   |   |-- e9
+|   |   |   |-- 4f6c87584ad79e7c9d1d3d856b4be02466d292
+|   |   |   |__ 5e3c9b601d9fdc04ee3ace6747ec84f68f53f0
+|   |   |-- ea
+|   |   |   |-- 694fa6f217893051e89a7d82ee43e832d3fb36
+|   |   |   |__ 6e1382b2924fa132e1b83beb42ff59b92a6605
+|   |   |-- eb
+|   |   |   |__ a9a2c31f8f41f75e4c0bad88bafd1066469bb2
+|   |   |-- ec
+|   |   |   |-- 95d6c1c7e15d1797a40a89bc740a72eefe0226
+|   |   |   |__ ee7adf780131f3f0f99230e878d996feeac336
+|   |   |-- ed
+|   |   |   |__ 1c46d546861fa0d0afd8af10ed60f4c461e649
+|   |   |-- ee
+|   |   |   |__ c292b019bdac93be9addeb8fa99bcd33bf4561
+|   |   |-- ef
+|   |   |   |-- 19371636da9a92e377a460ae8d6b1671723981
+|   |   |   |__ 3cbecd2680d2ea775296df9b809b2acd839127
+|   |   |-- f0
+|   |   |   |-- 094b5aad8e174d4aeec3caf720ef8bd33150cc
+|   |   |   |-- 59173ec019652c002a2842b3185f886fe02aff
+|   |   |   |-- cfee3072b74a644db92d866c52888c2cdfb0a2
+|   |   |   |__ eb4954e8261933bf2b5d3dff295ce12f8cc144
+|   |   |-- f1
+|   |   |   |__ 19ec7392f5e2b81f90a22bc76377a1af9d6630
+|   |   |-- f2
+|   |   |   |-- abe5943e105174f2a364cf33b66509047b357c
+|   |   |   |__ ed7f4ee6c128acf13ee7556b7b60baf1cbed0a
+|   |   |-- f3
+|   |   |   |-- 971d971f93dd76d9d13fc46189ad51284067aa
+|   |   |   |__ 9d613a6cd818ab1a7d4eb06183efec800ccfed
+|   |   |-- f4
+|   |   |   |__ db4caca86375edb3cc098ab8c4eaf951cb719c
+|   |   |-- f5
+|   |   |   |__ 190d7256a846484650f6fc3fbbaeed7b5ec46f
+|   |   |-- f6
+|   |   |   |-- 28ec52f7348cd45e7338c1c6e2155610391c83
+|   |   |   |__ e111511b4ad90b0eb14d1b14b366cab2bbd8d3
+|   |   |-- fb
+|   |   |   |__ 3f622131f0dd716f55b5344aaf0a893fd01848
+|   |   |-- fc
+|   |   |   |__ 37b77e06d0fb97ff64cfe1f06abcabb96857ce
+|   |   |-- fd
+|   |   |   |__ 68f19bbf7144fc71357213ec2b0bf52faef664
+|   |   |-- fe
+|   |   |   |__ c343e17bb4f9b6db512f156afcb1b130f7a2b6
+|   |   |__ ff
+|   |       |__ ce44a7d7f1c9727bca56f91e413dfbb3a215de
+|   |__ refs
+|       |-- heads
+|       |   |-- assistant-ui
+|       |   |-- code-analyzer
+|       |   |-- file-manager
+|       |   |-- main
+|       |   |-- openai-integration
+|       |   |-- v1.1-development
+|       |   |__ v1.2-development
+|       |-- remotes
+|       |   |__ origin
+|       |       |-- main
+|       |       |-- v1.1-development
+|       |       |__ v1.2-development
+|       |__ tags
+|           |-- v1.0
+|           |__ v1.0.1
+|-- .github
+|   |__ workflows
+|       |-- test-ci.yml
+|       |__ test.yml
+|-- .gitignore
+|-- .pytest_cache
+|   |-- .gitignore
+|   |-- CACHEDIR.TAG
+|   |-- README.md
+|   |__ v
+|       |__ cache
+|           |-- lastfailed
+|           |-- nodeids
+|           |__ stepwise
+|-- .vscode
+|   |__ settings.json
+|-- CHANGELOG.md
+|-- Co
+|   |-- Co_strategy
+|   |   |-- __init__.py
+|   |   |-- __pycache__
+|   |   |   |__ __init__.cpython-313.pyc
+|   |   |-- co_strategy.json
+|   |   |-- co_strategy_info.json
+|   |   |-- progress_tracking.json
+|   |   |__ strategy_tracker.py
+|   |-- __init__.py
+|   |-- ai_instructions.json
+|   |-- fill_strategy.py
+|   |__ session_transfer
+|       |-- ai_assist_tree.txt
+|       |-- chatgpt_prompt.txt
+|       |-- generate_session_report.ps1
+|       |-- prepare_transfer.py
+|       |__ session_context.txt
+|-- README.md
+|-- __pycache__
+|   |__ test_script.cpython-313.pyc
+|-- cache
+|   |__ openai_cache.db
+|-- chatbot.py
+|-- config
+|   |-- .env
+|   |-- ai_structure.txt
+|   |-- config.json
+|   |-- organize_project.py
+|   |-- project_structure.txt
+|   |-- pytest.ini
+|   |__ scan_project_structure.py
+|-- config.json
+|-- data
+|   |-- backlog.txt
+|   |-- chat_history.json
+|   |-- file_hashes.txt
+|   |__ project_plan.md
+|-- logs
+|   |-- openai_client.log
+|   |__ openai_client_errors.log
+|-- modules
+|   |-- __init__.py
+|   |-- __pycache__
+|   |   |-- __init__.cpython-313.pyc
+|   |   |-- api_usage_tracker.cpython-313.pyc
+|   |   |-- assistant_ui.cpython-313.pyc
+|   |   |-- chat_ui.cpython-313.pyc
+|   |   |-- code_analyzer.cpython-313.pyc
+|   |   |-- config.cpython-313.pyc
+|   |   |-- doc_generator.cpython-313.pyc
+|   |   |-- file_manager.cpython-313.pyc
+|   |   |-- openai_client.cpython-313.pyc
+|   |   |-- task_manager.cpython-313.pyc
+|   |   |__ ui_config.cpython-313.pyc
+|   |-- api_usage.log
+|   |-- api_usage_report.json
+|   |-- api_usage_tracker.py
+|   |-- assistant_ui.py
+|   |-- chat_ui.py
+|   |-- code_analyzer.py
+|   |-- config.py
+|   |-- doc_generator.py
+|   |-- file_manager.py
+|   |-- openai_client.py
+|   |-- task_manager.py
+|   |__ ui_config.py
+|-- requirements.txt
+|-- scripts
+|   |-- check_gpt_model.py
+|   |__ test_script.py
+|-- setup.py
+|-- strategy
+|   |-- __init__.py
+|   |-- __pycache__
+|   |   |__ __init__.cpython-313.pyc
+|   |__ ai_assist_pr_strategy
+|       |-- __init__.py
+|       |-- __pycache__
+|       |   |-- __init__.cpython-313.pyc
+|       |   |__ strategy_tracker.cpython-313.pyc
+|       |-- ai_assist_strategy.json
+|       |-- ai_assist_strategy_info.json
+|       |-- progress_tracking.json
+|       |__ strategy_tracker.py
+|-- test_script.py
+|-- tests
+|   |-- __init__.py
+|   |-- __pycache__
+|   |   |-- __init__.cpython-313.pyc
+|   |   |-- test_api.cpython-313-pytest-8.3.4.pyc
+|   |   |-- test_api.cpython-313.pyc
+|   |   |-- test_assistant_ui.cpython-313-pytest-8.3.4.pyc
+|   |   |-- test_assistant_ui.cpython-313.pyc
+|   |   |-- test_code_analyzer.cpython-313-pytest-8.3.4.pyc
+|   |   |-- test_code_analyzer.cpython-313.pyc
+|   |   |-- test_file_manager.cpython-313-pytest-8.3.4.pyc
+|   |   |-- test_file_manager.cpython-313.pyc
+|   |   |-- test_git_status.cpython-313-pytest-8.3.4.pyc
+|   |   |-- test_git_status.cpython-313.pyc
+|   |   |-- test_openai_client.cpython-313-pytest-8.3.4.pyc
+|   |   |-- test_openai_client.cpython-313.pyc
+|   |   |-- test_ui.cpython-313-pytest-8.3.4.pyc
+|   |   |__ test_ui.cpython-313.pyc
+|   |-- logs
+|   |   |__ test_results_latest.txt
+|   |-- test_api.py
+|   |-- test_assistant_ui.py
+|   |-- test_code_analyzer.py
+|   |-- test_file_manager.py
+|   |-- test_git_status.py
+|   |-- test_openai_client.py
+|   |__ test_ui.py
+|__ venv
+    |-- .gitignore
+    |-- Lib
+    |   |__ site-packages
+    |       |-- __pycache__
+    |       |   |-- py.cpython-313.pyc
+    |       |   |__ typing_extensions.cpython-313.pyc
+    |       |-- _pytest
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- _argcomplete.cpython-313.pyc
+    |       |   |   |-- _version.cpython-313.pyc
+    |       |   |   |-- cacheprovider.cpython-313.pyc
+    |       |   |   |-- capture.cpython-313.pyc
+    |       |   |   |-- compat.cpython-313.pyc
+    |       |   |   |-- debugging.cpython-313.pyc
+    |       |   |   |-- deprecated.cpython-313.pyc
+    |       |   |   |-- doctest.cpython-313.pyc
+    |       |   |   |-- faulthandler.cpython-313.pyc
+    |       |   |   |-- fixtures.cpython-313.pyc
+    |       |   |   |-- freeze_support.cpython-313.pyc
+    |       |   |   |-- helpconfig.cpython-313.pyc
+    |       |   |   |-- hookspec.cpython-313.pyc
+    |       |   |   |-- junitxml.cpython-313.pyc
+    |       |   |   |-- legacypath.cpython-313.pyc
+    |       |   |   |-- logging.cpython-313.pyc
+    |       |   |   |-- main.cpython-313.pyc
+    |       |   |   |-- monkeypatch.cpython-313.pyc
+    |       |   |   |-- nodes.cpython-313.pyc
+    |       |   |   |-- outcomes.cpython-313.pyc
+    |       |   |   |-- pastebin.cpython-313.pyc
+    |       |   |   |-- pathlib.cpython-313.pyc
+    |       |   |   |-- pytester.cpython-313.pyc
+    |       |   |   |-- pytester_assertions.cpython-313.pyc
+    |       |   |   |-- python.cpython-313.pyc
+    |       |   |   |-- python_api.cpython-313.pyc
+    |       |   |   |-- python_path.cpython-313.pyc
+    |       |   |   |-- recwarn.cpython-313.pyc
+    |       |   |   |-- reports.cpython-313.pyc
+    |       |   |   |-- runner.cpython-313.pyc
+    |       |   |   |-- scope.cpython-313.pyc
+    |       |   |   |-- setuponly.cpython-313.pyc
+    |       |   |   |-- setupplan.cpython-313.pyc
+    |       |   |   |-- skipping.cpython-313.pyc
+    |       |   |   |-- stash.cpython-313.pyc
+    |       |   |   |-- stepwise.cpython-313.pyc
+    |       |   |   |-- terminal.cpython-313.pyc
+    |       |   |   |-- threadexception.cpython-313.pyc
+    |       |   |   |-- timing.cpython-313.pyc
+    |       |   |   |-- tmpdir.cpython-313.pyc
+    |       |   |   |-- unittest.cpython-313.pyc
+    |       |   |   |-- unraisableexception.cpython-313.pyc
+    |       |   |   |-- warning_types.cpython-313.pyc
+    |       |   |   |__ warnings.cpython-313.pyc
+    |       |   |-- _argcomplete.py
+    |       |   |-- _code
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- code.cpython-313.pyc
+    |       |   |   |   |__ source.cpython-313.pyc
+    |       |   |   |-- code.py
+    |       |   |   |__ source.py
+    |       |   |-- _io
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- pprint.cpython-313.pyc
+    |       |   |   |   |-- saferepr.cpython-313.pyc
+    |       |   |   |   |-- terminalwriter.cpython-313.pyc
+    |       |   |   |   |__ wcwidth.cpython-313.pyc
+    |       |   |   |-- pprint.py
+    |       |   |   |-- saferepr.py
+    |       |   |   |-- terminalwriter.py
+    |       |   |   |__ wcwidth.py
+    |       |   |-- _py
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- error.cpython-313.pyc
+    |       |   |   |   |__ path.cpython-313.pyc
+    |       |   |   |-- error.py
+    |       |   |   |__ path.py
+    |       |   |-- _version.py
+    |       |   |-- assertion
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- rewrite.cpython-313.pyc
+    |       |   |   |   |-- truncate.cpython-313.pyc
+    |       |   |   |   |__ util.cpython-313.pyc
+    |       |   |   |-- rewrite.py
+    |       |   |   |-- truncate.py
+    |       |   |   |__ util.py
+    |       |   |-- cacheprovider.py
+    |       |   |-- capture.py
+    |       |   |-- compat.py
+    |       |   |-- config
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- argparsing.cpython-313.pyc
+    |       |   |   |   |-- compat.cpython-313.pyc
+    |       |   |   |   |-- exceptions.cpython-313.pyc
+    |       |   |   |   |__ findpaths.cpython-313.pyc
+    |       |   |   |-- argparsing.py
+    |       |   |   |-- compat.py
+    |       |   |   |-- exceptions.py
+    |       |   |   |__ findpaths.py
+    |       |   |-- debugging.py
+    |       |   |-- deprecated.py
+    |       |   |-- doctest.py
+    |       |   |-- faulthandler.py
+    |       |   |-- fixtures.py
+    |       |   |-- freeze_support.py
+    |       |   |-- helpconfig.py
+    |       |   |-- hookspec.py
+    |       |   |-- junitxml.py
+    |       |   |-- legacypath.py
+    |       |   |-- logging.py
+    |       |   |-- main.py
+    |       |   |-- mark
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- expression.cpython-313.pyc
+    |       |   |   |   |__ structures.cpython-313.pyc
+    |       |   |   |-- expression.py
+    |       |   |   |__ structures.py
+    |       |   |-- monkeypatch.py
+    |       |   |-- nodes.py
+    |       |   |-- outcomes.py
+    |       |   |-- pastebin.py
+    |       |   |-- pathlib.py
+    |       |   |-- py.typed
+    |       |   |-- pytester.py
+    |       |   |-- pytester_assertions.py
+    |       |   |-- python.py
+    |       |   |-- python_api.py
+    |       |   |-- python_path.py
+    |       |   |-- recwarn.py
+    |       |   |-- reports.py
+    |       |   |-- runner.py
+    |       |   |-- scope.py
+    |       |   |-- setuponly.py
+    |       |   |-- setupplan.py
+    |       |   |-- skipping.py
+    |       |   |-- stash.py
+    |       |   |-- stepwise.py
+    |       |   |-- terminal.py
+    |       |   |-- threadexception.py
+    |       |   |-- timing.py
+    |       |   |-- tmpdir.py
+    |       |   |-- unittest.py
+    |       |   |-- unraisableexception.py
+    |       |   |-- warning_types.py
+    |       |   |__ warnings.py
+    |       |-- aiosqlite
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- __version__.cpython-313.pyc
+    |       |   |   |-- context.cpython-313.pyc
+    |       |   |   |-- core.cpython-313.pyc
+    |       |   |   |__ cursor.cpython-313.pyc
+    |       |   |-- __version__.py
+    |       |   |-- context.py
+    |       |   |-- core.py
+    |       |   |-- cursor.py
+    |       |   |-- py.typed
+    |       |   |__ tests
+    |       |       |-- __init__.py
+    |       |       |-- __main__.py
+    |       |       |-- __pycache__
+    |       |       |   |-- __init__.cpython-313.pyc
+    |       |       |   |-- __main__.cpython-313.pyc
+    |       |       |   |-- helpers.cpython-313.pyc
+    |       |       |   |-- perf.cpython-313.pyc
+    |       |       |   |__ smoke.cpython-313.pyc
+    |       |       |-- helpers.py
+    |       |       |-- perf.py
+    |       |       |__ smoke.py
+    |       |-- aiosqlite-0.21.0.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- REQUESTED
+    |       |   |__ WHEEL
+    |       |-- annotated_types
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |__ test_cases.cpython-313.pyc
+    |       |   |-- py.typed
+    |       |   |__ test_cases.py
+    |       |-- annotated_types-0.7.0.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- WHEEL
+    |       |   |__ licenses
+    |       |       |__ LICENSE
+    |       |-- anyio
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- from_thread.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |-- from_thread.cpython-313.pyc
+    |       |   |   |-- lowlevel.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |-- lowlevel.cpython-313.pyc
+    |       |   |   |-- pytest_plugin.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |-- pytest_plugin.cpython-313.pyc
+    |       |   |   |-- to_interpreter.cpython-313.pyc
+    |       |   |   |-- to_process.cpython-313.pyc
+    |       |   |   |-- to_thread.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |__ to_thread.cpython-313.pyc
+    |       |   |-- _backends
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- _asyncio.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _asyncio.cpython-313.pyc
+    |       |   |   |   |__ _trio.cpython-313.pyc
+    |       |   |   |-- _asyncio.py
+    |       |   |   |__ _trio.py
+    |       |   |-- _core
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- _asyncio_selector_thread.cpython-313.pyc
+    |       |   |   |   |-- _eventloop.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _eventloop.cpython-313.pyc
+    |       |   |   |   |-- _exceptions.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _exceptions.cpython-313.pyc
+    |       |   |   |   |-- _fileio.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _fileio.cpython-313.pyc
+    |       |   |   |   |-- _resources.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _resources.cpython-313.pyc
+    |       |   |   |   |-- _signals.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _signals.cpython-313.pyc
+    |       |   |   |   |-- _sockets.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _sockets.cpython-313.pyc
+    |       |   |   |   |-- _streams.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _streams.cpython-313.pyc
+    |       |   |   |   |-- _subprocesses.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _subprocesses.cpython-313.pyc
+    |       |   |   |   |-- _synchronization.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _synchronization.cpython-313.pyc
+    |       |   |   |   |-- _tasks.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _tasks.cpython-313.pyc
+    |       |   |   |   |-- _testing.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _testing.cpython-313.pyc
+    |       |   |   |   |-- _typedattr.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |__ _typedattr.cpython-313.pyc
+    |       |   |   |-- _asyncio_selector_thread.py
+    |       |   |   |-- _eventloop.py
+    |       |   |   |-- _exceptions.py
+    |       |   |   |-- _fileio.py
+    |       |   |   |-- _resources.py
+    |       |   |   |-- _signals.py
+    |       |   |   |-- _sockets.py
+    |       |   |   |-- _streams.py
+    |       |   |   |-- _subprocesses.py
+    |       |   |   |-- _synchronization.py
+    |       |   |   |-- _tasks.py
+    |       |   |   |-- _testing.py
+    |       |   |   |__ _typedattr.py
+    |       |   |-- abc
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- _eventloop.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _eventloop.cpython-313.pyc
+    |       |   |   |   |-- _resources.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _resources.cpython-313.pyc
+    |       |   |   |   |-- _sockets.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _sockets.cpython-313.pyc
+    |       |   |   |   |-- _streams.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _streams.cpython-313.pyc
+    |       |   |   |   |-- _subprocesses.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _subprocesses.cpython-313.pyc
+    |       |   |   |   |-- _tasks.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- _tasks.cpython-313.pyc
+    |       |   |   |   |-- _testing.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |__ _testing.cpython-313.pyc
+    |       |   |   |-- _eventloop.py
+    |       |   |   |-- _resources.py
+    |       |   |   |-- _sockets.py
+    |       |   |   |-- _streams.py
+    |       |   |   |-- _subprocesses.py
+    |       |   |   |-- _tasks.py
+    |       |   |   |__ _testing.py
+    |       |   |-- from_thread.py
+    |       |   |-- lowlevel.py
+    |       |   |-- py.typed
+    |       |   |-- pytest_plugin.py
+    |       |   |-- streams
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- buffered.cpython-313.pyc
+    |       |   |   |   |-- file.cpython-313.pyc
+    |       |   |   |   |-- memory.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- memory.cpython-313.pyc
+    |       |   |   |   |-- stapled.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |-- stapled.cpython-313.pyc
+    |       |   |   |   |-- text.cpython-313.pyc
+    |       |   |   |   |-- tls.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |   |__ tls.cpython-313.pyc
+    |       |   |   |-- buffered.py
+    |       |   |   |-- file.py
+    |       |   |   |-- memory.py
+    |       |   |   |-- stapled.py
+    |       |   |   |-- text.py
+    |       |   |   |__ tls.py
+    |       |   |-- to_interpreter.py
+    |       |   |-- to_process.py
+    |       |   |__ to_thread.py
+    |       |-- anyio-4.8.0.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- WHEEL
+    |       |   |-- entry_points.txt
+    |       |   |__ top_level.txt
+    |       |-- cachetools
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- func.cpython-313.pyc
+    |       |   |   |__ keys.cpython-313.pyc
+    |       |   |-- func.py
+    |       |   |__ keys.py
+    |       |-- cachetools-5.5.1.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- REQUESTED
+    |       |   |-- WHEEL
+    |       |   |__ top_level.txt
+    |       |-- certifi
+    |       |   |-- __init__.py
+    |       |   |-- __main__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- __main__.cpython-313.pyc
+    |       |   |   |__ core.cpython-313.pyc
+    |       |   |-- cacert.pem
+    |       |   |-- core.py
+    |       |   |__ py.typed
+    |       |-- certifi-2025.1.31.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- WHEEL
+    |       |   |__ top_level.txt
+    |       |-- colorama
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- ansi.cpython-313.pyc
+    |       |   |   |-- ansitowin32.cpython-313.pyc
+    |       |   |   |-- initialise.cpython-313.pyc
+    |       |   |   |-- win32.cpython-313.pyc
+    |       |   |   |__ winterm.cpython-313.pyc
+    |       |   |-- ansi.py
+    |       |   |-- ansitowin32.py
+    |       |   |-- initialise.py
+    |       |   |-- tests
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- ansi_test.cpython-313.pyc
+    |       |   |   |   |-- ansitowin32_test.cpython-313.pyc
+    |       |   |   |   |-- initialise_test.cpython-313.pyc
+    |       |   |   |   |-- isatty_test.cpython-313.pyc
+    |       |   |   |   |-- utils.cpython-313.pyc
+    |       |   |   |   |__ winterm_test.cpython-313.pyc
+    |       |   |   |-- ansi_test.py
+    |       |   |   |-- ansitowin32_test.py
+    |       |   |   |-- initialise_test.py
+    |       |   |   |-- isatty_test.py
+    |       |   |   |-- utils.py
+    |       |   |   |__ winterm_test.py
+    |       |   |-- win32.py
+    |       |   |__ winterm.py
+    |       |-- colorama-0.4.6.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- WHEEL
+    |       |   |__ licenses
+    |       |       |__ LICENSE.txt
+    |       |-- distro
+    |       |   |-- __init__.py
+    |       |   |-- __main__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- __main__.cpython-313.pyc
+    |       |   |   |__ distro.cpython-313.pyc
+    |       |   |-- distro.py
+    |       |   |__ py.typed
+    |       |-- distro-1.9.0.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- WHEEL
+    |       |   |-- entry_points.txt
+    |       |   |__ top_level.txt
+    |       |-- dotenv
+    |       |   |-- __init__.py
+    |       |   |-- __main__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- __main__.cpython-313.pyc
+    |       |   |   |-- cli.cpython-313.pyc
+    |       |   |   |-- ipython.cpython-313.pyc
+    |       |   |   |-- main.cpython-313.pyc
+    |       |   |   |-- parser.cpython-313.pyc
+    |       |   |   |-- variables.cpython-313.pyc
+    |       |   |   |__ version.cpython-313.pyc
+    |       |   |-- cli.py
+    |       |   |-- ipython.py
+    |       |   |-- main.py
+    |       |   |-- parser.py
+    |       |   |-- py.typed
+    |       |   |-- variables.py
+    |       |   |__ version.py
+    |       |-- h11
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- _abnf.cpython-313.pyc
+    |       |   |   |-- _connection.cpython-313.pyc
+    |       |   |   |-- _events.cpython-313.pyc
+    |       |   |   |-- _headers.cpython-313.pyc
+    |       |   |   |-- _readers.cpython-313.pyc
+    |       |   |   |-- _receivebuffer.cpython-313.pyc
+    |       |   |   |-- _state.cpython-313.pyc
+    |       |   |   |-- _util.cpython-313.pyc
+    |       |   |   |-- _version.cpython-313.pyc
+    |       |   |   |__ _writers.cpython-313.pyc
+    |       |   |-- _abnf.py
+    |       |   |-- _connection.py
+    |       |   |-- _events.py
+    |       |   |-- _headers.py
+    |       |   |-- _readers.py
+    |       |   |-- _receivebuffer.py
+    |       |   |-- _state.py
+    |       |   |-- _util.py
+    |       |   |-- _version.py
+    |       |   |-- _writers.py
+    |       |   |-- py.typed
+    |       |   |__ tests
+    |       |       |-- __init__.py
+    |       |       |-- __pycache__
+    |       |       |   |-- __init__.cpython-313.pyc
+    |       |       |   |-- helpers.cpython-313.pyc
+    |       |       |   |-- test_against_stdlib_http.cpython-313.pyc
+    |       |       |   |-- test_connection.cpython-313.pyc
+    |       |       |   |-- test_events.cpython-313.pyc
+    |       |       |   |-- test_headers.cpython-313.pyc
+    |       |       |   |-- test_helpers.cpython-313.pyc
+    |       |       |   |-- test_io.cpython-313.pyc
+    |       |       |   |-- test_receivebuffer.cpython-313.pyc
+    |       |       |   |-- test_state.cpython-313.pyc
+    |       |       |   |__ test_util.cpython-313.pyc
+    |       |       |-- data
+    |       |       |   |__ test-file
+    |       |       |-- helpers.py
+    |       |       |-- test_against_stdlib_http.py
+    |       |       |-- test_connection.py
+    |       |       |-- test_events.py
+    |       |       |-- test_headers.py
+    |       |       |-- test_helpers.py
+    |       |       |-- test_io.py
+    |       |       |-- test_receivebuffer.py
+    |       |       |-- test_state.py
+    |       |       |__ test_util.py
+    |       |-- h11-0.14.0.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE.txt
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- WHEEL
+    |       |   |__ top_level.txt
+    |       |-- httpcore
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- _api.cpython-313.pyc
+    |       |   |   |-- _exceptions.cpython-313.pyc
+    |       |   |   |-- _models.cpython-313.pyc
+    |       |   |   |-- _ssl.cpython-313.pyc
+    |       |   |   |-- _synchronization.cpython-313.pyc
+    |       |   |   |-- _trace.cpython-313.pyc
+    |       |   |   |__ _utils.cpython-313.pyc
+    |       |   |-- _api.py
+    |       |   |-- _async
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- connection.cpython-313.pyc
+    |       |   |   |   |-- connection_pool.cpython-313.pyc
+    |       |   |   |   |-- http11.cpython-313.pyc
+    |       |   |   |   |-- http2.cpython-313.pyc
+    |       |   |   |   |-- http_proxy.cpython-313.pyc
+    |       |   |   |   |-- interfaces.cpython-313.pyc
+    |       |   |   |   |__ socks_proxy.cpython-313.pyc
+    |       |   |   |-- connection.py
+    |       |   |   |-- connection_pool.py
+    |       |   |   |-- http11.py
+    |       |   |   |-- http2.py
+    |       |   |   |-- http_proxy.py
+    |       |   |   |-- interfaces.py
+    |       |   |   |__ socks_proxy.py
+    |       |   |-- _backends
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- anyio.cpython-313.pyc
+    |       |   |   |   |-- auto.cpython-313.pyc
+    |       |   |   |   |-- base.cpython-313.pyc
+    |       |   |   |   |-- mock.cpython-313.pyc
+    |       |   |   |   |-- sync.cpython-313.pyc
+    |       |   |   |   |__ trio.cpython-313.pyc
+    |       |   |   |-- anyio.py
+    |       |   |   |-- auto.py
+    |       |   |   |-- base.py
+    |       |   |   |-- mock.py
+    |       |   |   |-- sync.py
+    |       |   |   |__ trio.py
+    |       |   |-- _exceptions.py
+    |       |   |-- _models.py
+    |       |   |-- _ssl.py
+    |       |   |-- _sync
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- connection.cpython-313.pyc
+    |       |   |   |   |-- connection_pool.cpython-313.pyc
+    |       |   |   |   |-- http11.cpython-313.pyc
+    |       |   |   |   |-- http2.cpython-313.pyc
+    |       |   |   |   |-- http_proxy.cpython-313.pyc
+    |       |   |   |   |-- interfaces.cpython-313.pyc
+    |       |   |   |   |__ socks_proxy.cpython-313.pyc
+    |       |   |   |-- connection.py
+    |       |   |   |-- connection_pool.py
+    |       |   |   |-- http11.py
+    |       |   |   |-- http2.py
+    |       |   |   |-- http_proxy.py
+    |       |   |   |-- interfaces.py
+    |       |   |   |__ socks_proxy.py
+    |       |   |-- _synchronization.py
+    |       |   |-- _trace.py
+    |       |   |-- _utils.py
+    |       |   |__ py.typed
+    |       |-- httpcore-1.0.7.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- WHEEL
+    |       |   |__ licenses
+    |       |       |__ LICENSE.md
+    |       |-- httpx
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- __version__.cpython-313.pyc
+    |       |   |   |-- _api.cpython-313.pyc
+    |       |   |   |-- _auth.cpython-313.pyc
+    |       |   |   |-- _client.cpython-313.pyc
+    |       |   |   |-- _config.cpython-313.pyc
+    |       |   |   |-- _content.cpython-313.pyc
+    |       |   |   |-- _decoders.cpython-313.pyc
+    |       |   |   |-- _exceptions.cpython-313.pyc
+    |       |   |   |-- _main.cpython-313.pyc
+    |       |   |   |-- _models.cpython-313.pyc
+    |       |   |   |-- _multipart.cpython-313.pyc
+    |       |   |   |-- _status_codes.cpython-313.pyc
+    |       |   |   |-- _types.cpython-313.pyc
+    |       |   |   |-- _urlparse.cpython-313.pyc
+    |       |   |   |-- _urls.cpython-313.pyc
+    |       |   |   |__ _utils.cpython-313.pyc
+    |       |   |-- __version__.py
+    |       |   |-- _api.py
+    |       |   |-- _auth.py
+    |       |   |-- _client.py
+    |       |   |-- _config.py
+    |       |   |-- _content.py
+    |       |   |-- _decoders.py
+    |       |   |-- _exceptions.py
+    |       |   |-- _main.py
+    |       |   |-- _models.py
+    |       |   |-- _multipart.py
+    |       |   |-- _status_codes.py
+    |       |   |-- _transports
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- asgi.cpython-313.pyc
+    |       |   |   |   |-- base.cpython-313.pyc
+    |       |   |   |   |-- default.cpython-313.pyc
+    |       |   |   |   |-- mock.cpython-313.pyc
+    |       |   |   |   |__ wsgi.cpython-313.pyc
+    |       |   |   |-- asgi.py
+    |       |   |   |-- base.py
+    |       |   |   |-- default.py
+    |       |   |   |-- mock.py
+    |       |   |   |__ wsgi.py
+    |       |   |-- _types.py
+    |       |   |-- _urlparse.py
+    |       |   |-- _urls.py
+    |       |   |-- _utils.py
+    |       |   |__ py.typed
+    |       |-- httpx-0.28.1.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- WHEEL
+    |       |   |-- entry_points.txt
+    |       |   |__ licenses
+    |       |       |__ LICENSE.md
+    |       |-- idna
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- codec.cpython-313.pyc
+    |       |   |   |-- compat.cpython-313.pyc
+    |       |   |   |-- core.cpython-313.pyc
+    |       |   |   |-- idnadata.cpython-313.pyc
+    |       |   |   |-- intranges.cpython-313.pyc
+    |       |   |   |-- package_data.cpython-313.pyc
+    |       |   |   |__ uts46data.cpython-313.pyc
+    |       |   |-- codec.py
+    |       |   |-- compat.py
+    |       |   |-- core.py
+    |       |   |-- idnadata.py
+    |       |   |-- intranges.py
+    |       |   |-- package_data.py
+    |       |   |-- py.typed
+    |       |   |__ uts46data.py
+    |       |-- idna-3.10.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE.md
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |__ WHEEL
+    |       |-- iniconfig
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- _parse.cpython-313.pyc
+    |       |   |   |-- _version.cpython-313.pyc
+    |       |   |   |__ exceptions.cpython-313.pyc
+    |       |   |-- _parse.py
+    |       |   |-- _version.py
+    |       |   |-- exceptions.py
+    |       |   |__ py.typed
+    |       |-- iniconfig-2.0.0.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- WHEEL
+    |       |   |__ licenses
+    |       |       |__ LICENSE
+    |       |-- jiter
+    |       |   |-- __init__.py
+    |       |   |-- __init__.pyi
+    |       |   |-- __pycache__
+    |       |   |   |__ __init__.cpython-313.pyc
+    |       |   |-- jiter.cp313-win_amd64.pyd
+    |       |   |__ py.typed
+    |       |-- jiter-0.8.2.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |__ WHEEL
+    |       |-- openai
+    |       |   |-- __init__.py
+    |       |   |-- __main__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- __main__.cpython-313.pyc
+    |       |   |   |-- _base_client.cpython-313.pyc
+    |       |   |   |-- _client.cpython-313.pyc
+    |       |   |   |-- _compat.cpython-313.pyc
+    |       |   |   |-- _constants.cpython-313.pyc
+    |       |   |   |-- _exceptions.cpython-313.pyc
+    |       |   |   |-- _files.cpython-313.pyc
+    |       |   |   |-- _legacy_response.cpython-313.pyc
+    |       |   |   |-- _models.cpython-313.pyc
+    |       |   |   |-- _module_client.cpython-313.pyc
+    |       |   |   |-- _qs.cpython-313.pyc
+    |       |   |   |-- _resource.cpython-313.pyc
+    |       |   |   |-- _response.cpython-313.pyc
+    |       |   |   |-- _streaming.cpython-313.pyc
+    |       |   |   |-- _types.cpython-313.pyc
+    |       |   |   |-- _version.cpython-313.pyc
+    |       |   |   |-- pagination.cpython-313.pyc
+    |       |   |   |__ version.cpython-313.pyc
+    |       |   |-- _base_client.py
+    |       |   |-- _client.py
+    |       |   |-- _compat.py
+    |       |   |-- _constants.py
+    |       |   |-- _exceptions.py
+    |       |   |-- _extras
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- _common.cpython-313.pyc
+    |       |   |   |   |-- numpy_proxy.cpython-313.pyc
+    |       |   |   |   |__ pandas_proxy.cpython-313.pyc
+    |       |   |   |-- _common.py
+    |       |   |   |-- numpy_proxy.py
+    |       |   |   |__ pandas_proxy.py
+    |       |   |-- _files.py
+    |       |   |-- _legacy_response.py
+    |       |   |-- _models.py
+    |       |   |-- _module_client.py
+    |       |   |-- _qs.py
+    |       |   |-- _resource.py
+    |       |   |-- _response.py
+    |       |   |-- _streaming.py
+    |       |   |-- _types.py
+    |       |   |-- _utils
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- _logs.cpython-313.pyc
+    |       |   |   |   |-- _proxy.cpython-313.pyc
+    |       |   |   |   |-- _reflection.cpython-313.pyc
+    |       |   |   |   |-- _streams.cpython-313.pyc
+    |       |   |   |   |-- _sync.cpython-313.pyc
+    |       |   |   |   |-- _transform.cpython-313.pyc
+    |       |   |   |   |-- _typing.cpython-313.pyc
+    |       |   |   |   |__ _utils.cpython-313.pyc
+    |       |   |   |-- _logs.py
+    |       |   |   |-- _proxy.py
+    |       |   |   |-- _reflection.py
+    |       |   |   |-- _streams.py
+    |       |   |   |-- _sync.py
+    |       |   |   |-- _transform.py
+    |       |   |   |-- _typing.py
+    |       |   |   |__ _utils.py
+    |       |   |-- _version.py
+    |       |   |-- cli
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- _cli.cpython-313.pyc
+    |       |   |   |   |-- _errors.cpython-313.pyc
+    |       |   |   |   |-- _models.cpython-313.pyc
+    |       |   |   |   |-- _progress.cpython-313.pyc
+    |       |   |   |   |__ _utils.cpython-313.pyc
+    |       |   |   |-- _api
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- _main.cpython-313.pyc
+    |       |   |   |   |   |-- audio.cpython-313.pyc
+    |       |   |   |   |   |-- completions.cpython-313.pyc
+    |       |   |   |   |   |-- files.cpython-313.pyc
+    |       |   |   |   |   |-- image.cpython-313.pyc
+    |       |   |   |   |   |__ models.cpython-313.pyc
+    |       |   |   |   |-- _main.py
+    |       |   |   |   |-- audio.py
+    |       |   |   |   |-- chat
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |__ completions.cpython-313.pyc
+    |       |   |   |   |   |__ completions.py
+    |       |   |   |   |-- completions.py
+    |       |   |   |   |-- files.py
+    |       |   |   |   |-- image.py
+    |       |   |   |   |__ models.py
+    |       |   |   |-- _cli.py
+    |       |   |   |-- _errors.py
+    |       |   |   |-- _models.py
+    |       |   |   |-- _progress.py
+    |       |   |   |-- _tools
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- _main.cpython-313.pyc
+    |       |   |   |   |   |-- fine_tunes.cpython-313.pyc
+    |       |   |   |   |   |__ migrate.cpython-313.pyc
+    |       |   |   |   |-- _main.py
+    |       |   |   |   |-- fine_tunes.py
+    |       |   |   |   |__ migrate.py
+    |       |   |   |__ _utils.py
+    |       |   |-- lib
+    |       |   |   |-- .keep
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- _old_api.cpython-313.pyc
+    |       |   |   |   |-- _pydantic.cpython-313.pyc
+    |       |   |   |   |-- _tools.cpython-313.pyc
+    |       |   |   |   |-- _validators.cpython-313.pyc
+    |       |   |   |   |__ azure.cpython-313.pyc
+    |       |   |   |-- _old_api.py
+    |       |   |   |-- _parsing
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |__ _completions.cpython-313.pyc
+    |       |   |   |   |__ _completions.py
+    |       |   |   |-- _pydantic.py
+    |       |   |   |-- _tools.py
+    |       |   |   |-- _validators.py
+    |       |   |   |-- azure.py
+    |       |   |   |__ streaming
+    |       |   |       |-- __init__.py
+    |       |   |       |-- __pycache__
+    |       |   |       |   |-- __init__.cpython-313.pyc
+    |       |   |       |   |-- _assistants.cpython-313.pyc
+    |       |   |       |   |__ _deltas.cpython-313.pyc
+    |       |   |       |-- _assistants.py
+    |       |   |       |-- _deltas.py
+    |       |   |       |__ chat
+    |       |   |           |-- __init__.py
+    |       |   |           |-- __pycache__
+    |       |   |           |   |-- __init__.cpython-313.pyc
+    |       |   |           |   |-- _completions.cpython-313.pyc
+    |       |   |           |   |-- _events.cpython-313.pyc
+    |       |   |           |   |__ _types.cpython-313.pyc
+    |       |   |           |-- _completions.py
+    |       |   |           |-- _events.py
+    |       |   |           |__ _types.py
+    |       |   |-- pagination.py
+    |       |   |-- py.typed
+    |       |   |-- resources
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- batches.cpython-313.pyc
+    |       |   |   |   |-- completions.cpython-313.pyc
+    |       |   |   |   |-- embeddings.cpython-313.pyc
+    |       |   |   |   |-- files.cpython-313.pyc
+    |       |   |   |   |-- images.cpython-313.pyc
+    |       |   |   |   |-- models.cpython-313.pyc
+    |       |   |   |   |__ moderations.cpython-313.pyc
+    |       |   |   |-- audio
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- audio.cpython-313.pyc
+    |       |   |   |   |   |-- speech.cpython-313.pyc
+    |       |   |   |   |   |-- transcriptions.cpython-313.pyc
+    |       |   |   |   |   |__ translations.cpython-313.pyc
+    |       |   |   |   |-- audio.py
+    |       |   |   |   |-- speech.py
+    |       |   |   |   |-- transcriptions.py
+    |       |   |   |   |__ translations.py
+    |       |   |   |-- batches.py
+    |       |   |   |-- beta
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- assistants.cpython-313.pyc
+    |       |   |   |   |   |__ beta.cpython-313.pyc
+    |       |   |   |   |-- assistants.py
+    |       |   |   |   |-- beta.py
+    |       |   |   |   |-- chat
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |-- chat.cpython-313.pyc
+    |       |   |   |   |   |   |__ completions.cpython-313.pyc
+    |       |   |   |   |   |-- chat.py
+    |       |   |   |   |   |__ completions.py
+    |       |   |   |   |-- realtime
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |-- realtime.cpython-313.pyc
+    |       |   |   |   |   |   |__ sessions.cpython-313.pyc
+    |       |   |   |   |   |-- realtime.py
+    |       |   |   |   |   |__ sessions.py
+    |       |   |   |   |-- threads
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |-- messages.cpython-313.pyc
+    |       |   |   |   |   |   |__ threads.cpython-313.pyc
+    |       |   |   |   |   |-- messages.py
+    |       |   |   |   |   |-- runs
+    |       |   |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- runs.cpython-313.pyc
+    |       |   |   |   |   |   |   |__ steps.cpython-313.pyc
+    |       |   |   |   |   |   |-- runs.py
+    |       |   |   |   |   |   |__ steps.py
+    |       |   |   |   |   |__ threads.py
+    |       |   |   |   |__ vector_stores
+    |       |   |   |       |-- __init__.py
+    |       |   |   |       |-- __pycache__
+    |       |   |   |       |   |-- __init__.cpython-313.pyc
+    |       |   |   |       |   |-- file_batches.cpython-313.pyc
+    |       |   |   |       |   |-- files.cpython-313.pyc
+    |       |   |   |       |   |__ vector_stores.cpython-313.pyc
+    |       |   |   |       |-- file_batches.py
+    |       |   |   |       |-- files.py
+    |       |   |   |       |__ vector_stores.py
+    |       |   |   |-- chat
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- chat.cpython-313.pyc
+    |       |   |   |   |   |__ completions.cpython-313.pyc
+    |       |   |   |   |-- chat.py
+    |       |   |   |   |__ completions.py
+    |       |   |   |-- completions.py
+    |       |   |   |-- embeddings.py
+    |       |   |   |-- files.py
+    |       |   |   |-- fine_tuning
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |__ fine_tuning.cpython-313.pyc
+    |       |   |   |   |-- fine_tuning.py
+    |       |   |   |   |__ jobs
+    |       |   |   |       |-- __init__.py
+    |       |   |   |       |-- __pycache__
+    |       |   |   |       |   |-- __init__.cpython-313.pyc
+    |       |   |   |       |   |-- checkpoints.cpython-313.pyc
+    |       |   |   |       |   |__ jobs.cpython-313.pyc
+    |       |   |   |       |-- checkpoints.py
+    |       |   |   |       |__ jobs.py
+    |       |   |   |-- images.py
+    |       |   |   |-- models.py
+    |       |   |   |-- moderations.py
+    |       |   |   |__ uploads
+    |       |   |       |-- __init__.py
+    |       |   |       |-- __pycache__
+    |       |   |       |   |-- __init__.cpython-313.pyc
+    |       |   |       |   |-- parts.cpython-313.pyc
+    |       |   |       |   |__ uploads.cpython-313.pyc
+    |       |   |       |-- parts.py
+    |       |   |       |__ uploads.py
+    |       |   |-- types
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- audio_model.cpython-313.pyc
+    |       |   |   |   |-- audio_response_format.cpython-313.pyc
+    |       |   |   |   |-- batch.cpython-313.pyc
+    |       |   |   |   |-- batch_create_params.cpython-313.pyc
+    |       |   |   |   |-- batch_error.cpython-313.pyc
+    |       |   |   |   |-- batch_list_params.cpython-313.pyc
+    |       |   |   |   |-- batch_request_counts.cpython-313.pyc
+    |       |   |   |   |-- chat_model.cpython-313.pyc
+    |       |   |   |   |-- completion.cpython-313.pyc
+    |       |   |   |   |-- completion_choice.cpython-313.pyc
+    |       |   |   |   |-- completion_create_params.cpython-313.pyc
+    |       |   |   |   |-- completion_usage.cpython-313.pyc
+    |       |   |   |   |-- create_embedding_response.cpython-313.pyc
+    |       |   |   |   |-- embedding.cpython-313.pyc
+    |       |   |   |   |-- embedding_create_params.cpython-313.pyc
+    |       |   |   |   |-- embedding_model.cpython-313.pyc
+    |       |   |   |   |-- file_content.cpython-313.pyc
+    |       |   |   |   |-- file_create_params.cpython-313.pyc
+    |       |   |   |   |-- file_deleted.cpython-313.pyc
+    |       |   |   |   |-- file_list_params.cpython-313.pyc
+    |       |   |   |   |-- file_object.cpython-313.pyc
+    |       |   |   |   |-- file_purpose.cpython-313.pyc
+    |       |   |   |   |-- image.cpython-313.pyc
+    |       |   |   |   |-- image_create_variation_params.cpython-313.pyc
+    |       |   |   |   |-- image_edit_params.cpython-313.pyc
+    |       |   |   |   |-- image_generate_params.cpython-313.pyc
+    |       |   |   |   |-- image_model.cpython-313.pyc
+    |       |   |   |   |-- images_response.cpython-313.pyc
+    |       |   |   |   |-- model.cpython-313.pyc
+    |       |   |   |   |-- model_deleted.cpython-313.pyc
+    |       |   |   |   |-- moderation.cpython-313.pyc
+    |       |   |   |   |-- moderation_create_params.cpython-313.pyc
+    |       |   |   |   |-- moderation_create_response.cpython-313.pyc
+    |       |   |   |   |-- moderation_image_url_input_param.cpython-313.pyc
+    |       |   |   |   |-- moderation_model.cpython-313.pyc
+    |       |   |   |   |-- moderation_multi_modal_input_param.cpython-313.pyc
+    |       |   |   |   |-- moderation_text_input_param.cpython-313.pyc
+    |       |   |   |   |-- upload.cpython-313.pyc
+    |       |   |   |   |-- upload_complete_params.cpython-313.pyc
+    |       |   |   |   |-- upload_create_params.cpython-313.pyc
+    |       |   |   |   |__ websocket_connection_options.cpython-313.pyc
+    |       |   |   |-- audio
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- speech_create_params.cpython-313.pyc
+    |       |   |   |   |   |-- speech_model.cpython-313.pyc
+    |       |   |   |   |   |-- transcription.cpython-313.pyc
+    |       |   |   |   |   |-- transcription_create_params.cpython-313.pyc
+    |       |   |   |   |   |-- transcription_create_response.cpython-313.pyc
+    |       |   |   |   |   |-- transcription_segment.cpython-313.pyc
+    |       |   |   |   |   |-- transcription_verbose.cpython-313.pyc
+    |       |   |   |   |   |-- transcription_word.cpython-313.pyc
+    |       |   |   |   |   |-- translation.cpython-313.pyc
+    |       |   |   |   |   |-- translation_create_params.cpython-313.pyc
+    |       |   |   |   |   |-- translation_create_response.cpython-313.pyc
+    |       |   |   |   |   |__ translation_verbose.cpython-313.pyc
+    |       |   |   |   |-- speech_create_params.py
+    |       |   |   |   |-- speech_model.py
+    |       |   |   |   |-- transcription.py
+    |       |   |   |   |-- transcription_create_params.py
+    |       |   |   |   |-- transcription_create_response.py
+    |       |   |   |   |-- transcription_segment.py
+    |       |   |   |   |-- transcription_verbose.py
+    |       |   |   |   |-- transcription_word.py
+    |       |   |   |   |-- translation.py
+    |       |   |   |   |-- translation_create_params.py
+    |       |   |   |   |-- translation_create_response.py
+    |       |   |   |   |__ translation_verbose.py
+    |       |   |   |-- audio_model.py
+    |       |   |   |-- audio_response_format.py
+    |       |   |   |-- batch.py
+    |       |   |   |-- batch_create_params.py
+    |       |   |   |-- batch_error.py
+    |       |   |   |-- batch_list_params.py
+    |       |   |   |-- batch_request_counts.py
+    |       |   |   |-- beta
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- assistant.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_create_params.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_deleted.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_list_params.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_response_format_option.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_response_format_option_param.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_stream_event.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_tool.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_tool_choice.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_tool_choice_function.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_tool_choice_function_param.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_tool_choice_option.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_tool_choice_option_param.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_tool_choice_param.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_tool_param.cpython-313.pyc
+    |       |   |   |   |   |-- assistant_update_params.cpython-313.pyc
+    |       |   |   |   |   |-- auto_file_chunking_strategy_param.cpython-313.pyc
+    |       |   |   |   |   |-- code_interpreter_tool.cpython-313.pyc
+    |       |   |   |   |   |-- code_interpreter_tool_param.cpython-313.pyc
+    |       |   |   |   |   |-- file_chunking_strategy.cpython-313.pyc
+    |       |   |   |   |   |-- file_chunking_strategy_param.cpython-313.pyc
+    |       |   |   |   |   |-- file_search_tool.cpython-313.pyc
+    |       |   |   |   |   |-- file_search_tool_param.cpython-313.pyc
+    |       |   |   |   |   |-- function_tool.cpython-313.pyc
+    |       |   |   |   |   |-- function_tool_param.cpython-313.pyc
+    |       |   |   |   |   |-- other_file_chunking_strategy_object.cpython-313.pyc
+    |       |   |   |   |   |-- static_file_chunking_strategy.cpython-313.pyc
+    |       |   |   |   |   |-- static_file_chunking_strategy_object.cpython-313.pyc
+    |       |   |   |   |   |-- static_file_chunking_strategy_object_param.cpython-313.pyc
+    |       |   |   |   |   |-- static_file_chunking_strategy_param.cpython-313.pyc
+    |       |   |   |   |   |-- thread.cpython-313.pyc
+    |       |   |   |   |   |-- thread_create_and_run_params.cpython-313.pyc
+    |       |   |   |   |   |-- thread_create_params.cpython-313.pyc
+    |       |   |   |   |   |-- thread_deleted.cpython-313.pyc
+    |       |   |   |   |   |-- thread_update_params.cpython-313.pyc
+    |       |   |   |   |   |-- vector_store.cpython-313.pyc
+    |       |   |   |   |   |-- vector_store_create_params.cpython-313.pyc
+    |       |   |   |   |   |-- vector_store_deleted.cpython-313.pyc
+    |       |   |   |   |   |-- vector_store_list_params.cpython-313.pyc
+    |       |   |   |   |   |__ vector_store_update_params.cpython-313.pyc
+    |       |   |   |   |-- assistant.py
+    |       |   |   |   |-- assistant_create_params.py
+    |       |   |   |   |-- assistant_deleted.py
+    |       |   |   |   |-- assistant_list_params.py
+    |       |   |   |   |-- assistant_response_format_option.py
+    |       |   |   |   |-- assistant_response_format_option_param.py
+    |       |   |   |   |-- assistant_stream_event.py
+    |       |   |   |   |-- assistant_tool.py
+    |       |   |   |   |-- assistant_tool_choice.py
+    |       |   |   |   |-- assistant_tool_choice_function.py
+    |       |   |   |   |-- assistant_tool_choice_function_param.py
+    |       |   |   |   |-- assistant_tool_choice_option.py
+    |       |   |   |   |-- assistant_tool_choice_option_param.py
+    |       |   |   |   |-- assistant_tool_choice_param.py
+    |       |   |   |   |-- assistant_tool_param.py
+    |       |   |   |   |-- assistant_update_params.py
+    |       |   |   |   |-- auto_file_chunking_strategy_param.py
+    |       |   |   |   |-- chat
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |__ __pycache__
+    |       |   |   |   |       |__ __init__.cpython-313.pyc
+    |       |   |   |   |-- code_interpreter_tool.py
+    |       |   |   |   |-- code_interpreter_tool_param.py
+    |       |   |   |   |-- file_chunking_strategy.py
+    |       |   |   |   |-- file_chunking_strategy_param.py
+    |       |   |   |   |-- file_search_tool.py
+    |       |   |   |   |-- file_search_tool_param.py
+    |       |   |   |   |-- function_tool.py
+    |       |   |   |   |-- function_tool_param.py
+    |       |   |   |   |-- other_file_chunking_strategy_object.py
+    |       |   |   |   |-- realtime
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_created_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_content.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_content_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_create_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_create_event_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_created_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_delete_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_delete_event_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_deleted_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_input_audio_transcription_completed_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_input_audio_transcription_failed_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_truncate_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_truncate_event_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_truncated_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_with_reference.cpython-313.pyc
+    |       |   |   |   |   |   |-- conversation_item_with_reference_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- error_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- input_audio_buffer_append_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- input_audio_buffer_append_event_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- input_audio_buffer_clear_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- input_audio_buffer_clear_event_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- input_audio_buffer_cleared_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- input_audio_buffer_commit_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- input_audio_buffer_commit_event_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- input_audio_buffer_committed_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- input_audio_buffer_speech_started_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- input_audio_buffer_speech_stopped_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- rate_limits_updated_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- realtime_client_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- realtime_client_event_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- realtime_connect_params.cpython-313.pyc
+    |       |   |   |   |   |   |-- realtime_response.cpython-313.pyc
+    |       |   |   |   |   |   |-- realtime_response_status.cpython-313.pyc
+    |       |   |   |   |   |   |-- realtime_response_usage.cpython-313.pyc
+    |       |   |   |   |   |   |-- realtime_server_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_audio_delta_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_audio_done_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_audio_transcript_delta_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_audio_transcript_done_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_cancel_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_cancel_event_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_content_part_added_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_content_part_done_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_create_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_create_event_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_created_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_done_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_function_call_arguments_delta_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_function_call_arguments_done_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_output_item_added_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_output_item_done_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_text_delta_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- response_text_done_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- session.cpython-313.pyc
+    |       |   |   |   |   |   |-- session_create_params.cpython-313.pyc
+    |       |   |   |   |   |   |-- session_create_response.cpython-313.pyc
+    |       |   |   |   |   |   |-- session_created_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- session_update_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- session_update_event_param.cpython-313.pyc
+    |       |   |   |   |   |   |__ session_updated_event.cpython-313.pyc
+    |       |   |   |   |   |-- conversation_created_event.py
+    |       |   |   |   |   |-- conversation_item.py
+    |       |   |   |   |   |-- conversation_item_content.py
+    |       |   |   |   |   |-- conversation_item_content_param.py
+    |       |   |   |   |   |-- conversation_item_create_event.py
+    |       |   |   |   |   |-- conversation_item_create_event_param.py
+    |       |   |   |   |   |-- conversation_item_created_event.py
+    |       |   |   |   |   |-- conversation_item_delete_event.py
+    |       |   |   |   |   |-- conversation_item_delete_event_param.py
+    |       |   |   |   |   |-- conversation_item_deleted_event.py
+    |       |   |   |   |   |-- conversation_item_input_audio_transcription_completed_event.py
+    |       |   |   |   |   |-- conversation_item_input_audio_transcription_failed_event.py
+    |       |   |   |   |   |-- conversation_item_param.py
+    |       |   |   |   |   |-- conversation_item_truncate_event.py
+    |       |   |   |   |   |-- conversation_item_truncate_event_param.py
+    |       |   |   |   |   |-- conversation_item_truncated_event.py
+    |       |   |   |   |   |-- conversation_item_with_reference.py
+    |       |   |   |   |   |-- conversation_item_with_reference_param.py
+    |       |   |   |   |   |-- error_event.py
+    |       |   |   |   |   |-- input_audio_buffer_append_event.py
+    |       |   |   |   |   |-- input_audio_buffer_append_event_param.py
+    |       |   |   |   |   |-- input_audio_buffer_clear_event.py
+    |       |   |   |   |   |-- input_audio_buffer_clear_event_param.py
+    |       |   |   |   |   |-- input_audio_buffer_cleared_event.py
+    |       |   |   |   |   |-- input_audio_buffer_commit_event.py
+    |       |   |   |   |   |-- input_audio_buffer_commit_event_param.py
+    |       |   |   |   |   |-- input_audio_buffer_committed_event.py
+    |       |   |   |   |   |-- input_audio_buffer_speech_started_event.py
+    |       |   |   |   |   |-- input_audio_buffer_speech_stopped_event.py
+    |       |   |   |   |   |-- rate_limits_updated_event.py
+    |       |   |   |   |   |-- realtime_client_event.py
+    |       |   |   |   |   |-- realtime_client_event_param.py
+    |       |   |   |   |   |-- realtime_connect_params.py
+    |       |   |   |   |   |-- realtime_response.py
+    |       |   |   |   |   |-- realtime_response_status.py
+    |       |   |   |   |   |-- realtime_response_usage.py
+    |       |   |   |   |   |-- realtime_server_event.py
+    |       |   |   |   |   |-- response_audio_delta_event.py
+    |       |   |   |   |   |-- response_audio_done_event.py
+    |       |   |   |   |   |-- response_audio_transcript_delta_event.py
+    |       |   |   |   |   |-- response_audio_transcript_done_event.py
+    |       |   |   |   |   |-- response_cancel_event.py
+    |       |   |   |   |   |-- response_cancel_event_param.py
+    |       |   |   |   |   |-- response_content_part_added_event.py
+    |       |   |   |   |   |-- response_content_part_done_event.py
+    |       |   |   |   |   |-- response_create_event.py
+    |       |   |   |   |   |-- response_create_event_param.py
+    |       |   |   |   |   |-- response_created_event.py
+    |       |   |   |   |   |-- response_done_event.py
+    |       |   |   |   |   |-- response_function_call_arguments_delta_event.py
+    |       |   |   |   |   |-- response_function_call_arguments_done_event.py
+    |       |   |   |   |   |-- response_output_item_added_event.py
+    |       |   |   |   |   |-- response_output_item_done_event.py
+    |       |   |   |   |   |-- response_text_delta_event.py
+    |       |   |   |   |   |-- response_text_done_event.py
+    |       |   |   |   |   |-- session.py
+    |       |   |   |   |   |-- session_create_params.py
+    |       |   |   |   |   |-- session_create_response.py
+    |       |   |   |   |   |-- session_created_event.py
+    |       |   |   |   |   |-- session_update_event.py
+    |       |   |   |   |   |-- session_update_event_param.py
+    |       |   |   |   |   |__ session_updated_event.py
+    |       |   |   |   |-- static_file_chunking_strategy.py
+    |       |   |   |   |-- static_file_chunking_strategy_object.py
+    |       |   |   |   |-- static_file_chunking_strategy_object_param.py
+    |       |   |   |   |-- static_file_chunking_strategy_param.py
+    |       |   |   |   |-- thread.py
+    |       |   |   |   |-- thread_create_and_run_params.py
+    |       |   |   |   |-- thread_create_params.py
+    |       |   |   |   |-- thread_deleted.py
+    |       |   |   |   |-- thread_update_params.py
+    |       |   |   |   |-- threads
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |-- annotation.cpython-313.pyc
+    |       |   |   |   |   |   |-- annotation_delta.cpython-313.pyc
+    |       |   |   |   |   |   |-- file_citation_annotation.cpython-313.pyc
+    |       |   |   |   |   |   |-- file_citation_delta_annotation.cpython-313.pyc
+    |       |   |   |   |   |   |-- file_path_annotation.cpython-313.pyc
+    |       |   |   |   |   |   |-- file_path_delta_annotation.cpython-313.pyc
+    |       |   |   |   |   |   |-- image_file.cpython-313.pyc
+    |       |   |   |   |   |   |-- image_file_content_block.cpython-313.pyc
+    |       |   |   |   |   |   |-- image_file_content_block_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- image_file_delta.cpython-313.pyc
+    |       |   |   |   |   |   |-- image_file_delta_block.cpython-313.pyc
+    |       |   |   |   |   |   |-- image_file_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- image_url.cpython-313.pyc
+    |       |   |   |   |   |   |-- image_url_content_block.cpython-313.pyc
+    |       |   |   |   |   |   |-- image_url_content_block_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- image_url_delta.cpython-313.pyc
+    |       |   |   |   |   |   |-- image_url_delta_block.cpython-313.pyc
+    |       |   |   |   |   |   |-- image_url_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- message.cpython-313.pyc
+    |       |   |   |   |   |   |-- message_content.cpython-313.pyc
+    |       |   |   |   |   |   |-- message_content_delta.cpython-313.pyc
+    |       |   |   |   |   |   |-- message_content_part_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- message_create_params.cpython-313.pyc
+    |       |   |   |   |   |   |-- message_deleted.cpython-313.pyc
+    |       |   |   |   |   |   |-- message_delta.cpython-313.pyc
+    |       |   |   |   |   |   |-- message_delta_event.cpython-313.pyc
+    |       |   |   |   |   |   |-- message_list_params.cpython-313.pyc
+    |       |   |   |   |   |   |-- message_update_params.cpython-313.pyc
+    |       |   |   |   |   |   |-- refusal_content_block.cpython-313.pyc
+    |       |   |   |   |   |   |-- refusal_delta_block.cpython-313.pyc
+    |       |   |   |   |   |   |-- required_action_function_tool_call.cpython-313.pyc
+    |       |   |   |   |   |   |-- run.cpython-313.pyc
+    |       |   |   |   |   |   |-- run_create_params.cpython-313.pyc
+    |       |   |   |   |   |   |-- run_list_params.cpython-313.pyc
+    |       |   |   |   |   |   |-- run_status.cpython-313.pyc
+    |       |   |   |   |   |   |-- run_submit_tool_outputs_params.cpython-313.pyc
+    |       |   |   |   |   |   |-- run_update_params.cpython-313.pyc
+    |       |   |   |   |   |   |-- text.cpython-313.pyc
+    |       |   |   |   |   |   |-- text_content_block.cpython-313.pyc
+    |       |   |   |   |   |   |-- text_content_block_param.cpython-313.pyc
+    |       |   |   |   |   |   |-- text_delta.cpython-313.pyc
+    |       |   |   |   |   |   |__ text_delta_block.cpython-313.pyc
+    |       |   |   |   |   |-- annotation.py
+    |       |   |   |   |   |-- annotation_delta.py
+    |       |   |   |   |   |-- file_citation_annotation.py
+    |       |   |   |   |   |-- file_citation_delta_annotation.py
+    |       |   |   |   |   |-- file_path_annotation.py
+    |       |   |   |   |   |-- file_path_delta_annotation.py
+    |       |   |   |   |   |-- image_file.py
+    |       |   |   |   |   |-- image_file_content_block.py
+    |       |   |   |   |   |-- image_file_content_block_param.py
+    |       |   |   |   |   |-- image_file_delta.py
+    |       |   |   |   |   |-- image_file_delta_block.py
+    |       |   |   |   |   |-- image_file_param.py
+    |       |   |   |   |   |-- image_url.py
+    |       |   |   |   |   |-- image_url_content_block.py
+    |       |   |   |   |   |-- image_url_content_block_param.py
+    |       |   |   |   |   |-- image_url_delta.py
+    |       |   |   |   |   |-- image_url_delta_block.py
+    |       |   |   |   |   |-- image_url_param.py
+    |       |   |   |   |   |-- message.py
+    |       |   |   |   |   |-- message_content.py
+    |       |   |   |   |   |-- message_content_delta.py
+    |       |   |   |   |   |-- message_content_part_param.py
+    |       |   |   |   |   |-- message_create_params.py
+    |       |   |   |   |   |-- message_deleted.py
+    |       |   |   |   |   |-- message_delta.py
+    |       |   |   |   |   |-- message_delta_event.py
+    |       |   |   |   |   |-- message_list_params.py
+    |       |   |   |   |   |-- message_update_params.py
+    |       |   |   |   |   |-- refusal_content_block.py
+    |       |   |   |   |   |-- refusal_delta_block.py
+    |       |   |   |   |   |-- required_action_function_tool_call.py
+    |       |   |   |   |   |-- run.py
+    |       |   |   |   |   |-- run_create_params.py
+    |       |   |   |   |   |-- run_list_params.py
+    |       |   |   |   |   |-- run_status.py
+    |       |   |   |   |   |-- run_submit_tool_outputs_params.py
+    |       |   |   |   |   |-- run_update_params.py
+    |       |   |   |   |   |-- runs
+    |       |   |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- code_interpreter_logs.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- code_interpreter_output_image.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- code_interpreter_tool_call.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- code_interpreter_tool_call_delta.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- file_search_tool_call.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- file_search_tool_call_delta.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- function_tool_call.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- function_tool_call_delta.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- message_creation_step_details.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- run_step.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- run_step_delta.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- run_step_delta_event.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- run_step_delta_message_delta.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- run_step_include.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- step_list_params.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- step_retrieve_params.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- tool_call.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- tool_call_delta.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- tool_call_delta_object.cpython-313.pyc
+    |       |   |   |   |   |   |   |__ tool_calls_step_details.cpython-313.pyc
+    |       |   |   |   |   |   |-- code_interpreter_logs.py
+    |       |   |   |   |   |   |-- code_interpreter_output_image.py
+    |       |   |   |   |   |   |-- code_interpreter_tool_call.py
+    |       |   |   |   |   |   |-- code_interpreter_tool_call_delta.py
+    |       |   |   |   |   |   |-- file_search_tool_call.py
+    |       |   |   |   |   |   |-- file_search_tool_call_delta.py
+    |       |   |   |   |   |   |-- function_tool_call.py
+    |       |   |   |   |   |   |-- function_tool_call_delta.py
+    |       |   |   |   |   |   |-- message_creation_step_details.py
+    |       |   |   |   |   |   |-- run_step.py
+    |       |   |   |   |   |   |-- run_step_delta.py
+    |       |   |   |   |   |   |-- run_step_delta_event.py
+    |       |   |   |   |   |   |-- run_step_delta_message_delta.py
+    |       |   |   |   |   |   |-- run_step_include.py
+    |       |   |   |   |   |   |-- step_list_params.py
+    |       |   |   |   |   |   |-- step_retrieve_params.py
+    |       |   |   |   |   |   |-- tool_call.py
+    |       |   |   |   |   |   |-- tool_call_delta.py
+    |       |   |   |   |   |   |-- tool_call_delta_object.py
+    |       |   |   |   |   |   |__ tool_calls_step_details.py
+    |       |   |   |   |   |-- text.py
+    |       |   |   |   |   |-- text_content_block.py
+    |       |   |   |   |   |-- text_content_block_param.py
+    |       |   |   |   |   |-- text_delta.py
+    |       |   |   |   |   |__ text_delta_block.py
+    |       |   |   |   |-- vector_store.py
+    |       |   |   |   |-- vector_store_create_params.py
+    |       |   |   |   |-- vector_store_deleted.py
+    |       |   |   |   |-- vector_store_list_params.py
+    |       |   |   |   |-- vector_store_update_params.py
+    |       |   |   |   |__ vector_stores
+    |       |   |   |       |-- __init__.py
+    |       |   |   |       |-- __pycache__
+    |       |   |   |       |   |-- __init__.cpython-313.pyc
+    |       |   |   |       |   |-- file_batch_create_params.cpython-313.pyc
+    |       |   |   |       |   |-- file_batch_list_files_params.cpython-313.pyc
+    |       |   |   |       |   |-- file_create_params.cpython-313.pyc
+    |       |   |   |       |   |-- file_list_params.cpython-313.pyc
+    |       |   |   |       |   |-- vector_store_file.cpython-313.pyc
+    |       |   |   |       |   |-- vector_store_file_batch.cpython-313.pyc
+    |       |   |   |       |   |__ vector_store_file_deleted.cpython-313.pyc
+    |       |   |   |       |-- file_batch_create_params.py
+    |       |   |   |       |-- file_batch_list_files_params.py
+    |       |   |   |       |-- file_create_params.py
+    |       |   |   |       |-- file_list_params.py
+    |       |   |   |       |-- vector_store_file.py
+    |       |   |   |       |-- vector_store_file_batch.py
+    |       |   |   |       |__ vector_store_file_deleted.py
+    |       |   |   |-- chat
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_assistant_message_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_audio.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_audio_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_chunk.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_content_part_image_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_content_part_input_audio_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_content_part_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_content_part_refusal_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_content_part_text_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_developer_message_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_function_call_option_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_function_message_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_message.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_message_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_message_tool_call.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_message_tool_call_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_modality.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_named_tool_choice_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_prediction_content_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_reasoning_effort.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_role.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_stream_options_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_system_message_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_token_logprob.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_tool_choice_option_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_tool_message_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_tool_param.cpython-313.pyc
+    |       |   |   |   |   |-- chat_completion_user_message_param.cpython-313.pyc
+    |       |   |   |   |   |-- completion_create_params.cpython-313.pyc
+    |       |   |   |   |   |-- parsed_chat_completion.cpython-313.pyc
+    |       |   |   |   |   |__ parsed_function_tool_call.cpython-313.pyc
+    |       |   |   |   |-- chat_completion.py
+    |       |   |   |   |-- chat_completion_assistant_message_param.py
+    |       |   |   |   |-- chat_completion_audio.py
+    |       |   |   |   |-- chat_completion_audio_param.py
+    |       |   |   |   |-- chat_completion_chunk.py
+    |       |   |   |   |-- chat_completion_content_part_image_param.py
+    |       |   |   |   |-- chat_completion_content_part_input_audio_param.py
+    |       |   |   |   |-- chat_completion_content_part_param.py
+    |       |   |   |   |-- chat_completion_content_part_refusal_param.py
+    |       |   |   |   |-- chat_completion_content_part_text_param.py
+    |       |   |   |   |-- chat_completion_developer_message_param.py
+    |       |   |   |   |-- chat_completion_function_call_option_param.py
+    |       |   |   |   |-- chat_completion_function_message_param.py
+    |       |   |   |   |-- chat_completion_message.py
+    |       |   |   |   |-- chat_completion_message_param.py
+    |       |   |   |   |-- chat_completion_message_tool_call.py
+    |       |   |   |   |-- chat_completion_message_tool_call_param.py
+    |       |   |   |   |-- chat_completion_modality.py
+    |       |   |   |   |-- chat_completion_named_tool_choice_param.py
+    |       |   |   |   |-- chat_completion_prediction_content_param.py
+    |       |   |   |   |-- chat_completion_reasoning_effort.py
+    |       |   |   |   |-- chat_completion_role.py
+    |       |   |   |   |-- chat_completion_stream_options_param.py
+    |       |   |   |   |-- chat_completion_system_message_param.py
+    |       |   |   |   |-- chat_completion_token_logprob.py
+    |       |   |   |   |-- chat_completion_tool_choice_option_param.py
+    |       |   |   |   |-- chat_completion_tool_message_param.py
+    |       |   |   |   |-- chat_completion_tool_param.py
+    |       |   |   |   |-- chat_completion_user_message_param.py
+    |       |   |   |   |-- completion_create_params.py
+    |       |   |   |   |-- parsed_chat_completion.py
+    |       |   |   |   |__ parsed_function_tool_call.py
+    |       |   |   |-- chat_model.py
+    |       |   |   |-- completion.py
+    |       |   |   |-- completion_choice.py
+    |       |   |   |-- completion_create_params.py
+    |       |   |   |-- completion_usage.py
+    |       |   |   |-- create_embedding_response.py
+    |       |   |   |-- embedding.py
+    |       |   |   |-- embedding_create_params.py
+    |       |   |   |-- embedding_model.py
+    |       |   |   |-- file_content.py
+    |       |   |   |-- file_create_params.py
+    |       |   |   |-- file_deleted.py
+    |       |   |   |-- file_list_params.py
+    |       |   |   |-- file_object.py
+    |       |   |   |-- file_purpose.py
+    |       |   |   |-- fine_tuning
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- fine_tuning_job.cpython-313.pyc
+    |       |   |   |   |   |-- fine_tuning_job_event.cpython-313.pyc
+    |       |   |   |   |   |-- fine_tuning_job_integration.cpython-313.pyc
+    |       |   |   |   |   |-- fine_tuning_job_wandb_integration.cpython-313.pyc
+    |       |   |   |   |   |-- fine_tuning_job_wandb_integration_object.cpython-313.pyc
+    |       |   |   |   |   |-- job_create_params.cpython-313.pyc
+    |       |   |   |   |   |-- job_list_events_params.cpython-313.pyc
+    |       |   |   |   |   |__ job_list_params.cpython-313.pyc
+    |       |   |   |   |-- fine_tuning_job.py
+    |       |   |   |   |-- fine_tuning_job_event.py
+    |       |   |   |   |-- fine_tuning_job_integration.py
+    |       |   |   |   |-- fine_tuning_job_wandb_integration.py
+    |       |   |   |   |-- fine_tuning_job_wandb_integration_object.py
+    |       |   |   |   |-- job_create_params.py
+    |       |   |   |   |-- job_list_events_params.py
+    |       |   |   |   |-- job_list_params.py
+    |       |   |   |   |__ jobs
+    |       |   |   |       |-- __init__.py
+    |       |   |   |       |-- __pycache__
+    |       |   |   |       |   |-- __init__.cpython-313.pyc
+    |       |   |   |       |   |-- checkpoint_list_params.cpython-313.pyc
+    |       |   |   |       |   |__ fine_tuning_job_checkpoint.cpython-313.pyc
+    |       |   |   |       |-- checkpoint_list_params.py
+    |       |   |   |       |__ fine_tuning_job_checkpoint.py
+    |       |   |   |-- image.py
+    |       |   |   |-- image_create_variation_params.py
+    |       |   |   |-- image_edit_params.py
+    |       |   |   |-- image_generate_params.py
+    |       |   |   |-- image_model.py
+    |       |   |   |-- images_response.py
+    |       |   |   |-- model.py
+    |       |   |   |-- model_deleted.py
+    |       |   |   |-- moderation.py
+    |       |   |   |-- moderation_create_params.py
+    |       |   |   |-- moderation_create_response.py
+    |       |   |   |-- moderation_image_url_input_param.py
+    |       |   |   |-- moderation_model.py
+    |       |   |   |-- moderation_multi_modal_input_param.py
+    |       |   |   |-- moderation_text_input_param.py
+    |       |   |   |-- shared
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- error_object.cpython-313.pyc
+    |       |   |   |   |   |-- function_definition.cpython-313.pyc
+    |       |   |   |   |   |-- function_parameters.cpython-313.pyc
+    |       |   |   |   |   |-- metadata.cpython-313.pyc
+    |       |   |   |   |   |-- response_format_json_object.cpython-313.pyc
+    |       |   |   |   |   |-- response_format_json_schema.cpython-313.pyc
+    |       |   |   |   |   |__ response_format_text.cpython-313.pyc
+    |       |   |   |   |-- error_object.py
+    |       |   |   |   |-- function_definition.py
+    |       |   |   |   |-- function_parameters.py
+    |       |   |   |   |-- metadata.py
+    |       |   |   |   |-- response_format_json_object.py
+    |       |   |   |   |-- response_format_json_schema.py
+    |       |   |   |   |__ response_format_text.py
+    |       |   |   |-- shared_params
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- function_definition.cpython-313.pyc
+    |       |   |   |   |   |-- function_parameters.cpython-313.pyc
+    |       |   |   |   |   |-- metadata.cpython-313.pyc
+    |       |   |   |   |   |-- response_format_json_object.cpython-313.pyc
+    |       |   |   |   |   |-- response_format_json_schema.cpython-313.pyc
+    |       |   |   |   |   |__ response_format_text.cpython-313.pyc
+    |       |   |   |   |-- function_definition.py
+    |       |   |   |   |-- function_parameters.py
+    |       |   |   |   |-- metadata.py
+    |       |   |   |   |-- response_format_json_object.py
+    |       |   |   |   |-- response_format_json_schema.py
+    |       |   |   |   |__ response_format_text.py
+    |       |   |   |-- upload.py
+    |       |   |   |-- upload_complete_params.py
+    |       |   |   |-- upload_create_params.py
+    |       |   |   |-- uploads
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- part_create_params.cpython-313.pyc
+    |       |   |   |   |   |__ upload_part.cpython-313.pyc
+    |       |   |   |   |-- part_create_params.py
+    |       |   |   |   |__ upload_part.py
+    |       |   |   |__ websocket_connection_options.py
+    |       |   |__ version.py
+    |       |-- openai-1.62.0.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- REQUESTED
+    |       |   |-- WHEEL
+    |       |   |-- entry_points.txt
+    |       |   |__ licenses
+    |       |       |__ LICENSE
+    |       |-- packaging
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- _elffile.cpython-313.pyc
+    |       |   |   |-- _manylinux.cpython-313.pyc
+    |       |   |   |-- _musllinux.cpython-313.pyc
+    |       |   |   |-- _parser.cpython-313.pyc
+    |       |   |   |-- _structures.cpython-313.pyc
+    |       |   |   |-- _tokenizer.cpython-313.pyc
+    |       |   |   |-- markers.cpython-313.pyc
+    |       |   |   |-- metadata.cpython-313.pyc
+    |       |   |   |-- requirements.cpython-313.pyc
+    |       |   |   |-- specifiers.cpython-313.pyc
+    |       |   |   |-- tags.cpython-313.pyc
+    |       |   |   |-- utils.cpython-313.pyc
+    |       |   |   |__ version.cpython-313.pyc
+    |       |   |-- _elffile.py
+    |       |   |-- _manylinux.py
+    |       |   |-- _musllinux.py
+    |       |   |-- _parser.py
+    |       |   |-- _structures.py
+    |       |   |-- _tokenizer.py
+    |       |   |-- licenses
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |__ _spdx.cpython-313.pyc
+    |       |   |   |__ _spdx.py
+    |       |   |-- markers.py
+    |       |   |-- metadata.py
+    |       |   |-- py.typed
+    |       |   |-- requirements.py
+    |       |   |-- specifiers.py
+    |       |   |-- tags.py
+    |       |   |-- utils.py
+    |       |   |__ version.py
+    |       |-- packaging-24.2.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE
+    |       |   |-- LICENSE.APACHE
+    |       |   |-- LICENSE.BSD
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |__ WHEEL
+    |       |-- pip
+    |       |   |-- __init__.py
+    |       |   |-- __main__.py
+    |       |   |-- __pip-runner__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- __main__.cpython-313.pyc
+    |       |   |   |__ __pip-runner__.cpython-313.pyc
+    |       |   |-- _internal
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- build_env.cpython-313.pyc
+    |       |   |   |   |-- cache.cpython-313.pyc
+    |       |   |   |   |-- configuration.cpython-313.pyc
+    |       |   |   |   |-- exceptions.cpython-313.pyc
+    |       |   |   |   |-- main.cpython-313.pyc
+    |       |   |   |   |-- pyproject.cpython-313.pyc
+    |       |   |   |   |-- self_outdated_check.cpython-313.pyc
+    |       |   |   |   |__ wheel_builder.cpython-313.pyc
+    |       |   |   |-- build_env.py
+    |       |   |   |-- cache.py
+    |       |   |   |-- cli
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- autocompletion.cpython-313.pyc
+    |       |   |   |   |   |-- base_command.cpython-313.pyc
+    |       |   |   |   |   |-- cmdoptions.cpython-313.pyc
+    |       |   |   |   |   |-- command_context.cpython-313.pyc
+    |       |   |   |   |   |-- index_command.cpython-313.pyc
+    |       |   |   |   |   |-- main.cpython-313.pyc
+    |       |   |   |   |   |-- main_parser.cpython-313.pyc
+    |       |   |   |   |   |-- parser.cpython-313.pyc
+    |       |   |   |   |   |-- progress_bars.cpython-313.pyc
+    |       |   |   |   |   |-- req_command.cpython-313.pyc
+    |       |   |   |   |   |-- spinners.cpython-313.pyc
+    |       |   |   |   |   |__ status_codes.cpython-313.pyc
+    |       |   |   |   |-- autocompletion.py
+    |       |   |   |   |-- base_command.py
+    |       |   |   |   |-- cmdoptions.py
+    |       |   |   |   |-- command_context.py
+    |       |   |   |   |-- index_command.py
+    |       |   |   |   |-- main.py
+    |       |   |   |   |-- main_parser.py
+    |       |   |   |   |-- parser.py
+    |       |   |   |   |-- progress_bars.py
+    |       |   |   |   |-- req_command.py
+    |       |   |   |   |-- spinners.py
+    |       |   |   |   |__ status_codes.py
+    |       |   |   |-- commands
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- cache.cpython-313.pyc
+    |       |   |   |   |   |-- check.cpython-313.pyc
+    |       |   |   |   |   |-- completion.cpython-313.pyc
+    |       |   |   |   |   |-- configuration.cpython-313.pyc
+    |       |   |   |   |   |-- debug.cpython-313.pyc
+    |       |   |   |   |   |-- download.cpython-313.pyc
+    |       |   |   |   |   |-- freeze.cpython-313.pyc
+    |       |   |   |   |   |-- hash.cpython-313.pyc
+    |       |   |   |   |   |-- help.cpython-313.pyc
+    |       |   |   |   |   |-- index.cpython-313.pyc
+    |       |   |   |   |   |-- inspect.cpython-313.pyc
+    |       |   |   |   |   |-- install.cpython-313.pyc
+    |       |   |   |   |   |-- list.cpython-313.pyc
+    |       |   |   |   |   |-- search.cpython-313.pyc
+    |       |   |   |   |   |-- show.cpython-313.pyc
+    |       |   |   |   |   |-- uninstall.cpython-313.pyc
+    |       |   |   |   |   |__ wheel.cpython-313.pyc
+    |       |   |   |   |-- cache.py
+    |       |   |   |   |-- check.py
+    |       |   |   |   |-- completion.py
+    |       |   |   |   |-- configuration.py
+    |       |   |   |   |-- debug.py
+    |       |   |   |   |-- download.py
+    |       |   |   |   |-- freeze.py
+    |       |   |   |   |-- hash.py
+    |       |   |   |   |-- help.py
+    |       |   |   |   |-- index.py
+    |       |   |   |   |-- inspect.py
+    |       |   |   |   |-- install.py
+    |       |   |   |   |-- list.py
+    |       |   |   |   |-- search.py
+    |       |   |   |   |-- show.py
+    |       |   |   |   |-- uninstall.py
+    |       |   |   |   |__ wheel.py
+    |       |   |   |-- configuration.py
+    |       |   |   |-- distributions
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- base.cpython-313.pyc
+    |       |   |   |   |   |-- installed.cpython-313.pyc
+    |       |   |   |   |   |-- sdist.cpython-313.pyc
+    |       |   |   |   |   |__ wheel.cpython-313.pyc
+    |       |   |   |   |-- base.py
+    |       |   |   |   |-- installed.py
+    |       |   |   |   |-- sdist.py
+    |       |   |   |   |__ wheel.py
+    |       |   |   |-- exceptions.py
+    |       |   |   |-- index
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- collector.cpython-313.pyc
+    |       |   |   |   |   |-- package_finder.cpython-313.pyc
+    |       |   |   |   |   |__ sources.cpython-313.pyc
+    |       |   |   |   |-- collector.py
+    |       |   |   |   |-- package_finder.py
+    |       |   |   |   |__ sources.py
+    |       |   |   |-- locations
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- _distutils.cpython-313.pyc
+    |       |   |   |   |   |-- _sysconfig.cpython-313.pyc
+    |       |   |   |   |   |__ base.cpython-313.pyc
+    |       |   |   |   |-- _distutils.py
+    |       |   |   |   |-- _sysconfig.py
+    |       |   |   |   |__ base.py
+    |       |   |   |-- main.py
+    |       |   |   |-- metadata
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- _json.cpython-313.pyc
+    |       |   |   |   |   |-- base.cpython-313.pyc
+    |       |   |   |   |   |__ pkg_resources.cpython-313.pyc
+    |       |   |   |   |-- _json.py
+    |       |   |   |   |-- base.py
+    |       |   |   |   |-- importlib
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |-- _compat.cpython-313.pyc
+    |       |   |   |   |   |   |-- _dists.cpython-313.pyc
+    |       |   |   |   |   |   |__ _envs.cpython-313.pyc
+    |       |   |   |   |   |-- _compat.py
+    |       |   |   |   |   |-- _dists.py
+    |       |   |   |   |   |__ _envs.py
+    |       |   |   |   |__ pkg_resources.py
+    |       |   |   |-- models
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- candidate.cpython-313.pyc
+    |       |   |   |   |   |-- direct_url.cpython-313.pyc
+    |       |   |   |   |   |-- format_control.cpython-313.pyc
+    |       |   |   |   |   |-- index.cpython-313.pyc
+    |       |   |   |   |   |-- installation_report.cpython-313.pyc
+    |       |   |   |   |   |-- link.cpython-313.pyc
+    |       |   |   |   |   |-- scheme.cpython-313.pyc
+    |       |   |   |   |   |-- search_scope.cpython-313.pyc
+    |       |   |   |   |   |-- selection_prefs.cpython-313.pyc
+    |       |   |   |   |   |-- target_python.cpython-313.pyc
+    |       |   |   |   |   |__ wheel.cpython-313.pyc
+    |       |   |   |   |-- candidate.py
+    |       |   |   |   |-- direct_url.py
+    |       |   |   |   |-- format_control.py
+    |       |   |   |   |-- index.py
+    |       |   |   |   |-- installation_report.py
+    |       |   |   |   |-- link.py
+    |       |   |   |   |-- scheme.py
+    |       |   |   |   |-- search_scope.py
+    |       |   |   |   |-- selection_prefs.py
+    |       |   |   |   |-- target_python.py
+    |       |   |   |   |__ wheel.py
+    |       |   |   |-- network
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- auth.cpython-313.pyc
+    |       |   |   |   |   |-- cache.cpython-313.pyc
+    |       |   |   |   |   |-- download.cpython-313.pyc
+    |       |   |   |   |   |-- lazy_wheel.cpython-313.pyc
+    |       |   |   |   |   |-- session.cpython-313.pyc
+    |       |   |   |   |   |-- utils.cpython-313.pyc
+    |       |   |   |   |   |__ xmlrpc.cpython-313.pyc
+    |       |   |   |   |-- auth.py
+    |       |   |   |   |-- cache.py
+    |       |   |   |   |-- download.py
+    |       |   |   |   |-- lazy_wheel.py
+    |       |   |   |   |-- session.py
+    |       |   |   |   |-- utils.py
+    |       |   |   |   |__ xmlrpc.py
+    |       |   |   |-- operations
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- check.cpython-313.pyc
+    |       |   |   |   |   |-- freeze.cpython-313.pyc
+    |       |   |   |   |   |__ prepare.cpython-313.pyc
+    |       |   |   |   |-- build
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |-- build_tracker.cpython-313.pyc
+    |       |   |   |   |   |   |-- metadata.cpython-313.pyc
+    |       |   |   |   |   |   |-- metadata_editable.cpython-313.pyc
+    |       |   |   |   |   |   |-- metadata_legacy.cpython-313.pyc
+    |       |   |   |   |   |   |-- wheel.cpython-313.pyc
+    |       |   |   |   |   |   |-- wheel_editable.cpython-313.pyc
+    |       |   |   |   |   |   |__ wheel_legacy.cpython-313.pyc
+    |       |   |   |   |   |-- build_tracker.py
+    |       |   |   |   |   |-- metadata.py
+    |       |   |   |   |   |-- metadata_editable.py
+    |       |   |   |   |   |-- metadata_legacy.py
+    |       |   |   |   |   |-- wheel.py
+    |       |   |   |   |   |-- wheel_editable.py
+    |       |   |   |   |   |__ wheel_legacy.py
+    |       |   |   |   |-- check.py
+    |       |   |   |   |-- freeze.py
+    |       |   |   |   |-- install
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |-- editable_legacy.cpython-313.pyc
+    |       |   |   |   |   |   |__ wheel.cpython-313.pyc
+    |       |   |   |   |   |-- editable_legacy.py
+    |       |   |   |   |   |__ wheel.py
+    |       |   |   |   |__ prepare.py
+    |       |   |   |-- pyproject.py
+    |       |   |   |-- req
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- constructors.cpython-313.pyc
+    |       |   |   |   |   |-- req_file.cpython-313.pyc
+    |       |   |   |   |   |-- req_install.cpython-313.pyc
+    |       |   |   |   |   |-- req_set.cpython-313.pyc
+    |       |   |   |   |   |__ req_uninstall.cpython-313.pyc
+    |       |   |   |   |-- constructors.py
+    |       |   |   |   |-- req_file.py
+    |       |   |   |   |-- req_install.py
+    |       |   |   |   |-- req_set.py
+    |       |   |   |   |__ req_uninstall.py
+    |       |   |   |-- resolution
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |__ base.cpython-313.pyc
+    |       |   |   |   |-- base.py
+    |       |   |   |   |-- legacy
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |__ resolver.cpython-313.pyc
+    |       |   |   |   |   |__ resolver.py
+    |       |   |   |   |__ resolvelib
+    |       |   |   |       |-- __init__.py
+    |       |   |   |       |-- __pycache__
+    |       |   |   |       |   |-- __init__.cpython-313.pyc
+    |       |   |   |       |   |-- base.cpython-313.pyc
+    |       |   |   |       |   |-- candidates.cpython-313.pyc
+    |       |   |   |       |   |-- factory.cpython-313.pyc
+    |       |   |   |       |   |-- found_candidates.cpython-313.pyc
+    |       |   |   |       |   |-- provider.cpython-313.pyc
+    |       |   |   |       |   |-- reporter.cpython-313.pyc
+    |       |   |   |       |   |-- requirements.cpython-313.pyc
+    |       |   |   |       |   |__ resolver.cpython-313.pyc
+    |       |   |   |       |-- base.py
+    |       |   |   |       |-- candidates.py
+    |       |   |   |       |-- factory.py
+    |       |   |   |       |-- found_candidates.py
+    |       |   |   |       |-- provider.py
+    |       |   |   |       |-- reporter.py
+    |       |   |   |       |-- requirements.py
+    |       |   |   |       |__ resolver.py
+    |       |   |   |-- self_outdated_check.py
+    |       |   |   |-- utils
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- _jaraco_text.cpython-313.pyc
+    |       |   |   |   |   |-- _log.cpython-313.pyc
+    |       |   |   |   |   |-- appdirs.cpython-313.pyc
+    |       |   |   |   |   |-- compat.cpython-313.pyc
+    |       |   |   |   |   |-- compatibility_tags.cpython-313.pyc
+    |       |   |   |   |   |-- datetime.cpython-313.pyc
+    |       |   |   |   |   |-- deprecation.cpython-313.pyc
+    |       |   |   |   |   |-- direct_url_helpers.cpython-313.pyc
+    |       |   |   |   |   |-- egg_link.cpython-313.pyc
+    |       |   |   |   |   |-- entrypoints.cpython-313.pyc
+    |       |   |   |   |   |-- filesystem.cpython-313.pyc
+    |       |   |   |   |   |-- filetypes.cpython-313.pyc
+    |       |   |   |   |   |-- glibc.cpython-313.pyc
+    |       |   |   |   |   |-- hashes.cpython-313.pyc
+    |       |   |   |   |   |-- logging.cpython-313.pyc
+    |       |   |   |   |   |-- misc.cpython-313.pyc
+    |       |   |   |   |   |-- packaging.cpython-313.pyc
+    |       |   |   |   |   |-- retry.cpython-313.pyc
+    |       |   |   |   |   |-- setuptools_build.cpython-313.pyc
+    |       |   |   |   |   |-- subprocess.cpython-313.pyc
+    |       |   |   |   |   |-- temp_dir.cpython-313.pyc
+    |       |   |   |   |   |-- unpacking.cpython-313.pyc
+    |       |   |   |   |   |-- urls.cpython-313.pyc
+    |       |   |   |   |   |-- virtualenv.cpython-313.pyc
+    |       |   |   |   |   |__ wheel.cpython-313.pyc
+    |       |   |   |   |-- _jaraco_text.py
+    |       |   |   |   |-- _log.py
+    |       |   |   |   |-- appdirs.py
+    |       |   |   |   |-- compat.py
+    |       |   |   |   |-- compatibility_tags.py
+    |       |   |   |   |-- datetime.py
+    |       |   |   |   |-- deprecation.py
+    |       |   |   |   |-- direct_url_helpers.py
+    |       |   |   |   |-- egg_link.py
+    |       |   |   |   |-- entrypoints.py
+    |       |   |   |   |-- filesystem.py
+    |       |   |   |   |-- filetypes.py
+    |       |   |   |   |-- glibc.py
+    |       |   |   |   |-- hashes.py
+    |       |   |   |   |-- logging.py
+    |       |   |   |   |-- misc.py
+    |       |   |   |   |-- packaging.py
+    |       |   |   |   |-- retry.py
+    |       |   |   |   |-- setuptools_build.py
+    |       |   |   |   |-- subprocess.py
+    |       |   |   |   |-- temp_dir.py
+    |       |   |   |   |-- unpacking.py
+    |       |   |   |   |-- urls.py
+    |       |   |   |   |-- virtualenv.py
+    |       |   |   |   |__ wheel.py
+    |       |   |   |-- vcs
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- bazaar.cpython-313.pyc
+    |       |   |   |   |   |-- git.cpython-313.pyc
+    |       |   |   |   |   |-- mercurial.cpython-313.pyc
+    |       |   |   |   |   |-- subversion.cpython-313.pyc
+    |       |   |   |   |   |__ versioncontrol.cpython-313.pyc
+    |       |   |   |   |-- bazaar.py
+    |       |   |   |   |-- git.py
+    |       |   |   |   |-- mercurial.py
+    |       |   |   |   |-- subversion.py
+    |       |   |   |   |__ versioncontrol.py
+    |       |   |   |__ wheel_builder.py
+    |       |   |-- _vendor
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |__ typing_extensions.cpython-313.pyc
+    |       |   |   |-- cachecontrol
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- _cmd.cpython-313.pyc
+    |       |   |   |   |   |-- adapter.cpython-313.pyc
+    |       |   |   |   |   |-- cache.cpython-313.pyc
+    |       |   |   |   |   |-- controller.cpython-313.pyc
+    |       |   |   |   |   |-- filewrapper.cpython-313.pyc
+    |       |   |   |   |   |-- heuristics.cpython-313.pyc
+    |       |   |   |   |   |-- serialize.cpython-313.pyc
+    |       |   |   |   |   |__ wrapper.cpython-313.pyc
+    |       |   |   |   |-- _cmd.py
+    |       |   |   |   |-- adapter.py
+    |       |   |   |   |-- cache.py
+    |       |   |   |   |-- caches
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |-- file_cache.cpython-313.pyc
+    |       |   |   |   |   |   |__ redis_cache.cpython-313.pyc
+    |       |   |   |   |   |-- file_cache.py
+    |       |   |   |   |   |__ redis_cache.py
+    |       |   |   |   |-- controller.py
+    |       |   |   |   |-- filewrapper.py
+    |       |   |   |   |-- heuristics.py
+    |       |   |   |   |-- py.typed
+    |       |   |   |   |-- serialize.py
+    |       |   |   |   |__ wrapper.py
+    |       |   |   |-- certifi
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __main__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- __main__.cpython-313.pyc
+    |       |   |   |   |   |__ core.cpython-313.pyc
+    |       |   |   |   |-- cacert.pem
+    |       |   |   |   |-- core.py
+    |       |   |   |   |__ py.typed
+    |       |   |   |-- distlib
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- compat.cpython-313.pyc
+    |       |   |   |   |   |-- database.cpython-313.pyc
+    |       |   |   |   |   |-- index.cpython-313.pyc
+    |       |   |   |   |   |-- locators.cpython-313.pyc
+    |       |   |   |   |   |-- manifest.cpython-313.pyc
+    |       |   |   |   |   |-- markers.cpython-313.pyc
+    |       |   |   |   |   |-- metadata.cpython-313.pyc
+    |       |   |   |   |   |-- resources.cpython-313.pyc
+    |       |   |   |   |   |-- scripts.cpython-313.pyc
+    |       |   |   |   |   |-- util.cpython-313.pyc
+    |       |   |   |   |   |-- version.cpython-313.pyc
+    |       |   |   |   |   |__ wheel.cpython-313.pyc
+    |       |   |   |   |-- compat.py
+    |       |   |   |   |-- database.py
+    |       |   |   |   |-- index.py
+    |       |   |   |   |-- locators.py
+    |       |   |   |   |-- manifest.py
+    |       |   |   |   |-- markers.py
+    |       |   |   |   |-- metadata.py
+    |       |   |   |   |-- resources.py
+    |       |   |   |   |-- scripts.py
+    |       |   |   |   |-- t32.exe
+    |       |   |   |   |-- t64-arm.exe
+    |       |   |   |   |-- t64.exe
+    |       |   |   |   |-- util.py
+    |       |   |   |   |-- version.py
+    |       |   |   |   |-- w32.exe
+    |       |   |   |   |-- w64-arm.exe
+    |       |   |   |   |-- w64.exe
+    |       |   |   |   |__ wheel.py
+    |       |   |   |-- distro
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __main__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- __main__.cpython-313.pyc
+    |       |   |   |   |   |__ distro.cpython-313.pyc
+    |       |   |   |   |-- distro.py
+    |       |   |   |   |__ py.typed
+    |       |   |   |-- idna
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- codec.cpython-313.pyc
+    |       |   |   |   |   |-- compat.cpython-313.pyc
+    |       |   |   |   |   |-- core.cpython-313.pyc
+    |       |   |   |   |   |-- idnadata.cpython-313.pyc
+    |       |   |   |   |   |-- intranges.cpython-313.pyc
+    |       |   |   |   |   |-- package_data.cpython-313.pyc
+    |       |   |   |   |   |__ uts46data.cpython-313.pyc
+    |       |   |   |   |-- codec.py
+    |       |   |   |   |-- compat.py
+    |       |   |   |   |-- core.py
+    |       |   |   |   |-- idnadata.py
+    |       |   |   |   |-- intranges.py
+    |       |   |   |   |-- package_data.py
+    |       |   |   |   |-- py.typed
+    |       |   |   |   |__ uts46data.py
+    |       |   |   |-- msgpack
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- exceptions.cpython-313.pyc
+    |       |   |   |   |   |-- ext.cpython-313.pyc
+    |       |   |   |   |   |__ fallback.cpython-313.pyc
+    |       |   |   |   |-- exceptions.py
+    |       |   |   |   |-- ext.py
+    |       |   |   |   |__ fallback.py
+    |       |   |   |-- packaging
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- _elffile.cpython-313.pyc
+    |       |   |   |   |   |-- _manylinux.cpython-313.pyc
+    |       |   |   |   |   |-- _musllinux.cpython-313.pyc
+    |       |   |   |   |   |-- _parser.cpython-313.pyc
+    |       |   |   |   |   |-- _structures.cpython-313.pyc
+    |       |   |   |   |   |-- _tokenizer.cpython-313.pyc
+    |       |   |   |   |   |-- markers.cpython-313.pyc
+    |       |   |   |   |   |-- metadata.cpython-313.pyc
+    |       |   |   |   |   |-- requirements.cpython-313.pyc
+    |       |   |   |   |   |-- specifiers.cpython-313.pyc
+    |       |   |   |   |   |-- tags.cpython-313.pyc
+    |       |   |   |   |   |-- utils.cpython-313.pyc
+    |       |   |   |   |   |__ version.cpython-313.pyc
+    |       |   |   |   |-- _elffile.py
+    |       |   |   |   |-- _manylinux.py
+    |       |   |   |   |-- _musllinux.py
+    |       |   |   |   |-- _parser.py
+    |       |   |   |   |-- _structures.py
+    |       |   |   |   |-- _tokenizer.py
+    |       |   |   |   |-- licenses
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |__ _spdx.cpython-313.pyc
+    |       |   |   |   |   |__ _spdx.py
+    |       |   |   |   |-- markers.py
+    |       |   |   |   |-- metadata.py
+    |       |   |   |   |-- py.typed
+    |       |   |   |   |-- requirements.py
+    |       |   |   |   |-- specifiers.py
+    |       |   |   |   |-- tags.py
+    |       |   |   |   |-- utils.py
+    |       |   |   |   |__ version.py
+    |       |   |   |-- pkg_resources
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |__ __pycache__
+    |       |   |   |       |__ __init__.cpython-313.pyc
+    |       |   |   |-- platformdirs
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __main__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- __main__.cpython-313.pyc
+    |       |   |   |   |   |-- android.cpython-313.pyc
+    |       |   |   |   |   |-- api.cpython-313.pyc
+    |       |   |   |   |   |-- macos.cpython-313.pyc
+    |       |   |   |   |   |-- unix.cpython-313.pyc
+    |       |   |   |   |   |-- version.cpython-313.pyc
+    |       |   |   |   |   |__ windows.cpython-313.pyc
+    |       |   |   |   |-- android.py
+    |       |   |   |   |-- api.py
+    |       |   |   |   |-- macos.py
+    |       |   |   |   |-- py.typed
+    |       |   |   |   |-- unix.py
+    |       |   |   |   |-- version.py
+    |       |   |   |   |__ windows.py
+    |       |   |   |-- pygments
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __main__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- __main__.cpython-313.pyc
+    |       |   |   |   |   |-- cmdline.cpython-313.pyc
+    |       |   |   |   |   |-- console.cpython-313.pyc
+    |       |   |   |   |   |-- filter.cpython-313.pyc
+    |       |   |   |   |   |-- formatter.cpython-313.pyc
+    |       |   |   |   |   |-- lexer.cpython-313.pyc
+    |       |   |   |   |   |-- modeline.cpython-313.pyc
+    |       |   |   |   |   |-- plugin.cpython-313.pyc
+    |       |   |   |   |   |-- regexopt.cpython-313.pyc
+    |       |   |   |   |   |-- scanner.cpython-313.pyc
+    |       |   |   |   |   |-- sphinxext.cpython-313.pyc
+    |       |   |   |   |   |-- style.cpython-313.pyc
+    |       |   |   |   |   |-- token.cpython-313.pyc
+    |       |   |   |   |   |-- unistring.cpython-313.pyc
+    |       |   |   |   |   |__ util.cpython-313.pyc
+    |       |   |   |   |-- cmdline.py
+    |       |   |   |   |-- console.py
+    |       |   |   |   |-- filter.py
+    |       |   |   |   |-- filters
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |__ __pycache__
+    |       |   |   |   |       |__ __init__.cpython-313.pyc
+    |       |   |   |   |-- formatter.py
+    |       |   |   |   |-- formatters
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |-- _mapping.cpython-313.pyc
+    |       |   |   |   |   |   |-- bbcode.cpython-313.pyc
+    |       |   |   |   |   |   |-- groff.cpython-313.pyc
+    |       |   |   |   |   |   |-- html.cpython-313.pyc
+    |       |   |   |   |   |   |-- img.cpython-313.pyc
+    |       |   |   |   |   |   |-- irc.cpython-313.pyc
+    |       |   |   |   |   |   |-- latex.cpython-313.pyc
+    |       |   |   |   |   |   |-- other.cpython-313.pyc
+    |       |   |   |   |   |   |-- pangomarkup.cpython-313.pyc
+    |       |   |   |   |   |   |-- rtf.cpython-313.pyc
+    |       |   |   |   |   |   |-- svg.cpython-313.pyc
+    |       |   |   |   |   |   |-- terminal.cpython-313.pyc
+    |       |   |   |   |   |   |__ terminal256.cpython-313.pyc
+    |       |   |   |   |   |-- _mapping.py
+    |       |   |   |   |   |-- bbcode.py
+    |       |   |   |   |   |-- groff.py
+    |       |   |   |   |   |-- html.py
+    |       |   |   |   |   |-- img.py
+    |       |   |   |   |   |-- irc.py
+    |       |   |   |   |   |-- latex.py
+    |       |   |   |   |   |-- other.py
+    |       |   |   |   |   |-- pangomarkup.py
+    |       |   |   |   |   |-- rtf.py
+    |       |   |   |   |   |-- svg.py
+    |       |   |   |   |   |-- terminal.py
+    |       |   |   |   |   |__ terminal256.py
+    |       |   |   |   |-- lexer.py
+    |       |   |   |   |-- lexers
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |-- _mapping.cpython-313.pyc
+    |       |   |   |   |   |   |__ python.cpython-313.pyc
+    |       |   |   |   |   |-- _mapping.py
+    |       |   |   |   |   |__ python.py
+    |       |   |   |   |-- modeline.py
+    |       |   |   |   |-- plugin.py
+    |       |   |   |   |-- regexopt.py
+    |       |   |   |   |-- scanner.py
+    |       |   |   |   |-- sphinxext.py
+    |       |   |   |   |-- style.py
+    |       |   |   |   |-- styles
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |__ _mapping.cpython-313.pyc
+    |       |   |   |   |   |__ _mapping.py
+    |       |   |   |   |-- token.py
+    |       |   |   |   |-- unistring.py
+    |       |   |   |   |__ util.py
+    |       |   |   |-- pyproject_hooks
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |__ _impl.cpython-313.pyc
+    |       |   |   |   |-- _impl.py
+    |       |   |   |   |-- _in_process
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |__ _in_process.cpython-313.pyc
+    |       |   |   |   |   |__ _in_process.py
+    |       |   |   |   |__ py.typed
+    |       |   |   |-- requests
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- __version__.cpython-313.pyc
+    |       |   |   |   |   |-- _internal_utils.cpython-313.pyc
+    |       |   |   |   |   |-- adapters.cpython-313.pyc
+    |       |   |   |   |   |-- api.cpython-313.pyc
+    |       |   |   |   |   |-- auth.cpython-313.pyc
+    |       |   |   |   |   |-- certs.cpython-313.pyc
+    |       |   |   |   |   |-- compat.cpython-313.pyc
+    |       |   |   |   |   |-- cookies.cpython-313.pyc
+    |       |   |   |   |   |-- exceptions.cpython-313.pyc
+    |       |   |   |   |   |-- help.cpython-313.pyc
+    |       |   |   |   |   |-- hooks.cpython-313.pyc
+    |       |   |   |   |   |-- models.cpython-313.pyc
+    |       |   |   |   |   |-- packages.cpython-313.pyc
+    |       |   |   |   |   |-- sessions.cpython-313.pyc
+    |       |   |   |   |   |-- status_codes.cpython-313.pyc
+    |       |   |   |   |   |-- structures.cpython-313.pyc
+    |       |   |   |   |   |__ utils.cpython-313.pyc
+    |       |   |   |   |-- __version__.py
+    |       |   |   |   |-- _internal_utils.py
+    |       |   |   |   |-- adapters.py
+    |       |   |   |   |-- api.py
+    |       |   |   |   |-- auth.py
+    |       |   |   |   |-- certs.py
+    |       |   |   |   |-- compat.py
+    |       |   |   |   |-- cookies.py
+    |       |   |   |   |-- exceptions.py
+    |       |   |   |   |-- help.py
+    |       |   |   |   |-- hooks.py
+    |       |   |   |   |-- models.py
+    |       |   |   |   |-- packages.py
+    |       |   |   |   |-- sessions.py
+    |       |   |   |   |-- status_codes.py
+    |       |   |   |   |-- structures.py
+    |       |   |   |   |__ utils.py
+    |       |   |   |-- resolvelib
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- providers.cpython-313.pyc
+    |       |   |   |   |   |-- reporters.cpython-313.pyc
+    |       |   |   |   |   |-- resolvers.cpython-313.pyc
+    |       |   |   |   |   |__ structs.cpython-313.pyc
+    |       |   |   |   |-- compat
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |__ collections_abc.cpython-313.pyc
+    |       |   |   |   |   |__ collections_abc.py
+    |       |   |   |   |-- providers.py
+    |       |   |   |   |-- py.typed
+    |       |   |   |   |-- reporters.py
+    |       |   |   |   |-- resolvers.py
+    |       |   |   |   |__ structs.py
+    |       |   |   |-- rich
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __main__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- __main__.cpython-313.pyc
+    |       |   |   |   |   |-- _cell_widths.cpython-313.pyc
+    |       |   |   |   |   |-- _emoji_codes.cpython-313.pyc
+    |       |   |   |   |   |-- _emoji_replace.cpython-313.pyc
+    |       |   |   |   |   |-- _export_format.cpython-313.pyc
+    |       |   |   |   |   |-- _extension.cpython-313.pyc
+    |       |   |   |   |   |-- _fileno.cpython-313.pyc
+    |       |   |   |   |   |-- _inspect.cpython-313.pyc
+    |       |   |   |   |   |-- _log_render.cpython-313.pyc
+    |       |   |   |   |   |-- _loop.cpython-313.pyc
+    |       |   |   |   |   |-- _null_file.cpython-313.pyc
+    |       |   |   |   |   |-- _palettes.cpython-313.pyc
+    |       |   |   |   |   |-- _pick.cpython-313.pyc
+    |       |   |   |   |   |-- _ratio.cpython-313.pyc
+    |       |   |   |   |   |-- _spinners.cpython-313.pyc
+    |       |   |   |   |   |-- _stack.cpython-313.pyc
+    |       |   |   |   |   |-- _timer.cpython-313.pyc
+    |       |   |   |   |   |-- _win32_console.cpython-313.pyc
+    |       |   |   |   |   |-- _windows.cpython-313.pyc
+    |       |   |   |   |   |-- _windows_renderer.cpython-313.pyc
+    |       |   |   |   |   |-- _wrap.cpython-313.pyc
+    |       |   |   |   |   |-- abc.cpython-313.pyc
+    |       |   |   |   |   |-- align.cpython-313.pyc
+    |       |   |   |   |   |-- ansi.cpython-313.pyc
+    |       |   |   |   |   |-- bar.cpython-313.pyc
+    |       |   |   |   |   |-- box.cpython-313.pyc
+    |       |   |   |   |   |-- cells.cpython-313.pyc
+    |       |   |   |   |   |-- color.cpython-313.pyc
+    |       |   |   |   |   |-- color_triplet.cpython-313.pyc
+    |       |   |   |   |   |-- columns.cpython-313.pyc
+    |       |   |   |   |   |-- console.cpython-313.pyc
+    |       |   |   |   |   |-- constrain.cpython-313.pyc
+    |       |   |   |   |   |-- containers.cpython-313.pyc
+    |       |   |   |   |   |-- control.cpython-313.pyc
+    |       |   |   |   |   |-- default_styles.cpython-313.pyc
+    |       |   |   |   |   |-- diagnose.cpython-313.pyc
+    |       |   |   |   |   |-- emoji.cpython-313.pyc
+    |       |   |   |   |   |-- errors.cpython-313.pyc
+    |       |   |   |   |   |-- file_proxy.cpython-313.pyc
+    |       |   |   |   |   |-- filesize.cpython-313.pyc
+    |       |   |   |   |   |-- highlighter.cpython-313.pyc
+    |       |   |   |   |   |-- json.cpython-313.pyc
+    |       |   |   |   |   |-- jupyter.cpython-313.pyc
+    |       |   |   |   |   |-- layout.cpython-313.pyc
+    |       |   |   |   |   |-- live.cpython-313.pyc
+    |       |   |   |   |   |-- live_render.cpython-313.pyc
+    |       |   |   |   |   |-- logging.cpython-313.pyc
+    |       |   |   |   |   |-- markup.cpython-313.pyc
+    |       |   |   |   |   |-- measure.cpython-313.pyc
+    |       |   |   |   |   |-- padding.cpython-313.pyc
+    |       |   |   |   |   |-- pager.cpython-313.pyc
+    |       |   |   |   |   |-- palette.cpython-313.pyc
+    |       |   |   |   |   |-- panel.cpython-313.pyc
+    |       |   |   |   |   |-- pretty.cpython-313.pyc
+    |       |   |   |   |   |-- progress.cpython-313.pyc
+    |       |   |   |   |   |-- progress_bar.cpython-313.pyc
+    |       |   |   |   |   |-- prompt.cpython-313.pyc
+    |       |   |   |   |   |-- protocol.cpython-313.pyc
+    |       |   |   |   |   |-- region.cpython-313.pyc
+    |       |   |   |   |   |-- repr.cpython-313.pyc
+    |       |   |   |   |   |-- rule.cpython-313.pyc
+    |       |   |   |   |   |-- scope.cpython-313.pyc
+    |       |   |   |   |   |-- screen.cpython-313.pyc
+    |       |   |   |   |   |-- segment.cpython-313.pyc
+    |       |   |   |   |   |-- spinner.cpython-313.pyc
+    |       |   |   |   |   |-- status.cpython-313.pyc
+    |       |   |   |   |   |-- style.cpython-313.pyc
+    |       |   |   |   |   |-- styled.cpython-313.pyc
+    |       |   |   |   |   |-- syntax.cpython-313.pyc
+    |       |   |   |   |   |-- table.cpython-313.pyc
+    |       |   |   |   |   |-- terminal_theme.cpython-313.pyc
+    |       |   |   |   |   |-- text.cpython-313.pyc
+    |       |   |   |   |   |-- theme.cpython-313.pyc
+    |       |   |   |   |   |-- themes.cpython-313.pyc
+    |       |   |   |   |   |-- traceback.cpython-313.pyc
+    |       |   |   |   |   |__ tree.cpython-313.pyc
+    |       |   |   |   |-- _cell_widths.py
+    |       |   |   |   |-- _emoji_codes.py
+    |       |   |   |   |-- _emoji_replace.py
+    |       |   |   |   |-- _export_format.py
+    |       |   |   |   |-- _extension.py
+    |       |   |   |   |-- _fileno.py
+    |       |   |   |   |-- _inspect.py
+    |       |   |   |   |-- _log_render.py
+    |       |   |   |   |-- _loop.py
+    |       |   |   |   |-- _null_file.py
+    |       |   |   |   |-- _palettes.py
+    |       |   |   |   |-- _pick.py
+    |       |   |   |   |-- _ratio.py
+    |       |   |   |   |-- _spinners.py
+    |       |   |   |   |-- _stack.py
+    |       |   |   |   |-- _timer.py
+    |       |   |   |   |-- _win32_console.py
+    |       |   |   |   |-- _windows.py
+    |       |   |   |   |-- _windows_renderer.py
+    |       |   |   |   |-- _wrap.py
+    |       |   |   |   |-- abc.py
+    |       |   |   |   |-- align.py
+    |       |   |   |   |-- ansi.py
+    |       |   |   |   |-- bar.py
+    |       |   |   |   |-- box.py
+    |       |   |   |   |-- cells.py
+    |       |   |   |   |-- color.py
+    |       |   |   |   |-- color_triplet.py
+    |       |   |   |   |-- columns.py
+    |       |   |   |   |-- console.py
+    |       |   |   |   |-- constrain.py
+    |       |   |   |   |-- containers.py
+    |       |   |   |   |-- control.py
+    |       |   |   |   |-- default_styles.py
+    |       |   |   |   |-- diagnose.py
+    |       |   |   |   |-- emoji.py
+    |       |   |   |   |-- errors.py
+    |       |   |   |   |-- file_proxy.py
+    |       |   |   |   |-- filesize.py
+    |       |   |   |   |-- highlighter.py
+    |       |   |   |   |-- json.py
+    |       |   |   |   |-- jupyter.py
+    |       |   |   |   |-- layout.py
+    |       |   |   |   |-- live.py
+    |       |   |   |   |-- live_render.py
+    |       |   |   |   |-- logging.py
+    |       |   |   |   |-- markup.py
+    |       |   |   |   |-- measure.py
+    |       |   |   |   |-- padding.py
+    |       |   |   |   |-- pager.py
+    |       |   |   |   |-- palette.py
+    |       |   |   |   |-- panel.py
+    |       |   |   |   |-- pretty.py
+    |       |   |   |   |-- progress.py
+    |       |   |   |   |-- progress_bar.py
+    |       |   |   |   |-- prompt.py
+    |       |   |   |   |-- protocol.py
+    |       |   |   |   |-- py.typed
+    |       |   |   |   |-- region.py
+    |       |   |   |   |-- repr.py
+    |       |   |   |   |-- rule.py
+    |       |   |   |   |-- scope.py
+    |       |   |   |   |-- screen.py
+    |       |   |   |   |-- segment.py
+    |       |   |   |   |-- spinner.py
+    |       |   |   |   |-- status.py
+    |       |   |   |   |-- style.py
+    |       |   |   |   |-- styled.py
+    |       |   |   |   |-- syntax.py
+    |       |   |   |   |-- table.py
+    |       |   |   |   |-- terminal_theme.py
+    |       |   |   |   |-- text.py
+    |       |   |   |   |-- theme.py
+    |       |   |   |   |-- themes.py
+    |       |   |   |   |-- traceback.py
+    |       |   |   |   |__ tree.py
+    |       |   |   |-- tomli
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- _parser.cpython-313.pyc
+    |       |   |   |   |   |-- _re.cpython-313.pyc
+    |       |   |   |   |   |__ _types.cpython-313.pyc
+    |       |   |   |   |-- _parser.py
+    |       |   |   |   |-- _re.py
+    |       |   |   |   |-- _types.py
+    |       |   |   |   |__ py.typed
+    |       |   |   |-- truststore
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- _api.cpython-313.pyc
+    |       |   |   |   |   |-- _macos.cpython-313.pyc
+    |       |   |   |   |   |-- _openssl.cpython-313.pyc
+    |       |   |   |   |   |-- _ssl_constants.cpython-313.pyc
+    |       |   |   |   |   |__ _windows.cpython-313.pyc
+    |       |   |   |   |-- _api.py
+    |       |   |   |   |-- _macos.py
+    |       |   |   |   |-- _openssl.py
+    |       |   |   |   |-- _ssl_constants.py
+    |       |   |   |   |-- _windows.py
+    |       |   |   |   |__ py.typed
+    |       |   |   |-- typing_extensions.py
+    |       |   |   |-- urllib3
+    |       |   |   |   |-- __init__.py
+    |       |   |   |   |-- __pycache__
+    |       |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |-- _collections.cpython-313.pyc
+    |       |   |   |   |   |-- _version.cpython-313.pyc
+    |       |   |   |   |   |-- connection.cpython-313.pyc
+    |       |   |   |   |   |-- connectionpool.cpython-313.pyc
+    |       |   |   |   |   |-- exceptions.cpython-313.pyc
+    |       |   |   |   |   |-- fields.cpython-313.pyc
+    |       |   |   |   |   |-- filepost.cpython-313.pyc
+    |       |   |   |   |   |-- poolmanager.cpython-313.pyc
+    |       |   |   |   |   |-- request.cpython-313.pyc
+    |       |   |   |   |   |__ response.cpython-313.pyc
+    |       |   |   |   |-- _collections.py
+    |       |   |   |   |-- _version.py
+    |       |   |   |   |-- connection.py
+    |       |   |   |   |-- connectionpool.py
+    |       |   |   |   |-- contrib
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |-- _appengine_environ.cpython-313.pyc
+    |       |   |   |   |   |   |-- appengine.cpython-313.pyc
+    |       |   |   |   |   |   |-- ntlmpool.cpython-313.pyc
+    |       |   |   |   |   |   |-- pyopenssl.cpython-313.pyc
+    |       |   |   |   |   |   |-- securetransport.cpython-313.pyc
+    |       |   |   |   |   |   |__ socks.cpython-313.pyc
+    |       |   |   |   |   |-- _appengine_environ.py
+    |       |   |   |   |   |-- _securetransport
+    |       |   |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- bindings.cpython-313.pyc
+    |       |   |   |   |   |   |   |__ low_level.cpython-313.pyc
+    |       |   |   |   |   |   |-- bindings.py
+    |       |   |   |   |   |   |__ low_level.py
+    |       |   |   |   |   |-- appengine.py
+    |       |   |   |   |   |-- ntlmpool.py
+    |       |   |   |   |   |-- pyopenssl.py
+    |       |   |   |   |   |-- securetransport.py
+    |       |   |   |   |   |__ socks.py
+    |       |   |   |   |-- exceptions.py
+    |       |   |   |   |-- fields.py
+    |       |   |   |   |-- filepost.py
+    |       |   |   |   |-- packages
+    |       |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |__ six.cpython-313.pyc
+    |       |   |   |   |   |-- backports
+    |       |   |   |   |   |   |-- __init__.py
+    |       |   |   |   |   |   |-- __pycache__
+    |       |   |   |   |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |   |   |   |-- makefile.cpython-313.pyc
+    |       |   |   |   |   |   |   |__ weakref_finalize.cpython-313.pyc
+    |       |   |   |   |   |   |-- makefile.py
+    |       |   |   |   |   |   |__ weakref_finalize.py
+    |       |   |   |   |   |__ six.py
+    |       |   |   |   |-- poolmanager.py
+    |       |   |   |   |-- request.py
+    |       |   |   |   |-- response.py
+    |       |   |   |   |__ util
+    |       |   |   |       |-- __init__.py
+    |       |   |   |       |-- __pycache__
+    |       |   |   |       |   |-- __init__.cpython-313.pyc
+    |       |   |   |       |   |-- connection.cpython-313.pyc
+    |       |   |   |       |   |-- proxy.cpython-313.pyc
+    |       |   |   |       |   |-- queue.cpython-313.pyc
+    |       |   |   |       |   |-- request.cpython-313.pyc
+    |       |   |   |       |   |-- response.cpython-313.pyc
+    |       |   |   |       |   |-- retry.cpython-313.pyc
+    |       |   |   |       |   |-- ssl_.cpython-313.pyc
+    |       |   |   |       |   |-- ssl_match_hostname.cpython-313.pyc
+    |       |   |   |       |   |-- ssltransport.cpython-313.pyc
+    |       |   |   |       |   |-- timeout.cpython-313.pyc
+    |       |   |   |       |   |-- url.cpython-313.pyc
+    |       |   |   |       |   |__ wait.cpython-313.pyc
+    |       |   |   |       |-- connection.py
+    |       |   |   |       |-- proxy.py
+    |       |   |   |       |-- queue.py
+    |       |   |   |       |-- request.py
+    |       |   |   |       |-- response.py
+    |       |   |   |       |-- retry.py
+    |       |   |   |       |-- ssl_.py
+    |       |   |   |       |-- ssl_match_hostname.py
+    |       |   |   |       |-- ssltransport.py
+    |       |   |   |       |-- timeout.py
+    |       |   |   |       |-- url.py
+    |       |   |   |       |__ wait.py
+    |       |   |   |__ vendor.txt
+    |       |   |__ py.typed
+    |       |-- pip-25.0.1.dist-info
+    |       |   |-- AUTHORS.txt
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE.txt
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- REQUESTED
+    |       |   |-- WHEEL
+    |       |   |-- entry_points.txt
+    |       |   |__ top_level.txt
+    |       |-- pluggy
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- _callers.cpython-313.pyc
+    |       |   |   |-- _hooks.cpython-313.pyc
+    |       |   |   |-- _manager.cpython-313.pyc
+    |       |   |   |-- _result.cpython-313.pyc
+    |       |   |   |-- _tracing.cpython-313.pyc
+    |       |   |   |-- _version.cpython-313.pyc
+    |       |   |   |__ _warnings.cpython-313.pyc
+    |       |   |-- _callers.py
+    |       |   |-- _hooks.py
+    |       |   |-- _manager.py
+    |       |   |-- _result.py
+    |       |   |-- _tracing.py
+    |       |   |-- _version.py
+    |       |   |-- _warnings.py
+    |       |   |__ py.typed
+    |       |-- pluggy-1.5.0.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- WHEEL
+    |       |   |__ top_level.txt
+    |       |-- py.py
+    |       |-- pydantic
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- _migration.cpython-313.pyc
+    |       |   |   |-- alias_generators.cpython-313.pyc
+    |       |   |   |-- aliases.cpython-313.pyc
+    |       |   |   |-- annotated_handlers.cpython-313.pyc
+    |       |   |   |-- class_validators.cpython-313.pyc
+    |       |   |   |-- color.cpython-313.pyc
+    |       |   |   |-- config.cpython-313.pyc
+    |       |   |   |-- dataclasses.cpython-313.pyc
+    |       |   |   |-- datetime_parse.cpython-313.pyc
+    |       |   |   |-- decorator.cpython-313.pyc
+    |       |   |   |-- env_settings.cpython-313.pyc
+    |       |   |   |-- error_wrappers.cpython-313.pyc
+    |       |   |   |-- errors.cpython-313.pyc
+    |       |   |   |-- fields.cpython-313.pyc
+    |       |   |   |-- functional_serializers.cpython-313.pyc
+    |       |   |   |-- functional_validators.cpython-313.pyc
+    |       |   |   |-- generics.cpython-313.pyc
+    |       |   |   |-- json.cpython-313.pyc
+    |       |   |   |-- json_schema.cpython-313.pyc
+    |       |   |   |-- main.cpython-313.pyc
+    |       |   |   |-- mypy.cpython-313.pyc
+    |       |   |   |-- networks.cpython-313.pyc
+    |       |   |   |-- parse.cpython-313.pyc
+    |       |   |   |-- root_model.cpython-313.pyc
+    |       |   |   |-- schema.cpython-313.pyc
+    |       |   |   |-- tools.cpython-313.pyc
+    |       |   |   |-- type_adapter.cpython-313.pyc
+    |       |   |   |-- types.cpython-313.pyc
+    |       |   |   |-- typing.cpython-313.pyc
+    |       |   |   |-- utils.cpython-313.pyc
+    |       |   |   |-- validate_call_decorator.cpython-313.pyc
+    |       |   |   |-- validators.cpython-313.pyc
+    |       |   |   |-- version.cpython-313.pyc
+    |       |   |   |__ warnings.cpython-313.pyc
+    |       |   |-- _internal
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- _config.cpython-313.pyc
+    |       |   |   |   |-- _core_metadata.cpython-313.pyc
+    |       |   |   |   |-- _core_utils.cpython-313.pyc
+    |       |   |   |   |-- _dataclasses.cpython-313.pyc
+    |       |   |   |   |-- _decorators.cpython-313.pyc
+    |       |   |   |   |-- _decorators_v1.cpython-313.pyc
+    |       |   |   |   |-- _discriminated_union.cpython-313.pyc
+    |       |   |   |   |-- _docs_extraction.cpython-313.pyc
+    |       |   |   |   |-- _fields.cpython-313.pyc
+    |       |   |   |   |-- _forward_ref.cpython-313.pyc
+    |       |   |   |   |-- _generate_schema.cpython-313.pyc
+    |       |   |   |   |-- _generics.cpython-313.pyc
+    |       |   |   |   |-- _git.cpython-313.pyc
+    |       |   |   |   |-- _import_utils.cpython-313.pyc
+    |       |   |   |   |-- _internal_dataclass.cpython-313.pyc
+    |       |   |   |   |-- _known_annotated_metadata.cpython-313.pyc
+    |       |   |   |   |-- _mock_val_ser.cpython-313.pyc
+    |       |   |   |   |-- _model_construction.cpython-313.pyc
+    |       |   |   |   |-- _namespace_utils.cpython-313.pyc
+    |       |   |   |   |-- _repr.cpython-313.pyc
+    |       |   |   |   |-- _schema_generation_shared.cpython-313.pyc
+    |       |   |   |   |-- _serializers.cpython-313.pyc
+    |       |   |   |   |-- _signature.cpython-313.pyc
+    |       |   |   |   |-- _std_types_schema.cpython-313.pyc
+    |       |   |   |   |-- _typing_extra.cpython-313.pyc
+    |       |   |   |   |-- _utils.cpython-313.pyc
+    |       |   |   |   |-- _validate_call.cpython-313.pyc
+    |       |   |   |   |__ _validators.cpython-313.pyc
+    |       |   |   |-- _config.py
+    |       |   |   |-- _core_metadata.py
+    |       |   |   |-- _core_utils.py
+    |       |   |   |-- _dataclasses.py
+    |       |   |   |-- _decorators.py
+    |       |   |   |-- _decorators_v1.py
+    |       |   |   |-- _discriminated_union.py
+    |       |   |   |-- _docs_extraction.py
+    |       |   |   |-- _fields.py
+    |       |   |   |-- _forward_ref.py
+    |       |   |   |-- _generate_schema.py
+    |       |   |   |-- _generics.py
+    |       |   |   |-- _git.py
+    |       |   |   |-- _import_utils.py
+    |       |   |   |-- _internal_dataclass.py
+    |       |   |   |-- _known_annotated_metadata.py
+    |       |   |   |-- _mock_val_ser.py
+    |       |   |   |-- _model_construction.py
+    |       |   |   |-- _namespace_utils.py
+    |       |   |   |-- _repr.py
+    |       |   |   |-- _schema_generation_shared.py
+    |       |   |   |-- _serializers.py
+    |       |   |   |-- _signature.py
+    |       |   |   |-- _std_types_schema.py
+    |       |   |   |-- _typing_extra.py
+    |       |   |   |-- _utils.py
+    |       |   |   |-- _validate_call.py
+    |       |   |   |__ _validators.py
+    |       |   |-- _migration.py
+    |       |   |-- alias_generators.py
+    |       |   |-- aliases.py
+    |       |   |-- annotated_handlers.py
+    |       |   |-- class_validators.py
+    |       |   |-- color.py
+    |       |   |-- config.py
+    |       |   |-- dataclasses.py
+    |       |   |-- datetime_parse.py
+    |       |   |-- decorator.py
+    |       |   |-- deprecated
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- class_validators.cpython-313.pyc
+    |       |   |   |   |-- config.cpython-313.pyc
+    |       |   |   |   |-- copy_internals.cpython-313.pyc
+    |       |   |   |   |-- decorator.cpython-313.pyc
+    |       |   |   |   |-- json.cpython-313.pyc
+    |       |   |   |   |-- parse.cpython-313.pyc
+    |       |   |   |   |__ tools.cpython-313.pyc
+    |       |   |   |-- class_validators.py
+    |       |   |   |-- config.py
+    |       |   |   |-- copy_internals.py
+    |       |   |   |-- decorator.py
+    |       |   |   |-- json.py
+    |       |   |   |-- parse.py
+    |       |   |   |__ tools.py
+    |       |   |-- env_settings.py
+    |       |   |-- error_wrappers.py
+    |       |   |-- errors.py
+    |       |   |-- experimental
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |__ pipeline.cpython-313.pyc
+    |       |   |   |__ pipeline.py
+    |       |   |-- fields.py
+    |       |   |-- functional_serializers.py
+    |       |   |-- functional_validators.py
+    |       |   |-- generics.py
+    |       |   |-- json.py
+    |       |   |-- json_schema.py
+    |       |   |-- main.py
+    |       |   |-- mypy.py
+    |       |   |-- networks.py
+    |       |   |-- parse.py
+    |       |   |-- plugin
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- _loader.cpython-313.pyc
+    |       |   |   |   |__ _schema_validator.cpython-313.pyc
+    |       |   |   |-- _loader.py
+    |       |   |   |__ _schema_validator.py
+    |       |   |-- py.typed
+    |       |   |-- root_model.py
+    |       |   |-- schema.py
+    |       |   |-- tools.py
+    |       |   |-- type_adapter.py
+    |       |   |-- types.py
+    |       |   |-- typing.py
+    |       |   |-- utils.py
+    |       |   |-- v1
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- _hypothesis_plugin.cpython-313.pyc
+    |       |   |   |   |-- annotated_types.cpython-313.pyc
+    |       |   |   |   |-- class_validators.cpython-313.pyc
+    |       |   |   |   |-- color.cpython-313.pyc
+    |       |   |   |   |-- config.cpython-313.pyc
+    |       |   |   |   |-- dataclasses.cpython-313.pyc
+    |       |   |   |   |-- datetime_parse.cpython-313.pyc
+    |       |   |   |   |-- decorator.cpython-313.pyc
+    |       |   |   |   |-- env_settings.cpython-313.pyc
+    |       |   |   |   |-- error_wrappers.cpython-313.pyc
+    |       |   |   |   |-- errors.cpython-313.pyc
+    |       |   |   |   |-- fields.cpython-313.pyc
+    |       |   |   |   |-- generics.cpython-313.pyc
+    |       |   |   |   |-- json.cpython-313.pyc
+    |       |   |   |   |-- main.cpython-313.pyc
+    |       |   |   |   |-- mypy.cpython-313.pyc
+    |       |   |   |   |-- networks.cpython-313.pyc
+    |       |   |   |   |-- parse.cpython-313.pyc
+    |       |   |   |   |-- schema.cpython-313.pyc
+    |       |   |   |   |-- tools.cpython-313.pyc
+    |       |   |   |   |-- types.cpython-313.pyc
+    |       |   |   |   |-- typing.cpython-313.pyc
+    |       |   |   |   |-- utils.cpython-313.pyc
+    |       |   |   |   |-- validators.cpython-313.pyc
+    |       |   |   |   |__ version.cpython-313.pyc
+    |       |   |   |-- _hypothesis_plugin.py
+    |       |   |   |-- annotated_types.py
+    |       |   |   |-- class_validators.py
+    |       |   |   |-- color.py
+    |       |   |   |-- config.py
+    |       |   |   |-- dataclasses.py
+    |       |   |   |-- datetime_parse.py
+    |       |   |   |-- decorator.py
+    |       |   |   |-- env_settings.py
+    |       |   |   |-- error_wrappers.py
+    |       |   |   |-- errors.py
+    |       |   |   |-- fields.py
+    |       |   |   |-- generics.py
+    |       |   |   |-- json.py
+    |       |   |   |-- main.py
+    |       |   |   |-- mypy.py
+    |       |   |   |-- networks.py
+    |       |   |   |-- parse.py
+    |       |   |   |-- py.typed
+    |       |   |   |-- schema.py
+    |       |   |   |-- tools.py
+    |       |   |   |-- types.py
+    |       |   |   |-- typing.py
+    |       |   |   |-- utils.py
+    |       |   |   |-- validators.py
+    |       |   |   |__ version.py
+    |       |   |-- validate_call_decorator.py
+    |       |   |-- validators.py
+    |       |   |-- version.py
+    |       |   |__ warnings.py
+    |       |-- pydantic-2.10.6.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- WHEEL
+    |       |   |__ licenses
+    |       |       |__ LICENSE
+    |       |-- pydantic_core
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |__ core_schema.cpython-313.pyc
+    |       |   |-- _pydantic_core.cp313-win_amd64.pyd
+    |       |   |-- _pydantic_core.pyi
+    |       |   |-- core_schema.py
+    |       |   |__ py.typed
+    |       |-- pydantic_core-2.27.2.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- WHEEL
+    |       |   |__ licenses
+    |       |       |__ LICENSE
+    |       |-- pytest
+    |       |   |-- __init__.py
+    |       |   |-- __main__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |__ __main__.cpython-313.pyc
+    |       |   |__ py.typed
+    |       |-- pytest-8.3.4.dist-info
+    |       |   |-- AUTHORS
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- REQUESTED
+    |       |   |-- WHEEL
+    |       |   |-- entry_points.txt
+    |       |   |__ top_level.txt
+    |       |-- pytest_asyncio
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- _version.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |-- _version.cpython-313.pyc
+    |       |   |   |-- plugin.cpython-313-pytest-8.3.4.pyc
+    |       |   |   |__ plugin.cpython-313.pyc
+    |       |   |-- _version.py
+    |       |   |-- plugin.py
+    |       |   |__ py.typed
+    |       |-- pytest_asyncio-0.25.3.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- REQUESTED
+    |       |   |-- WHEEL
+    |       |   |-- entry_points.txt
+    |       |   |__ top_level.txt
+    |       |-- python_dotenv-1.0.1.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- REQUESTED
+    |       |   |-- WHEEL
+    |       |   |-- entry_points.txt
+    |       |   |__ top_level.txt
+    |       |-- sniffio
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- _impl.cpython-313.pyc
+    |       |   |   |__ _version.cpython-313.pyc
+    |       |   |-- _impl.py
+    |       |   |-- _tests
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |__ test_sniffio.cpython-313.pyc
+    |       |   |   |__ test_sniffio.py
+    |       |   |-- _version.py
+    |       |   |__ py.typed
+    |       |-- sniffio-1.3.1.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE
+    |       |   |-- LICENSE.APACHE2
+    |       |   |-- LICENSE.MIT
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- WHEEL
+    |       |   |__ top_level.txt
+    |       |-- tenacity
+    |       |   |-- __init__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- _utils.cpython-313.pyc
+    |       |   |   |-- after.cpython-313.pyc
+    |       |   |   |-- before.cpython-313.pyc
+    |       |   |   |-- before_sleep.cpython-313.pyc
+    |       |   |   |-- nap.cpython-313.pyc
+    |       |   |   |-- retry.cpython-313.pyc
+    |       |   |   |-- stop.cpython-313.pyc
+    |       |   |   |-- tornadoweb.cpython-313.pyc
+    |       |   |   |__ wait.cpython-313.pyc
+    |       |   |-- _utils.py
+    |       |   |-- after.py
+    |       |   |-- asyncio
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |__ retry.cpython-313.pyc
+    |       |   |   |__ retry.py
+    |       |   |-- before.py
+    |       |   |-- before_sleep.py
+    |       |   |-- nap.py
+    |       |   |-- py.typed
+    |       |   |-- retry.py
+    |       |   |-- stop.py
+    |       |   |-- tornadoweb.py
+    |       |   |__ wait.py
+    |       |-- tenacity-9.0.0.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- REQUESTED
+    |       |   |-- WHEEL
+    |       |   |__ top_level.txt
+    |       |-- tqdm
+    |       |   |-- __init__.py
+    |       |   |-- __main__.py
+    |       |   |-- __pycache__
+    |       |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |-- __main__.cpython-313.pyc
+    |       |   |   |-- _dist_ver.cpython-313.pyc
+    |       |   |   |-- _main.cpython-313.pyc
+    |       |   |   |-- _monitor.cpython-313.pyc
+    |       |   |   |-- _tqdm.cpython-313.pyc
+    |       |   |   |-- _tqdm_gui.cpython-313.pyc
+    |       |   |   |-- _tqdm_notebook.cpython-313.pyc
+    |       |   |   |-- _tqdm_pandas.cpython-313.pyc
+    |       |   |   |-- _utils.cpython-313.pyc
+    |       |   |   |-- asyncio.cpython-313.pyc
+    |       |   |   |-- auto.cpython-313.pyc
+    |       |   |   |-- autonotebook.cpython-313.pyc
+    |       |   |   |-- cli.cpython-313.pyc
+    |       |   |   |-- dask.cpython-313.pyc
+    |       |   |   |-- gui.cpython-313.pyc
+    |       |   |   |-- keras.cpython-313.pyc
+    |       |   |   |-- notebook.cpython-313.pyc
+    |       |   |   |-- rich.cpython-313.pyc
+    |       |   |   |-- std.cpython-313.pyc
+    |       |   |   |-- tk.cpython-313.pyc
+    |       |   |   |-- utils.cpython-313.pyc
+    |       |   |   |__ version.cpython-313.pyc
+    |       |   |-- _dist_ver.py
+    |       |   |-- _main.py
+    |       |   |-- _monitor.py
+    |       |   |-- _tqdm.py
+    |       |   |-- _tqdm_gui.py
+    |       |   |-- _tqdm_notebook.py
+    |       |   |-- _tqdm_pandas.py
+    |       |   |-- _utils.py
+    |       |   |-- asyncio.py
+    |       |   |-- auto.py
+    |       |   |-- autonotebook.py
+    |       |   |-- cli.py
+    |       |   |-- completion.sh
+    |       |   |-- contrib
+    |       |   |   |-- __init__.py
+    |       |   |   |-- __pycache__
+    |       |   |   |   |-- __init__.cpython-313.pyc
+    |       |   |   |   |-- bells.cpython-313.pyc
+    |       |   |   |   |-- concurrent.cpython-313.pyc
+    |       |   |   |   |-- discord.cpython-313.pyc
+    |       |   |   |   |-- itertools.cpython-313.pyc
+    |       |   |   |   |-- logging.cpython-313.pyc
+    |       |   |   |   |-- slack.cpython-313.pyc
+    |       |   |   |   |-- telegram.cpython-313.pyc
+    |       |   |   |   |__ utils_worker.cpython-313.pyc
+    |       |   |   |-- bells.py
+    |       |   |   |-- concurrent.py
+    |       |   |   |-- discord.py
+    |       |   |   |-- itertools.py
+    |       |   |   |-- logging.py
+    |       |   |   |-- slack.py
+    |       |   |   |-- telegram.py
+    |       |   |   |__ utils_worker.py
+    |       |   |-- dask.py
+    |       |   |-- gui.py
+    |       |   |-- keras.py
+    |       |   |-- notebook.py
+    |       |   |-- rich.py
+    |       |   |-- std.py
+    |       |   |-- tk.py
+    |       |   |-- tqdm.1
+    |       |   |-- utils.py
+    |       |   |__ version.py
+    |       |-- tqdm-4.67.1.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENCE
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |-- WHEEL
+    |       |   |-- entry_points.txt
+    |       |   |__ top_level.txt
+    |       |-- typing_extensions-4.12.2.dist-info
+    |       |   |-- INSTALLER
+    |       |   |-- LICENSE
+    |       |   |-- METADATA
+    |       |   |-- RECORD
+    |       |   |__ WHEEL
+    |       |__ typing_extensions.py
+    |-- Scripts
+    |   |-- Activate.ps1
+    |   |-- activate
+    |   |-- activate.bat
+    |   |-- activate.fish
+    |   |-- deactivate.bat
+    |   |-- distro.exe
+    |   |-- dotenv.exe
+    |   |-- httpx.exe
+    |   |-- openai.exe
+    |   |-- pip.exe
+    |   |-- pip3.13.exe
+    |   |-- pip3.exe
+    |   |-- py.test.exe
+    |   |-- pytest.exe
+    |   |-- python.exe
+    |   |-- pythonw.exe
+    |   |__ tqdm.exe
+    |__ pyvenv.cfg

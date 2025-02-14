@@ -4,7 +4,7 @@ import os
 # Pridedame projekto šaknies aplanką į Python kelių sąrašą
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from modules.assistant_ui import start_chat
+from ai.assist.core.assistant_ui import start_chat
 
 # Testavimas
 if __name__ == "__main__":

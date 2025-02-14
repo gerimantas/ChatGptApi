@@ -1,6 +1,6 @@
 import unittest
 import os
-from modules.file_manager import FileManager
+from ai.assist.core.file_manager import FileManager
 
 class TestFileManager(unittest.TestCase):
     def setUp(self):

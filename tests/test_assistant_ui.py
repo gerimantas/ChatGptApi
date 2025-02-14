@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import AsyncMock, patch
 import asyncio
-from modules.assistant_ui import process_command
+from ai.assist.core.assistant_ui import process_command
 
 class TestAssistantUI(unittest.IsolatedAsyncioTestCase):
 

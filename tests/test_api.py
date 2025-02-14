@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 import unittest
 import asyncio
-from modules.openai_client import ask_openai
+from ai.assist.core.openai_client import ask_openai
 
 class TestOpenAIApi(unittest.TestCase):
     """Testuoja OpenAI API užklausas."""

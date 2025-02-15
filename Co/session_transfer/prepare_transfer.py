@@ -7,6 +7,8 @@ SOURCE_DIR = "Co/"
 DEST_DIR = "Co/session_transfer/"
 PROMPT_FILE = os.path.join(DEST_DIR, "chatgpt_prompt.txt")
 STRUCTURE_FILE = os.path.join(DEST_DIR, "project_structure.txt")
+GITHUB_REPO_URL = "https://github.com/gerimantas/ai.assist"
+
 
 def check_git_status():
     """Checks if there are any uncommitted changes in the Git repository."""
@@ -20,9 +22,10 @@ def check_git_status():
         print("    git commit -m 'Updated project state'")
         print("    git push origin main")
         return False
-    
+
     print(f"✅ GitHub repository is synchronized! Last commit: {last_commit}")
     return True
+
 
 def prepare_transfer():
     """Copies CoinArbitr session files to the `Co/session_transfer/` directory if Git is clean."""
@@ -41,8 +44,11 @@ def prepare_transfer():
     generate_project_structure()
     print("✅ CoinArbitr files are prepared for session transfer!")
 
+
 def generate_chatgpt_prompt():
     """Generates the ChatGPT session prompt and saves it in `Co/session_transfer/`."""
+    recent_commits = subprocess.getoutput("git log -3 --oneline").split("\n")
+
     context_data = {
         "session_summary": "During this session, the project file structure was fully optimized, and files were reorganized in `Co/session_transfer/`.",
         "critical_tasks": [
@@ -55,7 +61,9 @@ def generate_chatgpt_prompt():
             "Automatically detect the new session and ensure context continuity.",
             "Integrate `ChatGPT` into the new session with full previous session context.",
             "Automatically initiate CoinArbitr strategy progress tracking in the new session."
-        ]
+        ],
+        "github_repository": GITHUB_REPO_URL,
+        "recent_commits": recent_commits
     }
 
     with open(PROMPT_FILE, "w") as f:
@@ -63,14 +71,16 @@ def generate_chatgpt_prompt():
 
     print(f"✅ ChatGPT session prompt generated: {PROMPT_FILE}")
 
+
 def generate_project_structure():
     """Generates an updated project file structure and saves it in `Co/session_transfer/`."""
     structure_data = subprocess.getoutput("tree /F /A")
-    
+
     with open(STRUCTURE_FILE, "w", encoding="utf-8") as f:
         f.write(structure_data)
 
     print(f"✅ Updated project file structure saved: {STRUCTURE_FILE}")
+
 
 if __name__ == "__main__":
     prepare_transfer()

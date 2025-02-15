@@ -77,8 +77,17 @@ C:.
 |   |   ai_instructions.json
 |   |   fill_strategy.py
 |   |   prepare_transfer.py
+|   |   session_history.json
+|   |   session_id.json
+|   |   session_message_count.json
+|   |   session_tasks.json
+|   |   start_new_session.py
 |   |   __init__.py
 |   |   
+|   +---current_session
+|   |       ai_instructions.json
+|   |       project_structure.txt
+|   |       
 |   +---data
 |   +---logs
 |   +---scripts
@@ -88,7 +97,15 @@ C:.
 |   |       fill_strategy.py
 |   |       generate_session_report.ps1
 |   |       prepare_transfer.py
+|   |       project_structure.txt
 |   |       session_context.txt
+|   |       session_detector.json
+|   |       session_detector.py
+|   |       session_history.json
+|   |       session_id.json
+|   |       session_message_count.json
+|   |       session_tasks.json
+|   |       start_new_session.py
 |   |       __init__.py
 |   |       
 |   \---strategy

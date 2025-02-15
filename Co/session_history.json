@@ -1,0 +1,27 @@
+[
+    {
+        "session_id": "ab18ff6f-7c43-4340-aabf-1e53a3d9c701",
+        "timestamp": "2025-02-14T23:23:07.848173",
+        "message_count": 1
+    },
+    {
+        "session_id": "3b4f2a91-3d42-4524-8ecf-ac14fcdd2622",
+        "timestamp": "2025-02-14T23:25:31.780930+00:00",
+        "message_count": 1
+    },
+    {
+        "session_id": "a242d619-92a0-4013-89f0-9ad0a0f3e9f4",
+        "timestamp": "2025-02-14T23:27:12.823432+00:00",
+        "message_count": 1
+    },
+    {
+        "session_id": "2b3badc5-ca0c-4c40-8e6a-6b9e0f100ca5",
+        "timestamp": "2025-02-15T00:27:13.040349+00:00",
+        "message_count": 1
+    },
+    {
+        "session_id": "d4faabd9-377c-4da9-adb1-9145afcbe168",
+        "timestamp": "2025-02-15T00:27:23.416311+00:00",
+        "message_count": 1
+    }
+]

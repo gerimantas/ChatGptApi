@@ -1,0 +1,7 @@
+{
+    "rules": {
+        "no_temp_files": "Neleidžiami .tmp, .bak, .swp failai",
+        "expected_folders": ["src/", "tests/", "docs/", "config/", "logs/"]
+    }
+}
+

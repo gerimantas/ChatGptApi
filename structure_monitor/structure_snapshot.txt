@@ -1,0 +1,166 @@
+{
+    ".": {
+        "files": [
+            ".env",
+            ".gitignore",
+            "CHANGELOG.md",
+            "README.md",
+            "chat_history.json",
+            "chatbot.py",
+            "config.json",
+            "requirements.txt",
+            "setup.py",
+            "structure_snapshot.txt",
+            "test_script.py"
+        ]
+    },
+    ".git": {
+        "files": [
+            "COMMIT_EDITMSG",
+            "FETCH_HEAD",
+            "HEAD",
+            "ORIG_HEAD",
+            "config",
+            "description",
+            "index"
+        ]
+    },
+    ".github": {
+        "files": []
+    },
+    ".pytest_cache": {
+        "files": [
+            ".gitignore",
+            "CACHEDIR.TAG",
+            "README.md"
+        ]
+    },
+    "ai_core": {
+        "files": [
+            "ai_model_manager.py",
+            "task_analysis.py",
+            "task_execution.py",
+            "versioning.py",
+            "workspace_setup.py"
+        ]
+    },
+    "automation": {
+        "files": [
+            "automation.py"
+        ]
+    },
+    "bot_aps": {
+        "files": [
+            "__init__.py"
+        ]
+    },
+    "cache": {
+        "files": [
+            "openai_cache.db"
+        ]
+    },
+    "config": {
+        "files": [
+            ".env",
+            "ai_config.json",
+            "config.json",
+            "logging_config.json",
+            "pytest.ini",
+            "settings.json"
+        ]
+    },
+    "data": {
+        "files": [
+            "backlog.txt"
+        ]
+    },
+    "docs": {
+        "files": [
+            "API_DOCUMENTATION.md",
+            "README.md",
+            "STRUCTURE_OVERVIEW.md"
+        ]
+    },
+    "error_tracking": {
+        "files": [
+            "error_tracking.py"
+        ]
+    },
+    "file_management": {
+        "files": [
+            "file_management.py"
+        ]
+    },
+    "logs": {
+        "files": [
+            "openai_client_errors.log"
+        ]
+    },
+    "modules": {
+        "files": [
+            "__init__.py",
+            "api_usage.log",
+            "api_usage_report.json"
+        ]
+    },
+    "scripts": {
+        "files": [
+            "check_gpt_model.py",
+            "test_script.py"
+        ]
+    },
+    "session_management": {
+        "files": [
+            "session_registry.py"
+        ]
+    },
+    "strategy": {
+        "files": [
+            "__init__.py"
+        ]
+    },
+    "structure_monitor": {
+        "files": [
+            "project_structure_monitor.py",
+            "structure_changes.log",
+            "structure_config.json",
+            "structure_logger.py",
+            "structure_optimizer.py",
+            "structure_snapshot.txt"
+        ]
+    },
+    "tests": {
+        "files": [
+            "__init__.py",
+            "test_ai_core.py",
+            "test_api.py",
+            "test_assistant_ui.py",
+            "test_automation.py",
+            "test_code_analyzer.py",
+            "test_error_tracking.py",
+            "test_file_management.py",
+            "test_file_manager.py",
+            "test_git_status.py",
+            "test_openai_client.py",
+            "test_ui.py"
+        ]
+    },
+    "valymas": {
+        "files": [
+            "backup_CoinArbitr",
+            "vlm_clean_structure.txt",
+            "vlm_project_structure.txt"
+        ]
+    },
+    "venv": {
+        "files": [
+            ".gitignore",
+            "pyvenv.cfg"
+        ]
+    },
+    "__pycache__": {
+        "files": [
+            "test_script.cpython-313.pyc"
+        ]
+    }
+}

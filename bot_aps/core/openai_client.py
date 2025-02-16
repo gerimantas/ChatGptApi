@@ -8,7 +8,6 @@ from logging.handlers import RotatingFileHandler
 from bot_aps.core.config import load_config
 import os
 
-
 # ✅ Įkeliame konfigūraciją
 config = load_config()
 
@@ -83,5 +82,12 @@ async def ask_openai(prompt):
         return None
 
 
+async def get_current_model():
+    """Grąžina dabartinį OpenAI GPT modelio pavadinimą iš konfigūracijos."""
+    return config["model"]
+
 # ✅ Paleidžiame `ensure_cache()` paleidžiant programą
 asyncio.run(ensure_cache())
+
+# ✅ Eksportuojame funkcijas
+__all__ = ["ask_openai", "get_current_model"]

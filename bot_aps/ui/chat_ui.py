@@ -4,12 +4,18 @@ import json
 import asyncio
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QTextBrowser, QLineEdit, QPushButton
 from PyQt5.QtCore import QSettings, QSize, QPoint
+import sys
+import os
+
+# ✅ Pridedame `bot_aps/` į `sys.path`
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+
 
 # ✅ Užtikriname, kad `modules/` katalogas būtų matomas kaip paketas
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from bot_aps.core.openai_client import ask_openai, get_current_model
-from bot_aps.core.ui_config import apply_dark_theme, style_input_field, style_send_button
+from bot_aps.ui.ui_config import apply_dark_theme, style_input_field, style_send_button  # 🔹 Pataisytas importas
 
 class ChatUI(QWidget):
     def __init__(self):

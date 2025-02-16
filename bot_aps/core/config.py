@@ -25,8 +25,14 @@ def load_config():
 
     # ✅ Įkeliamas OpenAI API raktas iš `.env`, jei jis nėra nurodytas `config.json`
     load_dotenv()
+    api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    
     if not config["openai_api_key"]:
-        config["openai_api_key"] = os.getenv("OPENAI_API_KEY", "")
+        config["openai_api_key"] = api_key
+
+    # ✅ Užtikriname, kad API raktas tikrai nebus tuščias
+    if not config["openai_api_key"]:
+        raise ValueError("❌ Klaida: OpenAI API raktas nėra nustatytas!")
 
     return config
 

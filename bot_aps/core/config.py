@@ -2,10 +2,12 @@ import json
 import os
 from dotenv import load_dotenv
 
-CONFIG_FILE = "config.json"
+CONFIG_FILE = "config/ai_config.json"  # 🔄 Teisingas kelias!
 
 def load_config():
-    """Įkelia boto nustatymus iš `config.json`. Jei failas neegzistuoja, sukuria su numatytosiomis reikšmėmis."""
+    """Įkelia boto nustatymus iš `ai_config.json`. Jei failas neegzistuoja, sukuria jį su numatytosiomis reikšmėmis."""
+    os.makedirs("config", exist_ok=True)  # 🔄 Užtikriname, kad katalogas egzistuoja
+
     if not os.path.exists(CONFIG_FILE):
         default_config = {
             "model": "gpt-4o",
@@ -18,16 +20,15 @@ def load_config():
         }
         with open(CONFIG_FILE, "w", encoding="utf-8") as f:
             json.dump(default_config, f, ensure_ascii=False, indent=4)
-        return default_config
 
     with open(CONFIG_FILE, "r", encoding="utf-8") as f:
         config = json.load(f)
 
-    # ✅ Įkeliamas OpenAI API raktas iš `.env`, jei jis nėra nurodytas `config.json`
+    # ✅ Įkeliamas OpenAI API raktas iš `.env`, jei jis nėra nurodytas `ai_config.json`
     load_dotenv()
     api_key = os.getenv("OPENAI_API_KEY", "").strip()
-    
-    if not config["openai_api_key"]:
+
+    if not config.get("openai_api_key"):
         config["openai_api_key"] = api_key
 
     # ✅ Užtikriname, kad API raktas tikrai nebus tuščias

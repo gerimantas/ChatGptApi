@@ -10,7 +10,6 @@
             "config.json",
             "requirements.txt",
             "setup.py",
-            "structure_snapshot.txt",
             "test_script.py"
         ]
     },
@@ -37,7 +36,8 @@
     },
     "ai_core": {
         "files": [
-            "ai_model_manager.py",
+            "instruction_loader.py",
+            "model_selection.py",
             "task_analysis.py",
             "task_execution.py",
             "versioning.py",
@@ -63,6 +63,7 @@
         "files": [
             ".env",
             "ai_config.json",
+            "ai_instructions.json",
             "config.json",
             "logging_config.json",
             "pytest.ini",
@@ -76,9 +77,8 @@
     },
     "docs": {
         "files": [
-            "API_DOCUMENTATION.md",
-            "README.md",
-            "STRUCTURE_OVERVIEW.md"
+            "APS_Kliento_Struktura.md",
+            "Aivolt_struktūra.md"
         ]
     },
     "error_tracking": {
@@ -91,9 +91,21 @@
             "file_management.py"
         ]
     },
+    "gpt_help": {
+        "files": [
+            "generate_full_report.py",
+            "important_tasks.json",
+            "latest_commits.log",
+            "progress_summary.txt",
+            "project_status.md",
+            "session_report.txt",
+            "session_summary.txt"
+        ]
+    },
     "logs": {
         "files": [
-            "openai_client_errors.log"
+            "openai_client_errors.log",
+            "strategy_log.json"
         ]
     },
     "modules": {
@@ -107,11 +119,6 @@
         "files": [
             "check_gpt_model.py",
             "test_script.py"
-        ]
-    },
-    "session_management": {
-        "files": [
-            "session_registry.py"
         ]
     },
     "strategy": {
@@ -143,13 +150,6 @@
             "test_git_status.py",
             "test_openai_client.py",
             "test_ui.py"
-        ]
-    },
-    "valymas": {
-        "files": [
-            "backup_CoinArbitr",
-            "vlm_clean_structure.txt",
-            "vlm_project_structure.txt"
         ]
     },
     "venv": {

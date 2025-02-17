@@ -1,7 +1,7 @@
-🔹 **Session Report | 2025-02-17 08:44:43**
+🔹 **Session Report | 2025-02-17 20:53:15**
 
 📂 **progress_summary.txt**
-🔹 Projekto progresas: 2025-02-17 08:44:43
+🔹 Projekto progresas: 2025-02-17 20:53:15
 
 - ✅ Naujos AI strategijos integracija
 - ✅ Užduočių ir modelių valdymo sistema atnaujinta
@@ -11,6 +11,8 @@
 
 📂 **latest_commits.log**
 📌 Naujausi commit'ai:
+0c35cd8 Atnaujinta APS ir kliento AI asistentų dokumentacija
+56aac9d ✅ Automatizuotas gpt_help/ failų generavimas ir pilna sesijos ataskaita
 a02b48e ✅ Pridėtas užduoties priėmimas, strategijos generavimas ir AI modelių valdymas
 416173e 🔧 UI ir chatbot pataisymai: klaidų taisymas, importų korekcijos, naujos funkcijos
 b6cd74b 🗑️ Galutinis CoinArbitr failų pašalinimas – git status išvalytas
@@ -19,8 +21,6 @@ b6cd74b 🗑️ Galutinis CoinArbitr failų pašalinimas – git status išvalyt
 440e269 ✅ Fix: Atnaujintas config.py – importai ir API raktas
 298c107 chore: Finalized session transfer and GitHub sync
 8cc2c9f chore: Finalized session transfer preparations
-76abd44 feat: Improved session detection and message tracking system
-a8f9779 chore: Initialized new CoinArbitr session
 
 ================================================================================
 
@@ -79,7 +79,6 @@ C:\USERS\37065\PROJECTS\AI.ASSIST
 |   README.md
 |   requirements.txt
 |   setup.py
-|   structure_snapshot.txt
 |   test_script.py
 |   
 +---.github
@@ -99,8 +98,8 @@ C:\USERS\37065\PROJECTS\AI.ASSIST
 |               stepwise
 |               
 +---ai_core
-|   |   ai_model_manager.py
 |   |   instruction_loader.py
+|   |   model_selection.py
 |   |   task_analysis.py
 |   |   task_execution.py
 |   |   versioning.py
@@ -182,9 +181,8 @@ C:\USERS\37065\PROJECTS\AI.ASSIST
 |       backlog.txt
 |       
 +---docs
-|       API_DOCUMENTATION.md
-|       README.md
-|       STRUCTURE_OVERVIEW.md
+|       Aivolt_struktura.md
+|       APS_Kliento_Struktura.md
 |       
 +---error_tracking
 |       error_tracking.py
@@ -198,6 +196,7 @@ C:\USERS\37065\PROJECTS\AI.ASSIST
 |       latest_commits.log
 |       progress_summary.txt
 |       project_status.md
+|       session_report.txt
 |       session_summary.txt
 |       
 +---logs
@@ -229,23 +228,11 @@ C:\USERS\37065\PROJECTS\AI.ASSIST
 |   \---__pycache__
 |           test_script.cpython-313-pytest-8.3.4.pyc
 |           
-+---session_management
-|       session_registry.py
-|       
 +---strategy
 |   |   __init__.py
 |   |   
-|   +---ai_assist_pr_strategy
-|   |   |   ai_assist_strategy.json
-|   |   |   ai_assist_strategy_info.json
-|   |   |   progress_tracking.json
-|   |   |   strategy_tracker.py
-|   |   |   __init__.py
-|   |   |   
-|   |   \---__pycache__
-|   |           strategy_tracker.cpython-313.pyc
-|   |           __init__.cpython-313.pyc
-|   |           
+|   +---APS_strategy
+|   +---CL_strategy
 |   \---__pycache__
 |           __init__.cpython-313.pyc
 |           
@@ -293,44 +280,6 @@ C:\USERS\37065\PROJECTS\AI.ASSIST
 |           test_ui.cpython-313.pyc
 |           __init__.cpython-313.pyc
 |           
-+---valymas
-|   |   backup_CoinArbitr
-|   |   vlm_clean_structure.txt
-|   |   vlm_project_structure.txt
-|   |   
-|   \---backup_Co
-|       |   ai_instructions.json
-|       |   session_history.json
-|       |   session_id.json
-|       |   session_message_count.json
-|       |   session_tasks.json
-|       |   __init__.py
-|       |   
-|       +---current_session
-|       |       ai_instructions.json
-|       |       project_structure.txt
-|       |       
-|       +---logs
-|       |       session_logs.txt
-|       |       
-|       +---session_transfer
-|       |       ai_instructions.json
-|       |       project_structure.txt
-|       |       session_detector.json
-|       |       session_detector.py
-|       |       session_history.json
-|       |       session_id.json
-|       |       session_message_count.json
-|       |       session_tasks.json
-|       |       __init__.py
-|       |       
-|       \---strategy
-|           |   strategy_tracker.py
-|           |   __init__.py
-|           |   
-|           \---__pycache__
-|                   __init__.cpython-313.pyc
-|                   
 +---venv
 |   |   .gitignore
 |   |   pyvenv.cfg
@@ -3277,6 +3226,36 @@ C:\USERS\37065\PROJECTS\AI.ASSIST
 |   |       |   |           
 |   |       |   \---__pycache__
 |   |       |           __init__.cpython-313.pyc
+|   |       |           
+|   |       +---platformdirs
+|   |       |   |   android.py
+|   |       |   |   api.py
+|   |       |   |   macos.py
+|   |       |   |   py.typed
+|   |       |   |   unix.py
+|   |       |   |   version.py
+|   |       |   |   windows.py
+|   |       |   |   __init__.py
+|   |       |   |   __main__.py
+|   |       |   |   
+|   |       |   \---__pycache__
+|   |       |           android.cpython-313.pyc
+|   |       |           api.cpython-313.pyc
+|   |       |           macos.cpython-313.pyc
+|   |       |           unix.cpython-313.pyc
+|   |       |           version.cpython-313.pyc
+|   |       |           windows.cpython-313.pyc
+|   |       |           __init__.cpython-313.pyc
+|   |       |           __main__.cpython-313.pyc
+|   |       |           
+|   |       +---platformdirs-4.3.6.dist-info
+|   |       |   |   INSTALLER
+|   |       |   |   METADATA
+|   |       |   |   RECORD
+|   |       |   |   WHEEL
+|   |       |   |   
+|   |       |   \---licenses
+|   |       |           LICENSE
 |   |       |           
 |   |       +---pluggy
 |   |       |   |   py.typed
@@ -6500,6 +6479,52 @@ C:\USERS\37065\PROJECTS\AI.ASSIST
 |   |       |       top_level.txt
 |   |       |       WHEEL
 |   |       |       
+|   |       +---pytoolconfig
+|   |       |   |   documentation.py
+|   |       |   |   fields.py
+|   |       |   |   py.typed
+|   |       |   |   pytoolconfig.py
+|   |       |   |   types.py
+|   |       |   |   universal_config.py
+|   |       |   |   utils.py
+|   |       |   |   _version.py
+|   |       |   |   __init__.py
+|   |       |   |   
+|   |       |   +---sources
+|   |       |   |   |   ini.py
+|   |       |   |   |   pyproject.py
+|   |       |   |   |   pytool.py
+|   |       |   |   |   setup_cfg.py
+|   |       |   |   |   source.py
+|   |       |   |   |   __init__.py
+|   |       |   |   |   
+|   |       |   |   \---__pycache__
+|   |       |   |           ini.cpython-313.pyc
+|   |       |   |           pyproject.cpython-313.pyc
+|   |       |   |           pytool.cpython-313.pyc
+|   |       |   |           setup_cfg.cpython-313.pyc
+|   |       |   |           source.cpython-313.pyc
+|   |       |   |           __init__.cpython-313.pyc
+|   |       |   |           
+|   |       |   \---__pycache__
+|   |       |           documentation.cpython-313.pyc
+|   |       |           fields.cpython-313.pyc
+|   |       |           pytoolconfig.cpython-313.pyc
+|   |       |           types.cpython-313.pyc
+|   |       |           universal_config.cpython-313.pyc
+|   |       |           utils.cpython-313.pyc
+|   |       |           _version.cpython-313.pyc
+|   |       |           __init__.cpython-313.pyc
+|   |       |           
+|   |       +---pytoolconfig-1.3.1.dist-info
+|   |       |   |   INSTALLER
+|   |       |   |   METADATA
+|   |       |   |   RECORD
+|   |       |   |   WHEEL
+|   |       |   |   
+|   |       |   \---licenses
+|   |       |           LICENSE
+|   |       |           
 |   |       +---requests
 |   |       |   |   adapters.py
 |   |       |   |   api.py
@@ -6545,6 +6570,253 @@ C:\USERS\37065\PROJECTS\AI.ASSIST
 |   |       |       LICENSE
 |   |       |       METADATA
 |   |       |       RECORD
+|   |       |       top_level.txt
+|   |       |       WHEEL
+|   |       |       
+|   |       +---rope
+|   |       |   |   __init__.py
+|   |       |   |   
+|   |       |   +---base
+|   |       |   |   |   arguments.py
+|   |       |   |   |   ast.py
+|   |       |   |   |   builtins.py
+|   |       |   |   |   change.py
+|   |       |   |   |   codeanalyze.py
+|   |       |   |   |   evaluate.py
+|   |       |   |   |   exceptions.py
+|   |       |   |   |   fscommands.py
+|   |       |   |   |   history.py
+|   |       |   |   |   libutils.py
+|   |       |   |   |   nameanalyze.py
+|   |       |   |   |   prefs.py
+|   |       |   |   |   project.py
+|   |       |   |   |   pycore.py
+|   |       |   |   |   pynames.py
+|   |       |   |   |   pynamesdef.py
+|   |       |   |   |   pyobjects.py
+|   |       |   |   |   pyobjectsdef.py
+|   |       |   |   |   pyscopes.py
+|   |       |   |   |   resourceobserver.py
+|   |       |   |   |   resources.py
+|   |       |   |   |   serializer.py
+|   |       |   |   |   simplify.py
+|   |       |   |   |   stdmods.py
+|   |       |   |   |   taskhandle.py
+|   |       |   |   |   versioning.py
+|   |       |   |   |   worder.py
+|   |       |   |   |   __init__.py
+|   |       |   |   |   
+|   |       |   |   +---oi
+|   |       |   |   |   |   doa.py
+|   |       |   |   |   |   memorydb.py
+|   |       |   |   |   |   objectdb.py
+|   |       |   |   |   |   objectinfo.py
+|   |       |   |   |   |   runmod.py
+|   |       |   |   |   |   soa.py
+|   |       |   |   |   |   soi.py
+|   |       |   |   |   |   transform.py
+|   |       |   |   |   |   __init__.py
+|   |       |   |   |   |   
+|   |       |   |   |   +---type_hinting
+|   |       |   |   |   |   |   evaluate.py
+|   |       |   |   |   |   |   factory.py
+|   |       |   |   |   |   |   interfaces.py
+|   |       |   |   |   |   |   utils.py
+|   |       |   |   |   |   |   __init__.py
+|   |       |   |   |   |   |   
+|   |       |   |   |   |   +---providers
+|   |       |   |   |   |   |   |   composite.py
+|   |       |   |   |   |   |   |   docstrings.py
+|   |       |   |   |   |   |   |   inheritance.py
+|   |       |   |   |   |   |   |   interfaces.py
+|   |       |   |   |   |   |   |   numpydocstrings.py
+|   |       |   |   |   |   |   |   pep0484_type_comments.py
+|   |       |   |   |   |   |   |   __init__.py
+|   |       |   |   |   |   |   |   
+|   |       |   |   |   |   |   \---__pycache__
+|   |       |   |   |   |   |           composite.cpython-313.pyc
+|   |       |   |   |   |   |           docstrings.cpython-313.pyc
+|   |       |   |   |   |   |           inheritance.cpython-313.pyc
+|   |       |   |   |   |   |           interfaces.cpython-313.pyc
+|   |       |   |   |   |   |           numpydocstrings.cpython-313.pyc
+|   |       |   |   |   |   |           pep0484_type_comments.cpython-313.pyc
+|   |       |   |   |   |   |           __init__.cpython-313.pyc
+|   |       |   |   |   |   |           
+|   |       |   |   |   |   +---resolvers
+|   |       |   |   |   |   |   |   composite.py
+|   |       |   |   |   |   |   |   interfaces.py
+|   |       |   |   |   |   |   |   types.py
+|   |       |   |   |   |   |   |   __init__.py
+|   |       |   |   |   |   |   |   
+|   |       |   |   |   |   |   \---__pycache__
+|   |       |   |   |   |   |           composite.cpython-313.pyc
+|   |       |   |   |   |   |           interfaces.cpython-313.pyc
+|   |       |   |   |   |   |           types.cpython-313.pyc
+|   |       |   |   |   |   |           __init__.cpython-313.pyc
+|   |       |   |   |   |   |           
+|   |       |   |   |   |   \---__pycache__
+|   |       |   |   |   |           evaluate.cpython-313.pyc
+|   |       |   |   |   |           factory.cpython-313.pyc
+|   |       |   |   |   |           interfaces.cpython-313.pyc
+|   |       |   |   |   |           utils.cpython-313.pyc
+|   |       |   |   |   |           __init__.cpython-313.pyc
+|   |       |   |   |   |           
+|   |       |   |   |   \---__pycache__
+|   |       |   |   |           doa.cpython-313.pyc
+|   |       |   |   |           memorydb.cpython-313.pyc
+|   |       |   |   |           objectdb.cpython-313.pyc
+|   |       |   |   |           objectinfo.cpython-313.pyc
+|   |       |   |   |           runmod.cpython-313.pyc
+|   |       |   |   |           soa.cpython-313.pyc
+|   |       |   |   |           soi.cpython-313.pyc
+|   |       |   |   |           transform.cpython-313.pyc
+|   |       |   |   |           __init__.cpython-313.pyc
+|   |       |   |   |           
+|   |       |   |   +---utils
+|   |       |   |   |   |   datastructures.py
+|   |       |   |   |   |   __init__.py
+|   |       |   |   |   |   
+|   |       |   |   |   \---__pycache__
+|   |       |   |   |           datastructures.cpython-313.pyc
+|   |       |   |   |           __init__.cpython-313.pyc
+|   |       |   |   |           
+|   |       |   |   \---__pycache__
+|   |       |   |           arguments.cpython-313.pyc
+|   |       |   |           ast.cpython-313.pyc
+|   |       |   |           builtins.cpython-313.pyc
+|   |       |   |           change.cpython-313.pyc
+|   |       |   |           codeanalyze.cpython-313.pyc
+|   |       |   |           evaluate.cpython-313.pyc
+|   |       |   |           exceptions.cpython-313.pyc
+|   |       |   |           fscommands.cpython-313.pyc
+|   |       |   |           history.cpython-313.pyc
+|   |       |   |           libutils.cpython-313.pyc
+|   |       |   |           nameanalyze.cpython-313.pyc
+|   |       |   |           prefs.cpython-313.pyc
+|   |       |   |           project.cpython-313.pyc
+|   |       |   |           pycore.cpython-313.pyc
+|   |       |   |           pynames.cpython-313.pyc
+|   |       |   |           pynamesdef.cpython-313.pyc
+|   |       |   |           pyobjects.cpython-313.pyc
+|   |       |   |           pyobjectsdef.cpython-313.pyc
+|   |       |   |           pyscopes.cpython-313.pyc
+|   |       |   |           resourceobserver.cpython-313.pyc
+|   |       |   |           resources.cpython-313.pyc
+|   |       |   |           serializer.cpython-313.pyc
+|   |       |   |           simplify.cpython-313.pyc
+|   |       |   |           stdmods.cpython-313.pyc
+|   |       |   |           taskhandle.cpython-313.pyc
+|   |       |   |           versioning.cpython-313.pyc
+|   |       |   |           worder.cpython-313.pyc
+|   |       |   |           __init__.cpython-313.pyc
+|   |       |   |           
+|   |       |   +---contrib
+|   |       |   |   |   changestack.py
+|   |       |   |   |   codeassist.py
+|   |       |   |   |   finderrors.py
+|   |       |   |   |   findit.py
+|   |       |   |   |   fixmodnames.py
+|   |       |   |   |   fixsyntax.py
+|   |       |   |   |   generate.py
+|   |       |   |   |   __init__.py
+|   |       |   |   |   
+|   |       |   |   +---autoimport
+|   |       |   |   |   |   defs.py
+|   |       |   |   |   |   models.py
+|   |       |   |   |   |   parse.py
+|   |       |   |   |   |   pickle.py
+|   |       |   |   |   |   sqlite.py
+|   |       |   |   |   |   utils.py
+|   |       |   |   |   |   __init__.py
+|   |       |   |   |   |   
+|   |       |   |   |   \---__pycache__
+|   |       |   |   |           defs.cpython-313.pyc
+|   |       |   |   |           models.cpython-313.pyc
+|   |       |   |   |           parse.cpython-313.pyc
+|   |       |   |   |           pickle.cpython-313.pyc
+|   |       |   |   |           sqlite.cpython-313.pyc
+|   |       |   |   |           utils.cpython-313.pyc
+|   |       |   |   |           __init__.cpython-313.pyc
+|   |       |   |   |           
+|   |       |   |   \---__pycache__
+|   |       |   |           changestack.cpython-313.pyc
+|   |       |   |           codeassist.cpython-313.pyc
+|   |       |   |           finderrors.cpython-313.pyc
+|   |       |   |           findit.cpython-313.pyc
+|   |       |   |           fixmodnames.cpython-313.pyc
+|   |       |   |           fixsyntax.cpython-313.pyc
+|   |       |   |           generate.cpython-313.pyc
+|   |       |   |           __init__.cpython-313.pyc
+|   |       |   |           
+|   |       |   +---refactor
+|   |       |   |   |   change_signature.py
+|   |       |   |   |   encapsulate_field.py
+|   |       |   |   |   extract.py
+|   |       |   |   |   functionutils.py
+|   |       |   |   |   inline.py
+|   |       |   |   |   introduce_factory.py
+|   |       |   |   |   introduce_parameter.py
+|   |       |   |   |   localtofield.py
+|   |       |   |   |   method_object.py
+|   |       |   |   |   move.py
+|   |       |   |   |   multiproject.py
+|   |       |   |   |   occurrences.py
+|   |       |   |   |   patchedast.py
+|   |       |   |   |   rename.py
+|   |       |   |   |   restructure.py
+|   |       |   |   |   similarfinder.py
+|   |       |   |   |   sourceutils.py
+|   |       |   |   |   suites.py
+|   |       |   |   |   topackage.py
+|   |       |   |   |   usefunction.py
+|   |       |   |   |   wildcards.py
+|   |       |   |   |   __init__.py
+|   |       |   |   |   
+|   |       |   |   +---importutils
+|   |       |   |   |   |   actions.py
+|   |       |   |   |   |   importinfo.py
+|   |       |   |   |   |   module_imports.py
+|   |       |   |   |   |   __init__.py
+|   |       |   |   |   |   
+|   |       |   |   |   \---__pycache__
+|   |       |   |   |           actions.cpython-313.pyc
+|   |       |   |   |           importinfo.cpython-313.pyc
+|   |       |   |   |           module_imports.cpython-313.pyc
+|   |       |   |   |           __init__.cpython-313.pyc
+|   |       |   |   |           
+|   |       |   |   \---__pycache__
+|   |       |   |           change_signature.cpython-313.pyc
+|   |       |   |           encapsulate_field.cpython-313.pyc
+|   |       |   |           extract.cpython-313.pyc
+|   |       |   |           functionutils.cpython-313.pyc
+|   |       |   |           inline.cpython-313.pyc
+|   |       |   |           introduce_factory.cpython-313.pyc
+|   |       |   |           introduce_parameter.cpython-313.pyc
+|   |       |   |           localtofield.cpython-313.pyc
+|   |       |   |           method_object.cpython-313.pyc
+|   |       |   |           move.cpython-313.pyc
+|   |       |   |           multiproject.cpython-313.pyc
+|   |       |   |           occurrences.cpython-313.pyc
+|   |       |   |           patchedast.cpython-313.pyc
+|   |       |   |           rename.cpython-313.pyc
+|   |       |   |           restructure.cpython-313.pyc
+|   |       |   |           similarfinder.cpython-313.pyc
+|   |       |   |           sourceutils.cpython-313.pyc
+|   |       |   |           suites.cpython-313.pyc
+|   |       |   |           topackage.cpython-313.pyc
+|   |       |   |           usefunction.cpython-313.pyc
+|   |       |   |           wildcards.cpython-313.pyc
+|   |       |   |           __init__.cpython-313.pyc
+|   |       |   |           
+|   |       |   \---__pycache__
+|   |       |           __init__.cpython-313.pyc
+|   |       |           
+|   |       +---rope-1.13.0.dist-info
+|   |       |       COPYING
+|   |       |       INSTALLER
+|   |       |       METADATA
+|   |       |       RECORD
+|   |       |       REQUESTED
 |   |       |       top_level.txt
 |   |       |       WHEEL
 |   |       |       

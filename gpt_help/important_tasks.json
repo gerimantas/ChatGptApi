@@ -1,0 +1,19 @@
+{
+    "tasks": [
+        {
+            "title": "AI modelių optimizavimas",
+            "status": "Vykdoma",
+            "priority": "Aukštas"
+        },
+        {
+            "title": "Strategijos generavimo tobulinimas",
+            "status": "Baigta",
+            "priority": "Vidutinis"
+        },
+        {
+            "title": "Chat UI funkcionalumo plėtra",
+            "status": "Vykdoma",
+            "priority": "Aukštas"
+        }
+    ]
+}

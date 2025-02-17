@@ -4,6 +4,6 @@
     "response_detail": 3,
     "cache_file": "cache/openai_cache.db",
     "log_dir": "logs",
-    "openai_api_key": "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",
+    "openai_api_key": "FAKE-API-KEY",
     "lru_cache_size": 100
 }

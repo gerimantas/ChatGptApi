@@ -13,7 +13,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 from bot_aps.core.openai_client import ask_openai, get_current_model
 from bot_aps.ui.ui_config import apply_dark_theme, style_input_field, style_send_button
-from ai_core.instruction_loader import switch_model, load_instructions
+from APS_strategy.objective_definer import switch_model, load_instructions
 
 class ChatUI(QWidget):
     def __init__(self):

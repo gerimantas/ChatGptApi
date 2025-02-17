@@ -1,0 +1,60 @@
+{
+    "AI_INSTRUCTIONS_VERSION": "2.2.1",
+    "LAST_UPDATED": "2025-02-16",
+    "MODEL_SELECTION": {
+        "AVAILABLE_MODELS": ["gpt-4o", "gpt-4-turbo", "gpt-4", "gpt-3.5-turbo", "gpt-3.5", "llama-3-8b", "mistral-7b", "gemini-1.5"],
+        "DEFAULT_MODEL": "gpt-4o"
+    },
+    "MODEL_CONFIG": {
+        "gpt-4o": {
+            "response_style": "detailed",
+            "max_tokens": 8192,
+            "special_features": ["vision_processing", "faster_execution"]
+        },
+        "gpt-4-turbo": {
+            "response_style": "detailed",
+            "max_tokens": 8000,
+            "special_features": ["code_assistance", "deep_analysis"]
+        },
+        "gpt-4": {
+            "response_style": "balanced",
+            "max_tokens": 7000,
+            "special_features": ["general_purpose"]
+        },
+        "gpt-3.5-turbo": {
+            "response_style": "concise",
+            "max_tokens": 4096,
+            "special_features": ["cost_efficient"]
+        },
+        "gpt-3.5": {
+            "response_style": "concise",
+            "max_tokens": 4096,
+            "special_features": ["optimized_for_text"]
+        },
+        "llama-3-8b": {
+            "response_style": "concise",
+            "max_tokens": 4000,
+            "special_features": ["low_resource_friendly"]
+        },
+        "mistral-7b": {
+            "response_style": "balanced",
+            "max_tokens": 6000,
+            "special_features": ["text_summarization"]
+        },
+        "gemini-1.5": {
+            "response_style": "advanced",
+            "max_tokens": 10000,
+            "special_features": ["multimodal_capabilities"]
+        }
+    },
+    "API_CONFIGURATION": {
+        "API_KEY_STORAGE": "C:\\Users\\37065\\Projects\\ai.assist\\config\\api_keys.json",
+        "DEFAULT_ENDPOINT": "https://api.openai.com/v1/chat/completions",
+        "SECURE_STORAGE_ENABLED": true
+    },
+    "WORK_ENVIRONMENT": {
+        "OPERATING_SYSTEM": "Windows 11",
+        "IDE": "Visual Studio Code",
+        "TOOLS_USED": ["Python 3.x", "OpenAI API", "GitHub", "Windows Terminal"]
+    }
+}

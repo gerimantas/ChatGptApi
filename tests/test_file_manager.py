@@ -1,6 +1,6 @@
 import unittest
 import os
-from bot_aps.core.file_manager import FileManager
+from APS_project_manager.AI_assistant.file_manager import FileManager
 
 class TestFileManager(unittest.TestCase):
     def setUp(self):

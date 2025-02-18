@@ -81,11 +81,6 @@
     "ai_core": {
         "files": []
     },
-    "ai_core\\__pycache__": {
-        "files": [
-            "instruction_loader.cpython-313.pyc"
-        ]
-    },
     "APS_management": {
         "files": [
             "logs_handler.py",
@@ -101,6 +96,25 @@
     "APS_project_manager": {
         "files": [
             "project_data.json"
+        ]
+    },
+    "APS_project_manager\\AI_assistant": {
+        "files": [
+            "__init__.cpython-313.pyc",
+            "__init__.py",
+            "api_usage_tracker.py",
+            "assistant_ui.cpython-313.pyc",
+            "assistant_ui.py",
+            "code_analyzer.cpython-313.pyc",
+            "code_analyzer.py",
+            "config.cpython-313.pyc",
+            "config.py",
+            "doc_generator.py",
+            "file_manager.cpython-313.pyc",
+            "file_manager.py",
+            "openai_client.cpython-313.pyc",
+            "openai_client.py",
+            "task_manager.py"
         ]
     },
     "APS_project_manager\\APS_client_manager": {
@@ -137,17 +151,7 @@
         ]
     },
     "bot_aps\\core": {
-        "files": [
-            "__init__.py",
-            "api_usage_tracker.py",
-            "assistant_ui.py",
-            "code_analyzer.py",
-            "config.py",
-            "doc_generator.py",
-            "file_manager.py",
-            "openai_client.py",
-            "task_manager.py"
-        ]
+        "files": []
     },
     "bot_aps\\logs": {
         "files": [
@@ -175,11 +179,6 @@
             "ui_config.py"
         ]
     },
-    "bot_aps\\__pycache__": {
-        "files": [
-            "__init__.cpython-313.pyc"
-        ]
-    },
     "cache": {
         "files": [
             "openai_cache.db"
@@ -190,7 +189,7 @@
             ".env",
             ".env.backup",
             "ai_config.json",
-            "ai_instructions.json",
+            "aivolt_instructions.json",
             "config.json",
             "config.json.backup",
             "logging_config.json",
@@ -239,31 +238,12 @@
             "api_usage_report.json"
         ]
     },
-    "modules\\__pycache__": {
-        "files": [
-            "__init__.cpython-313.pyc",
-            "api_usage_tracker.cpython-313.pyc",
-            "assistant_ui.cpython-313.pyc",
-            "chat_ui.cpython-313.pyc",
-            "code_analyzer.cpython-313.pyc",
-            "config.cpython-313.pyc",
-            "doc_generator.cpython-313.pyc",
-            "file_manager.cpython-313.pyc",
-            "openai_client.cpython-313.pyc",
-            "task_manager.cpython-313.pyc",
-            "ui_config.cpython-313.pyc"
-        ]
-    },
     "scripts": {
         "files": [
             "check_gpt_model.py",
             "migrator.py",
+            "run_aivolt_test.py",
             "test_script.py"
-        ]
-    },
-    "scripts\\__pycache__": {
-        "files": [
-            "test_script.cpython-313-pytest-8.3.4.pyc"
         ]
     },
     "strategy": {
@@ -276,11 +256,6 @@
     },
     "strategy\\CL_strategy": {
         "files": []
-    },
-    "strategy\\__pycache__": {
-        "files": [
-            "__init__.cpython-313.pyc"
-        ]
     },
     "structure_monitor": {
         "files": [
@@ -295,6 +270,7 @@
     "tests": {
         "files": [
             "__init__.py",
+            "aivolt_test_task.json",
             "test_ai_core.py",
             "test_api.py",
             "test_assistant_ui.py",
@@ -315,27 +291,16 @@
         "files": [
             "__init__.cpython-313.pyc",
             "test_ai_core.cpython-313-pytest-8.3.4.pyc",
-            "test_ai_core.cpython-313.pyc",
             "test_api.cpython-313-pytest-8.3.4.pyc",
-            "test_api.cpython-313.pyc",
             "test_assistant_ui.cpython-313-pytest-8.3.4.pyc",
-            "test_assistant_ui.cpython-313.pyc",
             "test_automation.cpython-313-pytest-8.3.4.pyc",
-            "test_automation.cpython-313.pyc",
             "test_code_analyzer.cpython-313-pytest-8.3.4.pyc",
-            "test_code_analyzer.cpython-313.pyc",
             "test_error_tracking.cpython-313-pytest-8.3.4.pyc",
-            "test_error_tracking.cpython-313.pyc",
             "test_file_management.cpython-313-pytest-8.3.4.pyc",
-            "test_file_management.cpython-313.pyc",
             "test_file_manager.cpython-313-pytest-8.3.4.pyc",
-            "test_file_manager.cpython-313.pyc",
             "test_git_status.cpython-313-pytest-8.3.4.pyc",
-            "test_git_status.cpython-313.pyc",
             "test_openai_client.cpython-313-pytest-8.3.4.pyc",
-            "test_openai_client.cpython-313.pyc",
-            "test_ui.cpython-313-pytest-8.3.4.pyc",
-            "test_ui.cpython-313.pyc"
+            "test_ui.cpython-313-pytest-8.3.4.pyc"
         ]
     },
     "venv": {
@@ -376,11 +341,6 @@
             "pyuic5.exe",
             "tqdm.exe",
             "wheel.exe"
-        ]
-    },
-    "__pycache__": {
-        "files": [
-            "test_script.cpython-313.pyc"
         ]
     }
 }

@@ -4,16 +4,16 @@ import pytest
 import asyncio
 from cachetools import LRUCache
 
-# ✅ Naudojame absoliutų kelią į `bot_aps/core/`
+# ✅ Naudojame absoliutų kelią į `APS_project_manager.AI_assistant/`
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 CORE_PATH = os.path.join(PROJECT_ROOT, "bot_aps", "core")
 
 if CORE_PATH not in sys.path:
-    print(f"🔹 Pridedame `bot_aps/core/` į sys.path: {CORE_PATH}")
+    print(f"🔹 Pridedame `APS_project_manager.AI_assistant/` į sys.path: {CORE_PATH}")
     sys.path.insert(0, CORE_PATH)
 
 try:
-    from bot_aps.core.openai_client import ask_openai
+    from APS_project_manager.AI_assistant.openai_client import ask_openai
 except ModuleNotFoundError as e:
     print(f"⚠️ Importo klaida: {e}")
     print(f"🔍 sys.path: {sys.path}")

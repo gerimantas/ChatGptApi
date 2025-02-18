@@ -4,7 +4,7 @@ import asyncio
 
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + "/.."))
 
-from bot_aps.core.openai_client import ask_openai  
+from APS_project_manager.AI_assistant.openai_client import ask_openai  
 
 async def start_chat():
     """Paleidžia AI asistentą terminale."""

@@ -7,7 +7,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 # Pridedame projekto šaknies aplanką į Python kelių sąrašą
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from bot_aps.core.code_analyzer import analyze_code
+from APS_project_manager.AI_assistant.code_analyzer import analyze_code
 
 # Sukuriame testinį Python failą
 test_file = "test_script.py"

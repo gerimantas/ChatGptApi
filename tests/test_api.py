@@ -3,7 +3,7 @@ import os
 import unittest
 import asyncio
 from unittest.mock import AsyncMock, patch
-from bot_aps.core.openai_client import ask_openai
+from APS_project_manager.AI_assistant.openai_client import ask_openai
 
 # ✅ Pridedame `modules/` katalogą į `sys.path`, kad testai rastų modulius
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 class TestOpenAIApi(unittest.TestCase):
     """Testuoja OpenAI API užklausas."""
 
-    @patch("bot_aps.core.openai_client.ask_openai", new_callable=AsyncMock)
+    @patch("APS_project_manager.AI_assistant.openai_client.ask_openai", new_callable=AsyncMock)
     async def test_api_response(self, mock_openai):
         """Testuoja, ar OpenAI API grąžina atsakymą."""
         mock_openai.return_value = "Python yra programavimo kalba."

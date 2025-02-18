@@ -1,11 +1,11 @@
 import unittest
 from unittest.mock import AsyncMock, patch
 import asyncio
-from bot_aps.core.assistant_ui import process_command
+from APS_project_manager.AI_assistant.assistant_ui import process_command
 
 class TestAssistantUI(unittest.IsolatedAsyncioTestCase):
 
-    @patch("bot_aps.core.assistant_ui.ask_openai", new_callable=AsyncMock)
+    @patch("APS_project_manager.AI_assistant.assistant_ui.ask_openai", new_callable=AsyncMock)
     async def test_ask_command(self, mock_ask_openai):
         """Testuoja `/ask` komandą."""
         mock_ask_openai.return_value = "Test response"
@@ -16,7 +16,7 @@ class TestAssistantUI(unittest.IsolatedAsyncioTestCase):
 
         self.assertEqual(response, "Test response")
 
-    @patch("bot_aps.core.assistant_ui.ask_openai", new_callable=AsyncMock)
+    @patch("APS_project_manager.AI_assistant.assistant_ui.ask_openai", new_callable=AsyncMock)
     async def test_style_command(self, mock_ask_openai):
         """Testuoja `/style` komandą."""
         mock_ask_openai.return_value = "Styled code"
@@ -27,7 +27,7 @@ class TestAssistantUI(unittest.IsolatedAsyncioTestCase):
 
         self.assertEqual(response, "Styled code")
 
-    @patch("bot_aps.core.assistant_ui.ask_openai", new_callable=AsyncMock)
+    @patch("APS_project_manager.AI_assistant.assistant_ui.ask_openai", new_callable=AsyncMock)
     async def test_test_command(self, mock_ask_openai):
         """Testuoja `/test` komandą."""
         mock_ask_openai.return_value = "Generated tests"

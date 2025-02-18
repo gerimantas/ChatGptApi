@@ -11,7 +11,7 @@ FONT_SIZE = 14  # Galima keisti pagal poreikį
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from bot_aps.core.openai_client import ask_openai, get_current_model
+from APS_project_manager.AI_assistant.openai_client import ask_openai, get_current_model
 from bot_aps.ui.ui_config import apply_dark_theme, style_input_field, style_send_button
 from APS_strategy.objective_definer import switch_model, load_instructions
 

@@ -2,35 +2,60 @@ import openai
 import logging
 import aiosqlite
 import asyncio
+import json
+import os
 from cachetools import LRUCache
 from tenacity import retry, stop_after_attempt, wait_exponential
 from logging.handlers import RotatingFileHandler
-from APS_project_manager.AI_assistant.config import load_config
-import os
 
-# ✅ Įkeliame konfigūraciją
-config = load_config()
+# ✅ Konfigūracijos failų keliai
+CONFIG_FILES = ["config/ai_config.json", "config.json"]
+
+def load_api_key():
+    """Ieško OpenAI API rakto ai_config.json, config.json ir aplinkos kintamuosiuose."""
+    api_key = None
+
+    for config_file in CONFIG_FILES:
+        if os.path.exists(config_file):
+            try:
+                with open(config_file, "r", encoding="utf-8") as file:
+                    config = json.load(file)
+                    api_key = config.get("openai_api_key") or api_key
+            except (json.JSONDecodeError, IOError) as e:
+                print(f"⚠️ Klaida skaitant {config_file}: {e}")
+
+    # Jei API raktas dar nerastas, bandome aplinkos kintamąjį
+    if not api_key:
+        api_key = os.getenv("OPENAI_API_KEY")
+
+    if not api_key:
+        raise ValueError("❌ API raktas nerastas! Patikrink ai_config.json, config.json arba aplinkos kintamuosius.")
+
+    return api_key
+
+# ✅ Įkeliame API raktą
+try:
+    openai.api_key = load_api_key()
+    print(f"🔍 Naudojamas API raktas: {openai.api_key}")  # Diagnostikos eilutė
+except ValueError as e:
+    print(e)
 
 # ✅ Sukuriame OpenAI klientą
-client = openai.AsyncOpenAI(api_key=config["openai_api_key"])
+client = openai.AsyncOpenAI(api_key=openai.api_key)
 
-# ✅ Nustatoma logų sistema
-if not os.path.exists(config["log_dir"]):
-    os.makedirs(config["log_dir"])
-
-LOG_FILE = f"{config['log_dir']}/openai_client_errors.log"
+# ✅ Logų sistema
+LOG_FILE = "logs/openai_client_errors.log"
+os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
 handler = RotatingFileHandler(LOG_FILE, maxBytes=1_000_000, backupCount=5)
-logging.basicConfig(level=logging.ERROR, handlers=[handler],
-                    format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(level=logging.ERROR, handlers=[handler], format="%(asctime)s - %(levelname)s - %(message)s")
 
 # ✅ Sukuriame LRU cache
-cache = LRUCache(maxsize=config["lru_cache_size"])
-
+cache = LRUCache(maxsize=100)
 
 async def ensure_cache():
     """Asinchroniškai sukuria cache DB jei jos nėra."""
-    os.makedirs(os.path.dirname(config["cache_file"]), exist_ok=True)
-    async with aiosqlite.connect(config["cache_file"]) as db:
+    os.makedirs("cache", exist_ok=True)
+    async with aiosqlite.connect("cache/openai_cache.db") as db:
         await db.execute("""
             CREATE TABLE IF NOT EXISTS cache (
                 prompt TEXT PRIMARY KEY,
@@ -39,40 +64,34 @@ async def ensure_cache():
         """)
         await db.commit()
 
-
 @retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=1, max=10))
 async def ask_openai(prompt):
-    """Asinchroniškai siunčia užklausą OpenAI API su LRU cache, SQLite ir automatiniu backoff."""
+    """Asinchroniškai siunčia užklausą OpenAI API su cache mechanizmu."""
     try:
-        # ✅ Pirmiausia tikriname LRU cache
         if prompt in cache:
-            print("💾 Atsakymas paimtas iš LRU cache!")
+            print("💾 Atsakymas paimtas iš cache!")
             return cache[prompt]
 
-        # ✅ Jei nėra LRU cache, tikriname SQLite cache
-        async with aiosqlite.connect(config["cache_file"]) as db:
+        async with aiosqlite.connect("cache/openai_cache.db") as db:
             async with db.execute("SELECT response FROM cache WHERE prompt=?", (prompt,)) as cursor:
                 row = await cursor.fetchone()
                 if row:
                     print("💾 Atsakymas paimtas iš SQLite cache!")
-                    cache[prompt] = row[0]  # Įdedame į LRU cache
+                    cache[prompt] = row[0]
                     return row[0]
 
-        # ✅ Jei atsakymo nėra cache, siunčiame užklausą OpenAI API
+        print(f"🔍 Naudojamas API raktas: {openai.api_key}")  # Diagnostikos eilutė prieš siunčiant užklausą
+
         response = await client.chat.completions.create(
-            model=config["model"],
+            model="gpt-4o",
             messages=[{"role": "user", "content": prompt}]
         )
         result = response.choices[0].message.content
 
-        # ✅ Išsaugome į LRU cache
         cache[prompt] = result
 
-        # ✅ Išsaugome į SQLite cache
-        async with aiosqlite.connect(config["cache_file"]) as db:
-            await db.execute(
-                "INSERT OR REPLACE INTO cache (prompt, response) VALUES (?, ?)", (prompt, result)
-            )
+        async with aiosqlite.connect("cache/openai_cache.db") as db:
+            await db.execute("INSERT OR REPLACE INTO cache (prompt, response) VALUES (?, ?)", (prompt, result))
             await db.commit()
 
         return result
@@ -81,13 +100,11 @@ async def ask_openai(prompt):
         logging.error(f"OpenAI API klaida: {e}")
         return None
 
-
 async def get_current_model():
-    """Grąžina dabartinį OpenAI GPT modelio pavadinimą iš konfigūracijos."""
-    return config["model"]
+    """Grąžina dabartinį OpenAI GPT modelio pavadinimą."""
+    return "gpt-4o"
 
-# ✅ Paleidžiame `ensure_cache()` paleidžiant programą
 asyncio.run(ensure_cache())
 
-# ✅ Eksportuojame funkcijas
 __all__ = ["ask_openai", "get_current_model"]
+

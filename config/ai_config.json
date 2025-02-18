@@ -4,6 +4,6 @@
     "response_detail": 3,
     "cache_file": "cache/openai_cache.db",
     "log_dir": "logs",
-    "openai_api_key": "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",
+    "openai_api_key": "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",
     "lru_cache_size": 100
 }

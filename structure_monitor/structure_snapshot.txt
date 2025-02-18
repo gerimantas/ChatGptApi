@@ -24,8 +24,49 @@
             "packed-refs"
         ]
     },
+    ".git\\hooks": {
+        "files": [
+            "applypatch-msg.sample",
+            "commit-msg.sample",
+            "fsmonitor-watchman.sample",
+            "post-update.sample",
+            "pre-applypatch.sample",
+            "pre-commit",
+            "pre-commit.sample",
+            "pre-commit.txt",
+            "pre-merge-commit.sample",
+            "pre-push.sample",
+            "pre-rebase.sample",
+            "pre-receive.sample",
+            "prepare-commit-msg.sample",
+            "push-to-checkout.sample",
+            "update.sample"
+        ]
+    },
+    ".git\\info": {
+        "files": [
+            "exclude"
+        ]
+    },
+    ".git\\logs": {
+        "files": [
+            "HEAD"
+        ]
+    },
+    ".git\\objects": {
+        "files": []
+    },
+    ".git\\refs": {
+        "files": []
+    },
     ".github": {
         "files": []
+    },
+    ".github\\workflows": {
+        "files": [
+            "test-ci.yml",
+            "test.yml"
+        ]
     },
     ".pytest_cache": {
         "files": [
@@ -34,8 +75,16 @@
             "README.md"
         ]
     },
+    ".pytest_cache\\v": {
+        "files": []
+    },
     "ai_core": {
         "files": []
+    },
+    "ai_core\\__pycache__": {
+        "files": [
+            "instruction_loader.cpython-313.pyc"
+        ]
     },
     "APS_management": {
         "files": [
@@ -51,13 +100,21 @@
     },
     "APS_project_manager": {
         "files": [
-            "project_tracker.py"
+            "project_data.json"
         ]
     },
-    "APS_strategy": {
+    "APS_project_manager\\APS_client_manager": {
         "files": [
-            "objective_definer.py",
-            "strategy_analyzer.py"
+            "client_communication.py",
+            "client_data.json",
+            "order_handler.py",
+            "project_initializer.py"
+        ]
+    },
+    "APS_project_manager\\APS_strategy": {
+        "files": [
+            "decision_maker.py",
+            "strategy_data.json"
         ]
     },
     "APS_structure": {
@@ -72,6 +129,55 @@
     "bot_aps": {
         "files": [
             "__init__.py"
+        ]
+    },
+    "bot_aps\\config": {
+        "files": [
+            "__init__.py"
+        ]
+    },
+    "bot_aps\\core": {
+        "files": [
+            "__init__.py",
+            "api_usage_tracker.py",
+            "assistant_ui.py",
+            "code_analyzer.py",
+            "config.py",
+            "doc_generator.py",
+            "file_manager.py",
+            "openai_client.py",
+            "task_manager.py"
+        ]
+    },
+    "bot_aps\\logs": {
+        "files": [
+            "__init__.py",
+            "__init__.py.bak"
+        ]
+    },
+    "bot_aps\\task_management": {
+        "files": [
+            "clarification_questions.py",
+            "strategy_generator.py",
+            "task_intake.py"
+        ]
+    },
+    "bot_aps\\tests": {
+        "files": [
+            "__init__.py"
+        ]
+    },
+    "bot_aps\\ui": {
+        "files": [
+            "__init__.py",
+            "ai_assist_tree.txt",
+            "chat_ui.py",
+            "ui_config.py"
+        ]
+    },
+    "bot_aps\\__pycache__": {
+        "files": [
+            "__init__.cpython-313.pyc"
         ]
     },
     "cache": {
@@ -133,6 +239,21 @@
             "api_usage_report.json"
         ]
     },
+    "modules\\__pycache__": {
+        "files": [
+            "__init__.cpython-313.pyc",
+            "api_usage_tracker.cpython-313.pyc",
+            "assistant_ui.cpython-313.pyc",
+            "chat_ui.cpython-313.pyc",
+            "code_analyzer.cpython-313.pyc",
+            "config.cpython-313.pyc",
+            "doc_generator.cpython-313.pyc",
+            "file_manager.cpython-313.pyc",
+            "openai_client.cpython-313.pyc",
+            "task_manager.cpython-313.pyc",
+            "ui_config.cpython-313.pyc"
+        ]
+    },
     "scripts": {
         "files": [
             "check_gpt_model.py",
@@ -140,9 +261,25 @@
             "test_script.py"
         ]
     },
+    "scripts\\__pycache__": {
+        "files": [
+            "test_script.cpython-313-pytest-8.3.4.pyc"
+        ]
+    },
     "strategy": {
         "files": [
             "__init__.py"
+        ]
+    },
+    "strategy\\APS_strategy": {
+        "files": []
+    },
+    "strategy\\CL_strategy": {
+        "files": []
+    },
+    "strategy\\__pycache__": {
+        "files": [
+            "__init__.cpython-313.pyc"
         ]
     },
     "structure_monitor": {
@@ -171,10 +308,74 @@
             "test_ui.py"
         ]
     },
+    "tests\\logs": {
+        "files": []
+    },
+    "tests\\__pycache__": {
+        "files": [
+            "__init__.cpython-313.pyc",
+            "test_ai_core.cpython-313-pytest-8.3.4.pyc",
+            "test_ai_core.cpython-313.pyc",
+            "test_api.cpython-313-pytest-8.3.4.pyc",
+            "test_api.cpython-313.pyc",
+            "test_assistant_ui.cpython-313-pytest-8.3.4.pyc",
+            "test_assistant_ui.cpython-313.pyc",
+            "test_automation.cpython-313-pytest-8.3.4.pyc",
+            "test_automation.cpython-313.pyc",
+            "test_code_analyzer.cpython-313-pytest-8.3.4.pyc",
+            "test_code_analyzer.cpython-313.pyc",
+            "test_error_tracking.cpython-313-pytest-8.3.4.pyc",
+            "test_error_tracking.cpython-313.pyc",
+            "test_file_management.cpython-313-pytest-8.3.4.pyc",
+            "test_file_management.cpython-313.pyc",
+            "test_file_manager.cpython-313-pytest-8.3.4.pyc",
+            "test_file_manager.cpython-313.pyc",
+            "test_git_status.cpython-313-pytest-8.3.4.pyc",
+            "test_git_status.cpython-313.pyc",
+            "test_openai_client.cpython-313-pytest-8.3.4.pyc",
+            "test_openai_client.cpython-313.pyc",
+            "test_ui.cpython-313-pytest-8.3.4.pyc",
+            "test_ui.cpython-313.pyc"
+        ]
+    },
     "venv": {
         "files": [
             ".gitignore",
             "pyvenv.cfg"
+        ]
+    },
+    "venv\\Include": {
+        "files": []
+    },
+    "venv\\Lib": {
+        "files": []
+    },
+    "venv\\Scripts": {
+        "files": [
+            "Activate.ps1",
+            "activate",
+            "activate.bat",
+            "activate.fish",
+            "deactivate.bat",
+            "distro.exe",
+            "dotenv.exe",
+            "git-filter-repo.exe",
+            "gtts-cli.exe",
+            "httpx.exe",
+            "normalizer.exe",
+            "openai.exe",
+            "pip.exe",
+            "pip3.13.exe",
+            "pip3.exe",
+            "py.test.exe",
+            "pylupdate5.exe",
+            "pyrcc5.exe",
+            "pytest.exe",
+            "python.exe",
+            "pythonw.exe",
+            "pyuic5.exe",
+            "tqdm.exe",
+            "wheel.exe"
         ]
     },
     "__pycache__": {

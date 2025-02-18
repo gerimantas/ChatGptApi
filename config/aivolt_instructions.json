@@ -1,0 +1,160 @@
+{
+    "AIVOLT_INSTRUCTIONS_VERSION": "1.5.1",
+    "LAST_UPDATED": "2025-02-18",
+
+    "PROJECT_MANAGEMENT": {
+        "EXECUTION_MODE": "Aivolt Project Manager",
+        "EXECUTION_RULES": [
+            "Aivolt receives client tasks and analyzes them based on predefined criteria.",
+            "Creates a customized AI assistant plan tailored to client needs.",
+            "Automatically selects the most suitable AI model from available resources.",
+            "Assigns AI roles at each stage of assistant development.",
+            "Monitors project progress and task execution until full assistant completion.",
+            "Optimizes API queries and model usage for efficiency."
+        ]
+    },
+
+    "TASK_INTAKE": {
+        "ENABLED": true,
+        "PROCESS": [
+            "Receive the client's task description.",
+            "Analyze requirements and identify key functionalities.",
+            "Select AI roles and the most suitable models for each project stage.",
+            "Create an action plan and preliminary assistant model.",
+            "Confirm task details with the client.",
+            "Initiate AI assistant creation based on the approved plan."
+        ]
+    },
+
+    "MODEL_SELECTION": {
+        "AVAILABLE_MODELS": [
+            "gpt-4-turbo",
+            "mistral-7b",
+            "gemini-1.5"
+        ],
+        "DEFAULT_MODEL": "gpt-4-turbo",
+        "MODEL_SWITCHING": "Automatic selection based on task complexity.",
+        "MODEL_PERFORMANCE_DATABASE": {
+            "ENABLED": true,
+            "STORAGE_PATH": "logs/model_performance.json",
+            "TRACK_PERFORMANCE": true,
+            "EVALUATION_METRICS": [
+                "TASK_SUCCESS_RATE",
+                "AVERAGE_EXECUTION_TIME",
+                "ERROR_COUNT"
+            ],
+            "PRIORITY_SELECTION": "Most efficient models are prioritized."
+        }
+    },
+
+    "MODEL_OPTIMIZATION": {
+        "REAL_TIME_MONITORING": true,
+        "SELF_ADJUSTING_SELECTION": "If model efficiency drops by 20%, switch to a better-performing model.",
+        "TEST_TASKS": [
+            "Simple Task Evaluation",
+            "Complex Query Processing",
+            "Multi-Step Task Execution"
+        ]
+    },
+
+    "AI_ROLE_ASSIGNMENT": {
+        "ROLE_SELECTION": "Automatic assignment based on task type.",
+        "PRIORITY_ROLE_DATABASE": {
+            "ENABLED": true,
+            "STORAGE_PATH": "logs/role_performance.json",
+            "TRACK_PERFORMANCE": true,
+            "EVALUATION_METRICS": [
+                "TASK_COMPLETION_SUCCESS_RATE",
+                "ERROR_COUNT",
+                "EXECUTION_TIME"
+            ],
+            "ADAPTIVE_ROLE_SELECTION": "Roles that performed best are prioritized."
+        }
+    },
+
+    "TASK_EXECUTION": {
+        "PARALLEL_PROCESSING": true,
+        "DEPENDENCY_MANAGEMENT": "If a task does not require previous results, execute in parallel.",
+        "MAX_PARALLEL_TASKS": 3
+    },
+
+    "RESOURCE_MANAGEMENT": {
+        "ADAPTIVE_SCALING": true,
+        "CPU_THRESHOLD": {
+            "MAX_USAGE": 80,
+            "SCALE_DOWN_AT": 50,
+            "SCALE_UP_AT": 90
+        },
+        "MEMORY_THRESHOLD": {
+            "MAX_USAGE": 75,
+            "SCALE_DOWN_AT": 40,
+            "SCALE_UP_AT": 85
+        }
+    },
+
+    "PROJECT_TRACKING": {
+        "STATUS_MONITORING": true,
+        "LOGGING": {
+            "ENABLED": true,
+            "TRACK_EVENTS": [
+                "task_assignment",
+                "ai_role_assignment",
+                "ai_model_selection",
+                "progress_updates",
+                "completion_status"
+            ],
+            "LOG_STORAGE": "logs/aivolt_project_log.txt"
+        },
+        "RESOURCE_MONITORING": {
+            "ENABLED": true,
+            "CHECK_INTERVAL": "Every 10 minutes",
+            "LOG_STORAGE": "logs/resource_usage.txt",
+            "MONITORED_RESOURCES": [
+                "CPU_USAGE",
+                "MEMORY_USAGE",
+                "API_CALLS"
+            ]
+        }
+    },
+
+    "LEARNING_FROM_EXPERIENCE": {
+        "ENABLE_SELF_CORRECTION": true,
+        "DATA_STORAGE": "logs/adaptive_learning.json",
+        "PATTERN_ANALYSIS": "Analyze which solutions were most effective.",
+        "FEEDBACK_INTEGRATION": "AI models receive priority data on previous successful solutions."
+    },
+
+    "ERROR_HANDLING": {
+        "ENABLED": true,
+        "FAILURE_RECOVERY": {
+            "RETRY_LIMIT": 3,
+            "FALLBACK_ACTION": "If the AI assistant creation process stalls, suggest an alternative strategy.",
+            "LEARNING_FROM_FAILURES": {
+                "ENABLED": true,
+                "STORE_FAILURE_CASES": "logs/failure_cases.json",
+                "SUGGEST_PREVIOUSLY_SUCCESSFUL_FIXES": true
+            }
+        }
+    },
+
+    "SECURITY_MEASURES": {
+        "DATA_PROTECTION": {
+            "AUTHORIZATION_CONTROL": "RBAC",
+            "ENCRYPTION": "AES-256",
+            "AUDIT_LOGGING": "logs/audit_logs.txt"
+        },
+        "AI_MODEL_SECURITY": {
+            "INPUT_VALIDATION": true,
+            "THREAT_DETECTION": true,
+            "BACKUP_STORAGE": "logs/model_backups/"
+        },
+        "EXECUTION_SAFETY": {
+            "ACTION_VERIFICATION": true,
+            "FAILSAFE_TRIGGER": true,
+            "RESOURCE_PROTECTION": {
+                "CPU_LIMIT": 80,
+                "MEMORY_LIMIT": 75
+            }
+        }
+    }
+}

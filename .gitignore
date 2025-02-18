@@ -62,3 +62,9 @@ pytest_cache/
 # 🔹 Palikta visa kita Git saugojimui
 file_hashes.txt
 valymas/
+
+gpt_help/progress_summary.txt
+
+gpt_help/session_report.txt
+
+gpt_help/session_summary.txt

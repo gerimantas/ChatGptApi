@@ -81,6 +81,24 @@
     "ai_core": {
         "files": []
     },
+    "APS_core": {
+        "files": []
+    },
+    "APS_core\\APS_client_manager": {
+        "files": [
+            "task_intake.py"
+        ]
+    },
+    "APS_core\\APS_project_manager": {
+        "files": [
+            "clarification_questions.py"
+        ]
+    },
+    "APS_core\\APS_strategy": {
+        "files": [
+            "strategy_generator.py"
+        ]
+    },
     "APS_management": {
         "files": [
             "logs_handler.py",
@@ -139,45 +157,6 @@
     },
     "automation": {
         "files": []
-    },
-    "bot_aps": {
-        "files": [
-            "__init__.py"
-        ]
-    },
-    "bot_aps\\config": {
-        "files": [
-            "__init__.py"
-        ]
-    },
-    "bot_aps\\core": {
-        "files": []
-    },
-    "bot_aps\\logs": {
-        "files": [
-            "__init__.py",
-            "__init__.py.bak"
-        ]
-    },
-    "bot_aps\\task_management": {
-        "files": [
-            "clarification_questions.py",
-            "strategy_generator.py",
-            "task_intake.py"
-        ]
-    },
-    "bot_aps\\tests": {
-        "files": [
-            "__init__.py"
-        ]
-    },
-    "bot_aps\\ui": {
-        "files": [
-            "__init__.py",
-            "ai_assist_tree.txt",
-            "chat_ui.py",
-            "ui_config.py"
-        ]
     },
     "cache": {
         "files": [
@@ -238,12 +217,23 @@
             "api_usage_report.json"
         ]
     },
+    "modules\\__pycache__": {
+        "files": [
+            "__init__.cpython-313.pyc"
+        ]
+    },
     "scripts": {
         "files": [
             "check_gpt_model.py",
             "migrator.py",
             "run_aivolt_test.py",
             "test_script.py"
+        ]
+    },
+    "scripts\\__pycache__": {
+        "files": [
+            "run_aivolt_test.cpython-313-pytest-8.3.4.pyc",
+            "test_script.cpython-313-pytest-8.3.4.pyc"
         ]
     },
     "strategy": {
@@ -291,16 +281,27 @@
         "files": [
             "__init__.cpython-313.pyc",
             "test_ai_core.cpython-313-pytest-8.3.4.pyc",
+            "test_ai_core.cpython-313.pyc",
             "test_api.cpython-313-pytest-8.3.4.pyc",
+            "test_api.cpython-313.pyc",
             "test_assistant_ui.cpython-313-pytest-8.3.4.pyc",
+            "test_assistant_ui.cpython-313.pyc",
             "test_automation.cpython-313-pytest-8.3.4.pyc",
+            "test_automation.cpython-313.pyc",
             "test_code_analyzer.cpython-313-pytest-8.3.4.pyc",
+            "test_code_analyzer.cpython-313.pyc",
             "test_error_tracking.cpython-313-pytest-8.3.4.pyc",
+            "test_error_tracking.cpython-313.pyc",
             "test_file_management.cpython-313-pytest-8.3.4.pyc",
+            "test_file_management.cpython-313.pyc",
             "test_file_manager.cpython-313-pytest-8.3.4.pyc",
+            "test_file_manager.cpython-313.pyc",
             "test_git_status.cpython-313-pytest-8.3.4.pyc",
+            "test_git_status.cpython-313.pyc",
             "test_openai_client.cpython-313-pytest-8.3.4.pyc",
-            "test_ui.cpython-313-pytest-8.3.4.pyc"
+            "test_openai_client.cpython-313.pyc",
+            "test_ui.cpython-313-pytest-8.3.4.pyc",
+            "test_ui.cpython-313.pyc"
         ]
     },
     "venv": {

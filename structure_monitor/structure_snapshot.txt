@@ -1,7 +1,6 @@
 {
     ".": {
         "files": [
-            ".env",
             ".gitignore",
             "CHANGELOG.md",
             "README.md",
@@ -21,7 +20,8 @@
             "ORIG_HEAD",
             "config",
             "description",
-            "index"
+            "index",
+            "packed-refs"
         ]
     },
     ".github": {
@@ -35,19 +35,39 @@
         ]
     },
     "ai_core": {
+        "files": []
+    },
+    "APS_management": {
         "files": [
-            "instruction_loader.py",
-            "model_selection.py",
-            "task_analysis.py",
-            "task_execution.py",
-            "versioning.py",
-            "workspace_setup.py"
+            "logs_handler.py",
+            "security_manager.py",
+            "system_monitor.py"
+        ]
+    },
+    "APS_model_selection": {
+        "files": [
+            "model_selector.py"
+        ]
+    },
+    "APS_project_manager": {
+        "files": [
+            "project_tracker.py"
+        ]
+    },
+    "APS_strategy": {
+        "files": [
+            "objective_definer.py",
+            "strategy_analyzer.py"
+        ]
+    },
+    "APS_structure": {
+        "files": [
+            "structure_logger.py",
+            "structure_optimizer.py"
         ]
     },
     "automation": {
-        "files": [
-            "automation.py"
-        ]
+        "files": []
     },
     "bot_aps": {
         "files": [
@@ -62,9 +82,11 @@
     "config": {
         "files": [
             ".env",
+            ".env.backup",
             "ai_config.json",
             "ai_instructions.json",
             "config.json",
+            "config.json.backup",
             "logging_config.json",
             "pytest.ini",
             "settings.json"
@@ -82,14 +104,10 @@
         ]
     },
     "error_tracking": {
-        "files": [
-            "error_tracking.py"
-        ]
+        "files": []
     },
     "file_management": {
-        "files": [
-            "file_management.py"
-        ]
+        "files": []
     },
     "gpt_help": {
         "files": [
@@ -118,6 +136,7 @@
     "scripts": {
         "files": [
             "check_gpt_model.py",
+            "migrator.py",
             "test_script.py"
         ]
     },

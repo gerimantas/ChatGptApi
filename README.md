@@ -101,3 +101,5 @@ Aivolt/
 ├── CHANGELOG.md             # Pakeitimų istorija
 ├── requirements.txt         # Priklausomybės
 ├── setup.py                 # Projekto diegimo failas
+
+🔹 Testinis commit – minimalus pakeitimas.

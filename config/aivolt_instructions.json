@@ -1,6 +1,6 @@
 {
-    "AIVOLT_INSTRUCTIONS_VERSION": "1.5.1",
-    "LAST_UPDATED": "2025-02-18",
+    "AIVOLT_INSTRUCTIONS_VERSION": "1.6.0",
+    "LAST_UPDATED": "2025-02-19",
 
     "PROJECT_MANAGEMENT": {
         "EXECUTION_MODE": "Aivolt Project Manager",
@@ -74,8 +74,12 @@
 
     "TASK_EXECUTION": {
         "PARALLEL_PROCESSING": true,
-        "DEPENDENCY_MANAGEMENT": "If a task does not require previous results, execute in parallel.",
-        "MAX_PARALLEL_TASKS": 3
+        "MAX_PARALLEL_TASKS": 3,
+        "TASK_PRIORITY": {
+            "CRITICAL": "Immediate Execution",
+            "HIGH": "Execute in Next Available Slot",
+            "NORMAL": "Queue Execution"
+        }
     },
 
     "RESOURCE_MANAGEMENT": {
@@ -121,7 +125,11 @@
         "ENABLE_SELF_CORRECTION": true,
         "DATA_STORAGE": "logs/adaptive_learning.json",
         "PATTERN_ANALYSIS": "Analyze which solutions were most effective.",
-        "FEEDBACK_INTEGRATION": "AI models receive priority data on previous successful solutions."
+        "FEEDBACK_INTEGRATION": "AI models receive priority data on previous successful solutions.",
+        "REAL_TIME_ADJUSTMENT": {
+            "ENABLE": true,
+            "FEEDBACK_INTEGRATION": "Immediate Adaptation"
+        }
     },
 
     "ERROR_HANDLING": {
@@ -156,5 +164,25 @@
                 "MEMORY_LIMIT": 75
             }
         }
+    },
+
+    "TESTING": {
+        "ENABLED": true,
+        "TEST_CASES": [
+            "Unit Tests",
+            "Integration Tests",
+            "Performance Testing"
+        ],
+        "LOG_STORAGE": "logs/test_results.json"
+    },
+
+    "API_USAGE_MONITORING": {
+        "ENABLED": true,
+        "TRACKED_PARAMETERS": [
+            "TOTAL_CALLS",
+            "FAILED_CALLS",
+            "LATENCY_AVERAGE"
+        ],
+        "LOG_STORAGE": "logs/api_usage.json"
     }
 }

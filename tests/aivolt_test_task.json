@@ -1,0 +1,20 @@
+{
+    "TASK_ID": "001",
+    "TASK_NAME": "Customer Support AI Assistant",
+    "DESCRIPTION": "Develop an AI assistant that can generate automated responses for customer inquiries based on predefined datasets.",
+    "REQUIREMENTS": {
+        "NLP_MODEL": "gpt-4-turbo",
+        "KNOWLEDGE_BASE": "Predefined customer FAQs and support documents",
+        "RESPONSE_TONE": "Professional and empathetic"
+    },
+    "STEPS": [
+        "Analyze customer support data and common inquiries.",
+        "Select the most relevant AI model for natural language processing.",
+        "Develop a response generation module that adapts to customer sentiment.",
+        "Implement feedback learning to improve AI responses over time.",
+        "Deploy and test the AI assistant in a simulated environment."
+    ],
+    "AI_ROLE": "Strategy Planner",
+    "EXPECTED_OUTPUT": "A functional AI assistant capable of responding to customer inquiries with predefined responses and adaptive learning."
+}
+

@@ -1,0 +1,318 @@
+{
+    ".": {
+        "files": [
+            ".gitignore",
+            "CHANGELOG.md",
+            "README.md",
+            "chat_history.json",
+            "chatbot.py",
+            "config.json",
+            "requirements.txt",
+            "setup.py",
+            "test_script.py"
+        ]
+    },
+    ".git": {
+        "files": [
+            "COMMIT_EDITMSG",
+            "FETCH_HEAD",
+            "HEAD",
+            "ORIG_HEAD",
+            "config",
+            "description",
+            "index",
+            "packed-refs"
+        ]
+    },
+    ".git\\hooks": {
+        "files": [
+            "applypatch-msg.sample",
+            "commit-msg.sample",
+            "fsmonitor-watchman.sample",
+            "post-update.sample",
+            "pre-applypatch.sample",
+            "pre-commit",
+            "pre-commit.sample",
+            "pre-commit.txt",
+            "pre-merge-commit.sample",
+            "pre-push.sample",
+            "pre-rebase.sample",
+            "pre-receive.sample",
+            "prepare-commit-msg.sample",
+            "push-to-checkout.sample",
+            "update.sample"
+        ]
+    },
+    ".git\\info": {
+        "files": [
+            "exclude"
+        ]
+    },
+    ".git\\logs": {
+        "files": [
+            "HEAD"
+        ]
+    },
+    ".git\\objects": {
+        "files": []
+    },
+    ".git\\refs": {
+        "files": []
+    },
+    ".github": {
+        "files": []
+    },
+    ".github\\workflows": {
+        "files": [
+            "test-ci.yml",
+            "test.yml"
+        ]
+    },
+    ".pytest_cache": {
+        "files": [
+            ".gitignore",
+            "CACHEDIR.TAG",
+            "README.md"
+        ]
+    },
+    ".pytest_cache\\v": {
+        "files": []
+    },
+    "APS_core": {
+        "files": []
+    },
+    "APS_core\\APS_client_manager": {
+        "files": [
+            "task_intake.py"
+        ]
+    },
+    "APS_core\\APS_project_manager": {
+        "files": [
+            "clarification_questions.py"
+        ]
+    },
+    "APS_core\\APS_strategy": {
+        "files": [
+            "strategy_generator.py"
+        ]
+    },
+    "APS_management": {
+        "files": [
+            "logs_handler.py",
+            "security_manager.py",
+            "system_monitor.py"
+        ]
+    },
+    "APS_model_selection": {
+        "files": [
+            "model_selector.py"
+        ]
+    },
+    "APS_project_manager": {
+        "files": [
+            "project_data.json"
+        ]
+    },
+    "APS_project_manager\\AI_assistant": {
+        "files": [
+            "__init__.cpython-313.pyc",
+            "__init__.py",
+            "api_usage_tracker.py",
+            "assistant_ui.cpython-313.pyc",
+            "assistant_ui.py",
+            "code_analyzer.cpython-313.pyc",
+            "code_analyzer.py",
+            "config.cpython-313.pyc",
+            "config.py",
+            "doc_generator.py",
+            "file_manager.cpython-313.pyc",
+            "file_manager.py",
+            "openai_client.cpython-313.pyc",
+            "openai_client.py",
+            "task_manager.py"
+        ]
+    },
+    "APS_project_manager\\APS_client_manager": {
+        "files": [
+            "client_communication.py",
+            "client_data.json",
+            "order_handler.py",
+            "project_initializer.py"
+        ]
+    },
+    "APS_project_manager\\APS_strategy": {
+        "files": [
+            "decision_maker.py",
+            "strategy_data.json"
+        ]
+    },
+    "APS_structure": {
+        "files": [
+            "structure_logger.py",
+            "structure_optimizer.py"
+        ]
+    },
+    "cache": {
+        "files": [
+            "openai_cache.db"
+        ]
+    },
+    "config": {
+        "files": [
+            ".env",
+            "ai_config.json",
+            "aivolt_instructions.json",
+            "config.json",
+            "logging_config.json",
+            "pytest.ini",
+            "settings.json"
+        ]
+    },
+    "data": {
+        "files": [
+            "backlog.txt"
+        ]
+    },
+    "docs": {
+        "files": [
+            "APS_Kliento_Struktura.md",
+            "Aivolt_struktūra.md"
+        ]
+    },
+    "gpt_help": {
+        "files": [
+            "generate_full_report.py",
+            "important_tasks.json",
+            "latest_commits.log",
+            "progress_summary.txt",
+            "project_status.md",
+            "session_report.txt",
+            "session_summary.txt"
+        ]
+    },
+    "logs": {
+        "files": [
+            "openai_client_errors.log",
+            "strategy_log.json"
+        ]
+    },
+    "modules": {
+        "files": [
+            "__init__.py",
+            "api_usage.log",
+            "api_usage_report.json"
+        ]
+    },
+    "modules\\__pycache__": {
+        "files": [
+            "__init__.cpython-313.pyc"
+        ]
+    },
+    "scripts": {
+        "files": [
+            "check_gpt_model.py",
+            "migrator.py",
+            "run_aivolt_test.py",
+            "test_script.py"
+        ]
+    },
+    "strategy": {
+        "files": [
+            "__init__.py"
+        ]
+    },
+    "structure_monitor": {
+        "files": [
+            "project_structure_monitor.py",
+            "structure_changes.log",
+            "structure_config.json",
+            "structure_logger.py",
+            "structure_optimizer.py",
+            "structure_snapshot.txt"
+        ]
+    },
+    "tests": {
+        "files": [
+            "__init__.py",
+            "aivolt_test_task.json",
+            "test_ai_core.py",
+            "test_api.py",
+            "test_assistant_ui.py",
+            "test_automation.py",
+            "test_code_analyzer.py",
+            "test_error_tracking.py",
+            "test_file_management.py",
+            "test_file_manager.py",
+            "test_git_status.py",
+            "test_openai_client.py",
+            "test_ui.py"
+        ]
+    },
+    "tests\\__pycache__": {
+        "files": [
+            "__init__.cpython-313.pyc",
+            "test_ai_core.cpython-313-pytest-8.3.4.pyc",
+            "test_ai_core.cpython-313.pyc",
+            "test_api.cpython-313-pytest-8.3.4.pyc",
+            "test_api.cpython-313.pyc",
+            "test_assistant_ui.cpython-313-pytest-8.3.4.pyc",
+            "test_assistant_ui.cpython-313.pyc",
+            "test_automation.cpython-313-pytest-8.3.4.pyc",
+            "test_automation.cpython-313.pyc",
+            "test_code_analyzer.cpython-313-pytest-8.3.4.pyc",
+            "test_code_analyzer.cpython-313.pyc",
+            "test_error_tracking.cpython-313-pytest-8.3.4.pyc",
+            "test_error_tracking.cpython-313.pyc",
+            "test_file_management.cpython-313-pytest-8.3.4.pyc",
+            "test_file_management.cpython-313.pyc",
+            "test_file_manager.cpython-313-pytest-8.3.4.pyc",
+            "test_file_manager.cpython-313.pyc",
+            "test_git_status.cpython-313-pytest-8.3.4.pyc",
+            "test_git_status.cpython-313.pyc",
+            "test_openai_client.cpython-313-pytest-8.3.4.pyc",
+            "test_openai_client.cpython-313.pyc",
+            "test_ui.cpython-313-pytest-8.3.4.pyc",
+            "test_ui.cpython-313.pyc"
+        ]
+    },
+    "venv": {
+        "files": [
+            ".gitignore",
+            "pyvenv.cfg"
+        ]
+    },
+    "venv\\Include": {
+        "files": []
+    },
+    "venv\\Lib": {
+        "files": []
+    },
+    "venv\\Scripts": {
+        "files": [
+            "Activate.ps1",
+            "activate",
+            "activate.bat",
+            "activate.fish",
+            "deactivate.bat",
+            "distro.exe",
+            "dotenv.exe",
+            "git-filter-repo.exe",
+            "gtts-cli.exe",
+            "httpx.exe",
+            "normalizer.exe",
+            "openai.exe",
+            "pip.exe",
+            "pip3.13.exe",
+            "pip3.exe",
+            "py.test.exe",
+            "pylupdate5.exe",
+            "pyrcc5.exe",
+            "pytest.exe",
+            "python.exe",
+            "pythonw.exe",
+            "pyuic5.exe",
+            "tqdm.exe",
+            "wheel.exe"
+        ]
+    }
+}

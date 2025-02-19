@@ -1,0 +1,9 @@
+{
+    "model": "gpt-4o",
+    "language": "auto",
+    "response_detail": 3,
+    "cache_file": "cache/openai_cache.db",
+    "log_dir": "logs",
+    
+    "lru_cache_size": 100
+}

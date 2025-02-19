@@ -1,0 +1,70 @@
+# 🔹 Ignoruoti `__pycache__` katalogą ir `.pyc` failus
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# 🔹 Ignoruoti virtualias aplinkas ir su aplinka susijusius failus
+venv/
+.env
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# 🔹 Ignoruoti cache, logų ir testavimo failus
+logs/
+cache/
+*.log
+*.sqlite
+*.db
+ai_logs.txt
+chat_logs.txt
+test_script.py
+
+# 🔹 Ignoruoti OpenAI cache failus
+cache/openai_cache.db
+
+# Ignoruoti cache katalogą
+cache/
+
+
+# 🔹 Ignoruoti pokalbių istoriją ir generuotus atsakymus
+chat_history.json
+chat_logs.txt
+response.mp3
+
+# 🔹 Ignoruoti `modules/__pycache__` ir kitus `__pycache__` katalogus
+modules/__pycache__/
+__pycache__/
+
+# 🔹 Ignoruoti `VS Code` ir `JetBrains` IDE nustatymų failus
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# 🔹 Ignoruoti sistemos failus
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 🔹 Ignoruoti testų rezultatų failus
+.coverage
+*.cover
+nosetests.xml
+coverage.xml
+*.lcov
+pytest_cache/
+
+# 🔹 Ignoruoti Python priklausomybių katalogus
+*.egg-info/
+
+# 🔹 Palikta visa kita Git saugojimui
+file_hashes.txt
+valymas/
+
+gpt_help/progress_summary.txt
+
+gpt_help/session_report.txt
+
+gpt_help/session_summary.txt
